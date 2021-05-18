@@ -1,20 +1,19 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:element name="Product">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="Name" type="xs:string"></xs:element>
-                <xs:element name="Ean" type="xs:string"></xs:element>
-                <xs:element name="Description" type="xs:string"></xs:element>
-                <xs:element name="Ratings" type="xs:positiveInteger" minOccurs="0" maxOccurs="unbounded"></xs:element>
-                <xs:element name="Pictures" type="picture" minOccurs="1" maxOccurs="unbounded"></xs:element>
-                <xs:element name="Categories" type="category" minOccurs="1" maxOccurs="unbounded"></xs:element>
-                <xs:element name="Offers" type="offer" minOccurs="0" maxOccurs="unbounded"></xs:element>
-                <xs:element name="Producer" type="producer"></xs:element>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
+    <xs:element name="Product" type="product"></xs:element>
+    <xs:complexType name="product">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"></xs:element>
+            <xs:element name="Ean" type="xs:string"></xs:element>
+            <xs:element name="Description" type="xs:string"></xs:element>
+            <xs:element name="Ratings" type="xs:positiveInteger" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            <xs:element name="Pictures" type="picture" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            <xs:element name="Categories" type="category" minOccurs="1" maxOccurs="unbounded"></xs:element>
+            <xs:element name="Offers" type="offer" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            <xs:element name="Producer" type="producer"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:complexType name="picture">
         <xs:sequence>
