@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="Product">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Name" type="xs:string"></xs:element>
+                <xs:element name="Ean" type="xs:string"></xs:element>
+                <xs:element name="Description" type="xs:string"></xs:element>
+                <xs:element name="Ratings" type="xs:positiveInteger" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                <xs:element name="Pictures" type="picture" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                <xs:element name="Categories" type="category" minOccurs="1" maxOccurs="unbounded"></xs:element>
+                <xs:element name="Offers" type="offer" minOccurs="0" maxOccurs="unbounded"></xs:element>
+                <xs:element name="Producer" type="producer"></xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="picture">
+        <xs:sequence>
+            <xs:element name="Height" type="xs:positiveInteger"></xs:element>
+            <xs:element name="Width" type="xs:positiveInteger"></xs:element>
+            <xs:element name="Content" type="xs:hexBinary"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="category">
+        <xs:sequence>
+            <xs:element name="InternalName" type="xs:string"></xs:element>
+            <xs:element name="SynonymNames" type="xs:string" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            <xs:element name="ParentCategory" type="category"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="offer">
+        <xs:sequence>
+            <xs:element name="FromDate" type="xs:date"></xs:element>
+            <xs:element name="ToDate" type="xs:date"></xs:element>
+            <xs:element name="Price" type="xs:float"></xs:element>
+            <xs:element name="DiscountRate" type="xs:float"></xs:element>
+            <xs:element name="InStockCount" type="xs:positiveInteger"></xs:element>
+            <xs:element name="Description" type="xs:string"></xs:element>
+            <xs:element name="Store" type="store"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="store">
+        <xs:sequence>
+            <xs:element name="Location" type="geolocation"></xs:element>
+            <xs:element name="OpeningHours" type="xs:string" minOccurs="7" maxOccurs="7"></xs:element>
+            <xs:element name="Ratings" type="xs:positiveInteger" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            <xs:element name="Vendor" type="vendor"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="geolocation">
+        <xs:sequence>
+            <xs:element name="Latitude" type="xs:float"></xs:element>
+            <xs:element name="Longitude" type="xs:float"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="company">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"></xs:element>
+            <xs:element name="Dic" type="xs:string"></xs:element>
+            <xs:element name="Ratings" type="xs:positiveInteger" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            <xs:element name="Picture" type="picture" minOccurs="0" maxOccurs="1"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="producer">
+        <xs:complexContent>
+            <xs:extension base="company">
+                <xs:sequence>
+                    <xs:element name="ProductionCapacity" type="xs:positiveInteger"></xs:element>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="vendor">
+        <xs:complexContent>
+            <xs:extension base="company"></xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+</xs:schema>
