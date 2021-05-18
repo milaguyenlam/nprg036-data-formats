@@ -1,0 +1,33 @@
+# For every vendor find its best rated (average rating) store
+
+PREFIX schema: <http://schema.org/>
+
+SELECT ?vendor ?store ?average_rating
+WHERE 
+{
+  ?store schema:branchOf ?vendor .
+  {
+    SELECT ?vendor (MAX(?avg_rating) AS ?average_rating)
+    WHERE 
+    {
+        ?store schema:branchOf ?vendor .
+        {
+            SELECT ?store (AVG(?rating) AS ?avg_rating)
+            WHERE {
+            ?store a schema:Store .
+            ?store schema:rating ?rating .
+            }
+            GROUP BY ?store
+        }
+    }
+    GROUP BY ?vendor
+  }
+  {
+    SELECT ?store (AVG(?rating) AS ?average_rating)
+    WHERE {
+      ?store a schema:Store .
+      ?store schema:rating ?rating .
+    }
+    GROUP BY ?store
+  }
+}

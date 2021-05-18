@@ -1,0 +1,17 @@
+# Get the cheapest current offer for a certain product
+
+PREFIX schema: <http://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?offer
+WHERE {
+  ?offer a schema:Offer .
+  ?offer schema:itemOffered <http://example.org/#apple> .
+  ?offer schema:price ?price .
+  ?offer schema:startDate ?start .
+  ?offer schema:endDate ?end .
+  FILTER("2021-04-19"^^xsd:date > ?start)
+  FILTER("2021-04-19"^^xsd:date < ?end)
+}
+ORDER BY ASC(?price)
+LIMIT 1
