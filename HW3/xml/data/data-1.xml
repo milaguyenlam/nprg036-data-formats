@@ -1,50 +1,52 @@
 <?xml-model href="../schemas/schema-1.xsd"?>
-<Product>
-    <Name>Apple</Name>
-    <Ean>1231231331</Ean>
-    <Description>Fresh and tasty apple</Description>
-    <Rating>4</Rating>
-    <Rating>5</Rating>
-    <Rating>5</Rating>
-    <Picture>
-        <Height>100</Height>
-        <Width>100</Width>
-        <Content></Content>
-    </Picture>
-    <Category>
-        <InternalName>Fruit</InternalName>
-        <SynonymName>Ovoce</SynonymName>
-        <ParentCategory>
-            <InternalName>Fresh</InternalName>
-            <SynonymName>Cerstve</SynonymName>
-        </ParentCategory>
-    </Category>
-    <Offer>
-        <FromDate>2021-05-20</FromDate>
-        <ToDate>2021-05-30</ToDate>
-        <Price>50.49</Price>
-        <DiscountRate>0.2</DiscountRate>
-        <InStockCount>100</InStockCount>
-        <Description>Maximum of 10kg's can be bought at once</Description>
-        <Store>
-            <Location>
-                <Latitude>50</Latitude>
-                <Longitude>50</Longitude>
-            </Location>
-            <OpeningHours>Mon-Sun: 7:00-20:00</OpeningHours>
-            <Rating>2</Rating>
-            <Rating>3</Rating>
-            <Vendor>
-                <Name>Tesco</Name>
-                <Dic>321321412</Dic>
-                <Rating>4</Rating>
-            </Vendor>
-        </Store>
-    </Offer>
-    <Producer>
-        <Name>Nase Farma</Name>
-        <Dic>1111</Dic>
+<ProductList>
+    <Product>
+        <Name>Apple</Name>
+        <Ean>1231231331</Ean>
+        <Description>Fresh and tasty apple</Description>
+        <Rating>4</Rating>
         <Rating>5</Rating>
-        <ProductionCapacity>10000</ProductionCapacity>
-    </Producer>
-</Product>
+        <Rating>5</Rating>
+        <Picture>
+            <Height>100</Height>
+            <Width>100</Width>
+            <Content></Content>
+        </Picture>
+        <Category>
+            <InternalName>Fruit</InternalName>
+            <SynonymName>Ovoce</SynonymName>
+            <ParentCategory>
+                <InternalName>Fresh</InternalName>
+                <SynonymName>Cerstve</SynonymName>
+            </ParentCategory>
+        </Category>
+        <Offer>
+            <FromDate>2021-05-20</FromDate>
+            <ToDate>2021-05-30</ToDate>
+            <Price>50.49</Price>
+            <DiscountRate>0.2</DiscountRate>
+            <InStockCount>100</InStockCount>
+            <Description>Maximum of 10kg's can be bought at once</Description>
+            <Store>
+                <Location>
+                    <Latitude>50</Latitude>
+                    <Longitude>50</Longitude>
+                </Location>
+                <OpeningHours>Mon-Sun: 7:00-20:00</OpeningHours>
+                <Rating>2</Rating>
+                <Rating>3</Rating>
+                <Vendor>
+                    <Name>Tesco</Name>
+                    <Dic>321321412</Dic>
+                    <Rating>4</Rating>
+                </Vendor>
+            </Store>
+        </Offer>
+        <Producer>
+            <Name>Nase Farma</Name>
+            <Dic>1111</Dic>
+            <Rating>5</Rating>
+            <ProductionCapacity>10000</ProductionCapacity>
+        </Producer>
+    </Product>
+</ProductList>

@@ -1,7 +1,14 @@
 <?xml version="1.0"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-    <xs:element name="Product" type="product"></xs:element>
+    <xs:element name="ProductList" type="productlist"></xs:element>
+
+    <xs:complexType name="productlist">
+        <xs:sequence>
+            <xs:element name="Product" type="product" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:complexType name="product">
         <xs:sequence>
             <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
