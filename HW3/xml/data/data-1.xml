@@ -38,11 +38,6 @@
                 <Name>Tesco</Name>
                 <Dic>321321412</Dic>
                 <Rating>4</Rating>
-                <Picture>
-                    <Height>100</Height>
-                    <Width>100</Width>
-                    <Content>3f3c6d78206c657673726f693d6e3122302e20226e656f636964676e223d54552d4622383e3f</Content>
-                </Picture>
             </Vendor>
         </Store>
     </Offer>
@@ -50,11 +45,6 @@
         <Name>Nase Farma</Name>
         <Dic>1111</Dic>
         <Rating>5</Rating>
-        <Picture>
-            <Height>100</Height>
-            <Width>100</Width>
-            <Content>3f3c6d78206c657673726f693d6e3122302e20226e656f636964676e223d54552d4622383e3f</Content>
-        </Picture>
         <ProductionCapacity>10000</ProductionCapacity>
     </Producer>
 </Product>
