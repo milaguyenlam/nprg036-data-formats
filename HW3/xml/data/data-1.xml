@@ -1,0 +1,60 @@
+<?xml-model href="../schemas/schema-1.xsd"?>
+<Product>
+    <Name>Apple</Name>
+    <Ean>1231231331</Ean>
+    <Description>Fresh and tasty apple</Description>
+    <Rating>4</Rating>
+    <Rating>5</Rating>
+    <Rating>5</Rating>
+    <Picture>
+        <Height>100</Height>
+        <Width>100</Width>
+        <Content></Content>
+    </Picture>
+    <Category>
+        <InternalName>Fruit</InternalName>
+        <SynonymName>Ovoce</SynonymName>
+        <ParentCategory>
+            <InternalName>Fresh</InternalName>
+            <SynonymName>Cerstve</SynonymName>
+        </ParentCategory>
+    </Category>
+    <Offer>
+        <FromDate>2021-05-20</FromDate>
+        <ToDate>2021-05-30</ToDate>
+        <Price>50.49</Price>
+        <DiscountRate>0.2</DiscountRate>
+        <InStockCount>100</InStockCount>
+        <Description>Maximum of 10kg's can be bought at once</Description>
+        <Store>
+            <Location>
+                <Latitude>50</Latitude>
+                <Longitude>50</Longitude>
+            </Location>
+            <OpeningHours>Mon-Sun: 7:00-20:00</OpeningHours>
+            <Rating>2</Rating>
+            <Rating>3</Rating>
+            <Vendor>
+                <Name>Tesco</Name>
+                <Dic>321321412</Dic>
+                <Rating>4</Rating>
+                <Picture>
+                    <Height>100</Height>
+                    <Width>100</Width>
+                    <Content>3f3c6d78206c657673726f693d6e3122302e20226e656f636964676e223d54552d4622383e3f</Content>
+                </Picture>
+            </Vendor>
+        </Store>
+    </Offer>
+    <Producer>
+        <Name>Nase Farma</Name>
+        <Dic>1111</Dic>
+        <Rating>5</Rating>
+        <Picture>
+            <Height>100</Height>
+            <Width>100</Width>
+            <Content>3f3c6d78206c657673726f693d6e3122302e20226e656f636964676e223d54552d4622383e3f</Content>
+        </Picture>
+        <ProductionCapacity>10000</ProductionCapacity>
+    </Producer>
+</Product>
