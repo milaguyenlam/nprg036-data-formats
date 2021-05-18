@@ -14,10 +14,10 @@
         </Picture>
         <Category>
             <InternalName>Fruit</InternalName>
-            <SynonymName>Ovoce</SynonymName>
+            <SynonymName lang="cs">Ovoce</SynonymName>
             <ParentCategory>
                 <InternalName>Fresh</InternalName>
-                <SynonymName>Cerstve</SynonymName>
+                <SynonymName lang="cs">Cerstve</SynonymName>
             </ParentCategory>
         </Category>
         <Offer>
@@ -63,10 +63,10 @@
         </Picture>
         <Category>
             <InternalName>Alcohol</InternalName>
-            <SynonymName>Alkohol</SynonymName>
+            <SynonymName lang="cs">Alkohol</SynonymName>
             <ParentCategory>
                 <InternalName>Drinks</InternalName>
-                <SynonymName>Napoje</SynonymName>
+                <SynonymName lang="cs">Napoje</SynonymName>
             </ParentCategory>
         </Category>
         <Offer>
