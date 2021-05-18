@@ -1,9 +1,9 @@
 <?xml-model href="../schemas/schema-1.xsd"?>
-<ProductList>
+<ProductList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-1.xsd">
     <Product>
         <Name>Apple</Name>
         <Ean>1231231331</Ean>
-        <Description>Fresh and tasty apple</Description>
+        <Description>Fresh and tasty...</Description>
         <Rating>4</Rating>
         <Rating>5</Rating>
         <Rating>5</Rating>
@@ -47,6 +47,54 @@
             <Dic>1111</Dic>
             <Rating>5</Rating>
             <ProductionCapacity>10000</ProductionCapacity>
+        </Producer>
+    </Product>
+    <Product>
+        <Name>Pilner Beer</Name>
+        <Ean>12312312321</Ean>
+        <Description>Authentic Czech Beer</Description>
+        <Rating>5</Rating>
+        <Rating>5</Rating>
+        <Rating>5</Rating>
+        <Picture>
+            <Height>100</Height>
+            <Width>100</Width>
+            <Content></Content>
+        </Picture>
+        <Category>
+            <InternalName>Alcohol</InternalName>
+            <SynonymName>Alkohol</SynonymName>
+            <ParentCategory>
+                <InternalName>Drinks</InternalName>
+                <SynonymName>Napoje</SynonymName>
+            </ParentCategory>
+        </Category>
+        <Offer>
+            <FromDate>2021-05-10</FromDate>
+            <ToDate>2021-05-29</ToDate>
+            <Price>10.49</Price>
+            <DiscountRate>0.4</DiscountRate>
+            <InStockCount>1000</InStockCount>
+            <Store>
+                <Location>
+                    <Latitude>50</Latitude>
+                    <Longitude>50</Longitude>
+                </Location>
+                <OpeningHours>Mon-Sun: 7:00-20:00</OpeningHours>
+                <Rating>2</Rating>
+                <Rating>3</Rating>
+                <Vendor>
+                    <Name>Tesco</Name>
+                    <Dic>321321412</Dic>
+                    <Rating>4</Rating>
+                </Vendor>
+            </Store>
+        </Offer>
+        <Producer>
+            <Name>Pilsner Urquel</Name>
+            <Dic>112321</Dic>
+            <Rating>5</Rating>
+            <ProductionCapacity>50000</ProductionCapacity>
         </Producer>
     </Product>
 </ProductList>
