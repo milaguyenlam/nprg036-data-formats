@@ -51,8 +51,7 @@
                 },
                 "Vendor": {
                     "Name": {
-                        "type": "string",
-                        "enum": ["Makro", "Tesco"]
+                        "type": "string"
                     },
                     "Leicode": "string",
                     "Rating": {
@@ -67,8 +66,7 @@
         },
         "Manufacturer": {
             "name": {
-                "type": "string",
-                "enum": ["Pilsner", "Agrofert"]
+                "type": "string"
             },
             "Leicode": "string",
             "Rating": {
