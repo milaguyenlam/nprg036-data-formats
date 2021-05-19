@@ -48,7 +48,7 @@
                 "Height": 100,
                 "Width": 100,
                 "URI": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg"
-            },
+            }
         },
 
         {
@@ -96,7 +96,7 @@
                 "Height": 100,
                 "Width": 100,
                 "URI": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Club_Beer.jpg/640px-Club_Beer.jpg"
-            },
+            }
         }
     ]
     
