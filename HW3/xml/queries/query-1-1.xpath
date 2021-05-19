@@ -1,0 +1,2 @@
+(: Get root categories - one that does not have a parent :)
+//Category[not(ParentCategory)] | //ParentCategory[not(ParentCategory)]

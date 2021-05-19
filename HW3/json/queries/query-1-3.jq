@@ -1,1 +1,1 @@
-.Product[] | {"On sale": .Description, At: .Offer.Price}
+.Offer[] | {"On sale": .Product.Description, At: .Price}

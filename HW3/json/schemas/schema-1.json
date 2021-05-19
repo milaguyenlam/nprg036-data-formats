@@ -1,17 +1,9 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-	"Product": {
-        "Name": "string",
-        "Description": "string",
-        "Rating": {
-            "type": "array",
-            "items": {
-                "type": "number",
-                "minimum": 1,
-                "maximum": 5
-            }
-        },
-        "Offer": {
+
+    "Offer": {
+        "type": "array",
+        "items":{
             "StartDate": {
                 "type":"string",
                 "format":"date"
@@ -30,12 +22,11 @@
                 "maximum": 100
             },
             "Availability": {
-                "type": "string",
-                "enum": ["In stock", "Out of stock"]
+                "type": "string"
             },
             "Description": "string",
-            "Store": {
-                
+            "OfferedBy": {
+
                 "Location": {
                     "Langtitude": "number",
                     "Longitude": "number"
@@ -49,10 +40,9 @@
                         "maximum": 5
                     }
                 },
-                "Vendor": {
+                "BranchOf": {
                     "Name": {
-                        "type": "string",
-                        "enum": ["Makro", "Tesco"]
+                        "type": "string"
                     },
                     "Leicode": "string",
                     "Rating": {
@@ -61,38 +51,46 @@
                             "maximum": 5
                     }
                 }
-            }
-            
-                
-        },
-        "Manufacturer": {
-            "name": {
-                "type": "string",
-                "enum": ["Pilsner", "Agrofert"]
             },
-            "Leicode": "string",
-            "Rating": {
-                "type": "array",
-                "items": {
-                    "type": "number",
-                    "minimum": 1,
-                    "maximum": 5
+            "ItemOffered": {
+                "Name": "string",
+                "Description": "string",
+                "Rating": {
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                    }
                 }
             },
-            "ProductionCapacity": "integer"
-        },
-        "Category": {
-            "InternalName": "string",
-            "AlternateName": "string"
-        },
-        "Picture": {
-            "Height": "integer",
-            "Width": "integer",
-            "URI": {
-                "type": "string",
-                "format": "uri"  
+            "MadeBy": {
+                "name": {
+                    "type": "string"
+                },
+                "Leicode": "string",
+                "Rating": {
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                    }
+                },
+                "ProductionCapacity": "integer"
+            },
+            "Category": {
+                "InternalName": "string",
+                "AlternateName": "string"
+            },
+            "Picture": {
+                "Height": "integer",
+                "Width": "integer",
+                "URI": {
+                    "type": "string",
+                    "format": "uri"  
+                }
             }
         }
-	}
+    }
 }
-

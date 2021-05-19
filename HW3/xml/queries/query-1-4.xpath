@@ -1,0 +1,2 @@
+(: Find all stores of a certain vendor with average rating greater than 3 :)
+//Store[./Vendor/Name="Tesco" and avg(Rating) > 3]
