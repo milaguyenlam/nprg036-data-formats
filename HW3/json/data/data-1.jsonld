@@ -33,7 +33,7 @@
                     5
                 ]
             },
-            "Manufacturer": {
+            "Producer": {
                 "Name": "Nase Farma",
                 "Leicode": 1111,
                 "Rating": [5],
@@ -81,7 +81,7 @@
                     5
                 ],
             },
-            "Manufacturer": {
+            "Producer": {
                 "Name": "Pilsner Urquel",
                 "Leicode": 112321,
                 "Rating": [5],
