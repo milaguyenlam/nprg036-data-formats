@@ -77,27 +77,17 @@ ex:productionCapacity rdf:type xsd:integer .
     a schema:ImageObject ;
     schema:height 100 ;
     schema:width 100 ;
-    schema:bitrate "0100101010" .
+    schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg" .
 <#milk-image>
     a schema:ImageObject ;
     schema:height 100 ;
     schema:width 100 ;
-    schema:bitrate "0101010110" .
+    schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Milk_glass.jpg/640px-Milk_glass.jpg" .
 <#beer-image>
     a schema:ImageObject ;
     schema:height 100 ;
     schema:width 100 ;
-    schema:bitrate "0101010101" .
-<#makro-image>
-    a schema:ImageObject ;
-    schema:height 50 ;
-    schema:width 50 ;
-    schema:bitrate "0101010101" .
-<#tesco-image>
-    a schema:ImageObject ;
-    schema:height 50 ;
-    schema:width 50 ;
-    schema:bitrate "0101010101" .
+    schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Club_Beer.jpg/640px-Club_Beer.jpg" .
 
 #categories
 <#seasonal>
@@ -136,14 +126,12 @@ ex:productionCapacity rdf:type xsd:integer .
     a frapo:Vendor ;
     schema:name "Makro"@en ;
     schema:leiCode "111111111111" ;
-    schema:rating 4 ;
-    schema:thumbnail <#makro-image>.
+    schema:rating 4 .
 
 <#tesco>
     a frapo:Vendor ;
     schema:name "Tesco"@en ;
-    schema:leiCode "111111111112" ;
-    schema:thumbnail <#tesco-image>.
+    schema:leiCode "111111111112" .
 
 <#pilsner>
     a frapo:Manufacturer ;
