@@ -1,1 +1,1 @@
-del(.Product[0].Rating[-2:])
+del(.Offer[0].Product.Rating[-2:])
