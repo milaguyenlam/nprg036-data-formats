@@ -21,7 +21,6 @@
         },
         "Availability": {
             "type": "string",
-            "enum": ["In stock", "Out of stock"]
         },
         "Description": "string",
         "Store": {
@@ -42,7 +41,6 @@
             "Vendor": {
                 "Name": {
                     "type": "string",
-                    "enum": ["Makro", "Tesco"]
                 },
                 "Leicode": "string",
                 "Rating": {
@@ -67,7 +65,6 @@
         "Producer": {
             "name": {
                 "type": "string",
-                "enum": ["Pilsner", "Agrofert"]
             },
             "Leicode": "string",
             "Rating": {
