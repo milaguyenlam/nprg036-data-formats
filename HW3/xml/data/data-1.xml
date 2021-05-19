@@ -6,22 +6,22 @@
         <Price>50.49</Price>
         <DiscountRate>0.2</DiscountRate>
         <Availability lang="en">In Stock</Availability>
-        <Description>Customers can buy up to 5kilos at once</Description>
+        <Description lang="en">Customers can buy up to 5kilos at once</Description>
         <Store>
-            <Address></Address>
-            <OpeningHours>Mon-Sun: 7:00-20:00</OpeningHours>
+            <Address>Sokolovská 968/189, 190 00 Praha 9-Libeň</Address>
+            <OpeningHours lang="en">Mon-Sun: 7:00-20:00</OpeningHours>
             <Rating>2</Rating>
             <Rating>3</Rating>
             <Vendor>
-                <Name>Tesco</Name>
+                <Name lang="en">Tesco</Name>
                 <Dic>321321412</Dic>
                 <Rating>4</Rating>
             </Vendor>
         </Store>
         <Product>
-            <Name>Apple</Name>
+            <Name lang="en">Apple</Name>
             <Ean>123123123123</Ean>
-            <Description>Sweet and tasty apple</Description>
+            <Description lang="en">Sweet and tasty apple</Description>
             <Rating>2</Rating>
             <Rating>1</Rating>
             <Picture>
@@ -43,7 +43,59 @@
                 <SynonymName lang="cs">Sezonni</SynonymName>
             </Category>
             <Producer>
-                <Name>Agrofert</Name>
+                <Name lang="en">Agrofert</Name>
+                <Dic>333333333333</Dic>
+                <Rating>1</Rating>
+                <Rating>1</Rating>
+                <Rating>2</Rating>
+                <ProductionCapacity>10000000</ProductionCapacity>
+            </Producer>
+        </Product>
+    </Offer>
+    <Offer>
+        <FromDate>2021-05-20</FromDate>
+        <ToDate>2021-05-30</ToDate>
+        <Price>45.49</Price>
+        <DiscountRate>0.3</DiscountRate>
+        <Availability lang="en">In Stock</Availability>
+        <Description lang="en">Customers can buy up to 10kilos at once</Description>
+        <Store>
+            <Address>Písečná 5376, 430 00 Chomutov</Address>
+            <OpeningHours>Mon-Sun: 8:00-19:00</OpeningHours>
+            <Rating>4</Rating>
+            <Rating>5</Rating>
+            <Vendor>
+                <Name>Tesco</Name>
+                <Dic>321321412</Dic>
+                <Rating>4</Rating>
+            </Vendor>
+        </Store>
+        <Product>
+            <Name lang="en">Apple</Name>
+            <Ean>123123123123</Ean>
+            <Description lang="en">Sweet and tasty apple</Description>
+            <Rating>2</Rating>
+            <Rating>1</Rating>
+            <Picture>
+                <Height>100</Height>
+                <Width>100</Width>
+                <Uri>https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg</Uri>
+            </Picture>
+            <Category>
+                <InternalName lang="en">Fruit</InternalName>
+                <SynonymName lang="cs">Ovoce</SynonymName>
+                <ParentCategory>
+                    <InternalName lang="en">Fresh</InternalName>
+                    <SynonymName lang="cs">Cerstve</SynonymName>
+                    <SynonymName lang="vi">Tuoi</SynonymName>
+                </ParentCategory>
+            </Category>
+            <Category>
+                <InternalName lang="en">Seasonal</InternalName>
+                <SynonymName lang="cs">Sezonni</SynonymName>
+            </Category>
+            <Producer>
+                <Name lang="en">Agrofert</Name>
                 <Dic>333333333333</Dic>
                 <Rating>1</Rating>
                 <Rating>1</Rating>
@@ -55,15 +107,15 @@
     <Offer>
         <FromDate>2021-05-21</FromDate>
         <ToDate>2021-05-30</ToDate>
-        <Price>50.49</Price>
-        <DiscountRate>0.2</DiscountRate>
+        <Price>21.00</Price>
+        <DiscountRate>0.1</DiscountRate>
         <Availability lang="en">In Stock</Availability>
         <Description>Maximum of 10kg's can be bought at once</Description>
         <Store>
-            <Address></Address>
-            <OpeningHours>Mon-Sun: 7:00-20:00</OpeningHours>
-            <Rating>2</Rating>
-            <Rating>3</Rating>
+            <Address>Písečná 5376, 430 00 Chomutov</Address>
+            <OpeningHours>Mon-Sun: 8:00-19:00</OpeningHours>
+            <Rating>4</Rating>
+            <Rating>5</Rating>
             <Vendor>
                 <Name>Tesco</Name>
                 <Dic>321321412</Dic>
@@ -71,9 +123,9 @@
             </Vendor>
         </Store>
         <Product>
-            <Name>Milk</Name>
+            <Name lang="en">Milk</Name>
             <Ean>124124124124</Ean>
-            <Description>Fresh milk from an organic farm</Description>
+            <Description lang="en">Fresh milk from an organic farm</Description>
             <Rating>5</Rating>
             <Rating>2</Rating>
             <Rating>4</Rating>
@@ -92,7 +144,7 @@
                 </ParentCategory>
             </Category>
             <Producer>
-                <Name>Agrofert</Name>
+                <Name lang="en">Agrofert</Name>
                 <Dic>333333333333</Dic>
                 <Rating>1</Rating>
                 <Rating>1</Rating>
@@ -104,25 +156,25 @@
     <Offer>
         <FromDate>2021-05-19</FromDate>
         <ToDate>2021-05-25</ToDate>
-        <Price>50.49</Price>
-        <DiscountRate>0.2</DiscountRate>
+        <Price>20.99</Price>
+        <DiscountRate>0.05</DiscountRate>
         <Availability lang="en">In Stock</Availability>
-        <Description>Customers can buy up to 10 packs at once</Description>
+        <Description lang="en">Customers can buy up to 10 packs at once</Description>
         <Store>
-            <Address></Address>
-            <OpeningHours>Mon-Sun: 7:00-20:00</OpeningHours>
-            <Rating>2</Rating>
+            <Address>Obchodní zóna 260, 431 11 Otvice</Address>
+            <OpeningHours lang="en">Mon-Sun: 7:00-22:00</OpeningHours>
+            <Rating>5</Rating>
             <Rating>3</Rating>
             <Vendor>
-                <Name>Tesco</Name>
-                <Dic>321321412</Dic>
-                <Rating>4</Rating>
+                <Name>Kaufland</Name>
+                <Dic>321333332</Dic>
+                <Rating>3</Rating>
             </Vendor>
         </Store>
         <Product>
-            <Name>Pilsner beer</Name>
+            <Name lang="en">Pilsner beer</Name>
             <Ean>321321321321</Ean>
-            <Description>Authentic Czech beer</Description>
+            <Description lang="en">Authentic Czech beer</Description>
             <Rating>5</Rating>
             <Picture>
                 <Height>100</Height>
