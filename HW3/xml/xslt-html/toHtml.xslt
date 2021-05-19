@@ -1,12 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet version="2.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:fn="http://www.w3.org/2005/xpath-functions">
-	<xsl:output method="html" encoding="UTF-8" indent="yes"/>
-	<xsl:template match="ProductList">
+	<xsl:output name="index" method="html" encoding="UTF-8" indent="yes"/>
+	<xsl:output name="offer" method="html" encoding="UTF-8" indent="yes"/>
+	<xsl:template match="Offers">
+		<xsl:result-document href="index.html" format="index">
+			<html>
+				<head>
+					<title>
+                    Best good picker
+                </title>
+				</head>
+				<body>
+					<h1>
+                    Select offer
+                </h1>
+					<xsl:for-each select="Offer">
+						<p>
+							<a href="Offer{position()}.html">
+									<xsl:value-of select="Product/Name"/> at <xsl:value-of select="Store/Vendor/Name"/>
+							</a>
+						</p>
+						<xsl:result-document href="Offer{position()}.html" format="offer">
+							<xsl:apply-templates/>
+						</xsl:result-document>
+					</xsl:for-each>
+				</body>
+			</html>
+		</xsl:result-document>
+	</xsl:template>
+	<xsl:template match="text()"/>
+	<xsl:template match="Product">
 		<html>
 			<head>
 				<title>
-                    Best good picker
-                </title>
+					<xsl:value-of select="../Store/Vendor/Name"/> | <xsl:value-of select="../Product/Name"/>
+				</title>
 				<!-- For barecode printing -->
 				<script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.0/dist/JsBarcode.all.min.js"/>
 				<style>
@@ -24,25 +52,15 @@ div {
 			</head>
 			<body>
 				<h1>
-                    Best good picker!
+					<xsl:value-of select="../Product/Name"/> at <xsl:value-of select="../Store/Vendor/Name"/> offer
                 </h1>
 				<div>
-					<xsl:apply-templates/>
-				</div>
-			</body>
-		</html>
-	</xsl:template>
-	<xsl:template match="Product">
-		<span>
+					<span>
 			<h2>
 				<xsl:value-of select="Name"/>
-				<xsl:choose>
-					<xsl:when test="Offer">
-						<p class="sale">SALE <xsl:value-of select="Offer/DiscountRate * 100"/> %</p>
-					</xsl:when>
-				</xsl:choose>
+				<p class="sale">SALE <xsl:value-of select="../DiscountRate * 100"/> %</p>
 			</h2>
-			<p> &gt; <xsl:value-of select="Category/InternalName"/> &gt;<xsl:value-of select="Category/ParentCategory/InternalName"/>
+			<p> &gt; <xsl:value-of select="Category/InternalName"/> &gt; <xsl:value-of select="Category/ParentCategory/InternalName"/>
 			</p>
 			<img src="{Picture/Uri}" alt="{Name}" width="{Picture/Width}" height="{Picture/Height}"/>
 			<p>
@@ -98,5 +116,8 @@ div {
 			JsBarcode("#barcode_<xsl:value-of select="Ean"/>", "<xsl:value-of select="Ean"/>");
         </script>
 		</span>
+				</div>
+			</body>
+		</html>
 	</xsl:template>
 </xsl:stylesheet>
