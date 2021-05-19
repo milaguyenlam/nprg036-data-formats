@@ -1,5 +1,6 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
+
     "Offer": {
         "StartDate": {
             "type":"string",
@@ -40,7 +41,8 @@
             },
             "Vendor": {
                 "Name": {
-                    "type": "string"
+                    "type": "string",
+                    "enum": ["Makro", "Tesco"]
                 },
                 "Leicode": "string",
                 "Rating": {
@@ -50,7 +52,6 @@
                 }
             }
         },
-        
         "Product": {
             "Name": "string",
             "Description": "string",
@@ -61,37 +62,35 @@
                     "minimum": 1,
                     "maximum": 5
                 }
+            }
+        },
+        "Manufacturer": {
+            "name": {
+                "type": "string",
+                "enum": ["Pilsner", "Agrofert"]
             },
-            
-            "Producer": {
-                "name": {
-                    "type": "string"
-                },
-                "Leicode": "string",
-                "Rating": {
-                    "type": "array",
-                    "items": {
-                        "type": "number",
-                        "minimum": 1,
-                        "maximum": 5
-                    }
-                },
-                "ProductionCapacity": "integer"
-            },
-            "Category": {
-                "InternalName": "string",
-                "AlternateName": "string"
-            },
-            "Picture": {
-                "Height": "integer",
-                "Width": "integer",
-                "URI": {
-                    "type": "string",
-                    "format": "uri"  
+            "Leicode": "string",
+            "Rating": {
+                "type": "array",
+                "items": {
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 5
                 }
+            },
+            "ProductionCapacity": "integer"
+        },
+        "Category": {
+            "InternalName": "string",
+            "AlternateName": "string"
+        },
+        "Picture": {
+            "Height": "integer",
+            "Width": "integer",
+            "URI": {
+                "type": "string",
+                "format": "uri"  
             }
         }
-            
     }
 }
-
