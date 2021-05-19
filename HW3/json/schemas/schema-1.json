@@ -1,78 +1,78 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
 	"Product": {
-        "Name": "string",
-        "Description": "string",
-        "Rating": {
-            "type": "array",
-            "items": {
-                "type": "number",
-                "minimum": 1,
-                "maximum": 5
-            }
-        },
-        "Offer": {
-            "StartDate": {
-                "type":"string",
-                "format":"date"
-            },
-            "EndDate": {
-                "type":"string",
-                "format":"date"
-            },
-            "Price": {
-                "type": "number",
-                "minimum": 0    
-            },
-            "Discount": {
-                "type": "number",
-                "minimum": 0,
-                "maximum": 100
-            },
-            "Availability": {
-                "type": "string",
-                "enum": ["In stock", "Out of stock"]
-            },
-            "Description": "string",
-            "Vendor": {
-                "Name": {
-                    "type": "string",
-                    "enum": ["Makro", "Tesco"]
-                },
-                "Leicode": "string",
-                "Rating": {
-                    "type": "number",
-                    "minimum": 1,
-                    "maximum": 5
-                },
-                "Store": {
-                    "Name":"string",
-                    "Address":"string",
-                    "OpeningHours":"string",
-                    "Rating": {
-                        "type": "array",
-                        "items": {
-                            "type": "number",
-                            "minimum": 1,
-                            "maximum": 5
-                        }
-                    }
-                }
-            }
+       		"Name": "string",
+        	"Description": "string",
+        	"Rating": {
+            		"type": "array",
+            		"items": {
+                		"type": "number",
+                		"minimum": 1,
+                		"maximum": 5
+            		}
+        	},
+       		"Offer": {
+            		"StartDate": {
+                		"type":"string",
+                		"format":"date"
+            		},
+		    	"EndDate": {
+                		"type":"string",
+                		"format":"date"
+            		},
+            		"Price": {
+                		"type": "number",
+                		"minimum": 0    
+            		},
+            		"Discount": {
+                		"type": "number",
+                		"minimum": 0,
+                		"maximum": 100
+            		},
+            		"Availability": {
+                		"type": "string",
+                		"enum": ["In stock", "Out of stock"]
+            		},
+            		"Description": "string",
+            		"Vendor": {
+                		"Name": {
+                    			"type": "string",
+                    			"enum": ["Makro", "Tesco"]
+                		},
+                		"Leicode": "string",
+                		"Rating": {
+                    			"type": "number",
+                    			"minimum": 1,
+                    			"maximum": 5
+                		},
+                		"Store": {
+                    			"Name":"string",
+                    			"Address":"string",
+                    			"OpeningHours":"string",
+                    			"Rating": {
+                        			"type": "array",
+                        			"items": {
+                            				"type": "number",
+                            				"minimum": 1,
+                            				"maximum": 5
+                        			}
+					}
+                		}
+            		}
                 
-        },
-        "Manufacturer": {
-            "type": "string",
-            "enum": ["Pilsner", "Agrofert"]
-        },
-        "Category": {
-            "InternalName": "string",
-            "AlternateName": "string"
-        },
-        "Picture": {
-            "Height": "integer",
-            "Width": "integer",
-            "Bitrate": "string"  
-        }
+        	},
+        	"Manufacturer": {
+            		"type": "string",
+			"enum": ["Pilsner", "Agrofert"]
+        	},
+        	"Category": {
+            		"InternalName": "string",
+            		"AlternateName": "string"
+        	},
+        	"Picture": {
+            		"Height": "integer",
+            		"Width": "integer",
+            		"Bitrate": "string"  
+        	}
 	}
 }
