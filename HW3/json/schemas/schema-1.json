@@ -64,7 +64,7 @@
                 }
             }
         },
-        "Manufacturer": {
+        "Producer": {
             "name": {
                 "type": "string",
                 "enum": ["Pilsner", "Agrofert"]
