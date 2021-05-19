@@ -1,40 +1,39 @@
 {
-
-    "Product": 
+    "Offer": 
     [
         {
-            "Name": "Apple",
-            "Description": "Fresh and tasty...",
-            "Rating": [
-                4,
-                5,
-                5
-            ],
-            "Offer": {
-                "StartDate": "2021-05-20",
-                "EndDate": "2021-05-30",
-                "Price": 50.49,
-                "Discount": 0.2,
-                "Availability": "In stock",
-                "Description": "Maximum of 10kg's can be bought at once",
-                "Store": {
-                    "Location": {
-                        "Latitude": 50,
-                        "Longitude": 50
-                    },
-                    "OpeningHours": "Mon-Sun: 7:00-20:00",
-                    "Rating": [
-                        2,
-                        3
-                    ],
-                    "Vendor": {
-                        "Name": "Tesco",
-                        "Leicode": "321321412",
-                        "Rating": 4
-                    }   
+            "StartDate": "2021-05-20",
+            "EndDate": "2021-05-30",
+            "Price": 50.49,
+            "Discount": 0.2,
+            "Availability": "In stock",
+            "Description": "Maximum of 10kg's can be bought at once",
+            "Store": {
+                "Location": {
+                    "Latitude": 50,
+                    "Longitude": 50
+                },
+                "OpeningHours": "Mon-Sun: 7:00-20:00",
+                "Rating": [
+                    2,
+                    3
+                ],
+                "Vendor": {
+                    "Name": "Tesco",
+                    "Leicode": "321321412",
+                    "Rating": 4
                 }   
             },
-            "Manufacturer": {
+            "Product":{
+                "Name": "Apple",
+                "Description": "Fresh and tasty...",
+                "Rating": [
+                    4,
+                    5,
+                    5
+                ]
+            },
+            "Producer": {
                 "Name": "Nase Farma",
                 "Leicode": 1111,
                 "Rating": [5],
@@ -52,37 +51,37 @@
         },
 
         {
-            "Name": "Pilner Beer",
-            "Description": "Authentic Czech Beer",
-            "Rating": [
-                5,
-                5,
-                5
-            ],
-            "Offer": {
-                "StartDate": "2021-05-10",
-                "EndDate": "2021-05-29",
-                "Price": 10.49,
-                "Discount": 0.4,
-                "Availability": 1000,
-                "Store": {
-                    "Location": {
-                        "Latitude": 50,
-                        "Longitude": 50
-                    },
-                    "OpeningHours": "Mon-Sun: 7:00-20:00",
-                    "Rating": [
-                        2,
-                        3
-                    ],
-                    "Vendor": {
-                        "Name": "Tesco",
-                        "Leicode": "321321412",
-                        "Rating": 4
-                    }
+            "StartDate": "2021-05-10",
+            "EndDate": "2021-05-29",
+            "Price": 10.49,
+            "Discount": 0.4,
+            "Availability": 1000,
+            "Store": {
+                "Location": {
+                    "Latitude": 50,
+                    "Longitude": 50
+                },
+                "OpeningHours": "Mon-Sun: 7:00-20:00",
+                "Rating": [
+                    2,
+                    3
+                ],
+                "Vendor": {
+                    "Name": "Tesco",
+                    "Leicode": "321321412",
+                    "Rating": 4
                 }
             },
-            "Manufacturer": {
+            "Product": {
+                "Name": "Pilner Beer",
+                "Description": "Authentic Czech Beer",
+                "Rating": [
+                    5,
+                    5,
+                    5
+                ],
+            },
+            "Producer": {
                 "Name": "Pilsner Urquel",
                 "Leicode": 112321,
                 "Rating": [5],
