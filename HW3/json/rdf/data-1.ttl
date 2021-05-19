@@ -1,0 +1,80 @@
+@prefix schema: <http://schema.org/> .
+@prefix ns0: <http://example.org/ex/> .
+@prefix ns1: <frapo:> .
+
+[] schema:Offer [
+    schema:availability "In stock" ;
+    schema:description "Maximum of 10kg's can be bought at once" ;
+    schema:discount 2.000000e-1 ;
+    schema:endDate "2021-05-30" ;
+    schema:itemOffered [
+      schema:ImageObject [ a schema:ImageObject ] ;
+      schema:ProductGroup [
+        schema:alternateName "Ovoce" ;
+        a schema:ProductGroup
+      ] ;
+      schema:description "Fresh and tasty..." ;
+      schema:manufacturer [
+        ns0:productionCapacity 10000 ;
+        schema:leiCode 1111 ;
+        schema:name "Nase Farma" ;
+        schema:rating 5 ;
+        a <frapo:Manufacturer>
+      ] ;
+      schema:name "Apple" ;
+      schema:rating 4, 5 ;
+      a schema:Product
+    ] ;
+    schema:offeredBy [
+      schema:address "Vysocanska 117, Prague 19000" ;
+      schema:branchOf [
+        schema:leiCode "321321412" ;
+        schema:name "Tesco" ;
+        schema:rating 4 ;
+        a <frapo:Vendor>
+      ] ;
+      schema:openingHours "Mon-Sun: 7:00-20:00" ;
+      schema:rating 2, 3 ;
+      a schema:Store
+    ] ;
+    schema:price 5.049000e+1 ;
+    schema:startDate "2021-05-20" ;
+    a schema:Offer
+  ], [
+    schema:availability 1000 ;
+    schema:discount 4.000000e-1 ;
+    schema:endDate "2021-05-29" ;
+    schema:itemOffered [
+      ns1:Manufacturer [
+        ns0:productionCapacity 50000 ;
+        schema:leiCode 112321 ;
+        schema:name "Pilsner Urquel" ;
+        schema:rating 5 ;
+        a ns1:Manufacturer
+      ] ;
+      schema:ImageObject [ a schema:ImageObject ] ;
+      schema:ProductGroup [
+        schema:alternateName "Alkohol" ;
+        a schema:ProductGroup
+      ] ;
+      schema:description "Authentic Czech Beer" ;
+      schema:name "Pilner Beer" ;
+      schema:rating 5 ;
+      a schema:Product
+    ] ;
+    schema:offeredBy [
+      ns1:Vendor [
+        schema:leiCode "321321412" ;
+        schema:name "Tesco" ;
+        schema:rating 4 ;
+        a ns1:Vendor
+      ] ;
+      schema:address "Vysocanska 117, Prague 19000" ;
+      schema:openingHours "Mon-Sun: 7:00-20:00" ;
+      schema:rating 2, 3 ;
+      a schema:Store
+    ] ;
+    schema:price 1.049000e+1 ;
+    schema:startDate "2021-05-10" ;
+    a schema:Offer
+  ] .
