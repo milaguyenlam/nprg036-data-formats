@@ -17,18 +17,17 @@
 					<xsl:for-each select="Offer">
 						<p>
 							<a href="Offer{position()}.html">
-									<xsl:value-of select="Product/Name"/> at <xsl:value-of select="Store/Vendor/Name"/>
+									<xsl:value-of select="Product/Name"/> at <xsl:value-of select="Store/Vendor/Name"/> - <xsl:value-of select="Store/Address"/>
 							</a>
 						</p>
 						<xsl:result-document href="Offer{position()}.html" format="offer">
-							<xsl:apply-templates/>
+							<xsl:apply-templates select="Product"/>
 						</xsl:result-document>
 					</xsl:for-each>
 				</body>
 			</html>
 		</xsl:result-document>
 	</xsl:template>
-	<xsl:template match="text()"/>
 	<xsl:template match="Product">
 		<html>
 			<head>
@@ -54,6 +53,7 @@ div {
 				<h1>
 					<xsl:value-of select="../Product/Name"/> at <xsl:value-of select="../Store/Vendor/Name"/> offer
                 </h1>
+                <p><xsl:value-of select="../Store/Address"/></p>
 				<div>
 					<span>
 			<h2>
