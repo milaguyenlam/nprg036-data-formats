@@ -2,6 +2,7 @@
     "Offer": 
     [
         {
+            "type": "offer",
             "StartDate": "2021-05-20",
             "EndDate": "2021-05-30",
             "Price": 50.49,
@@ -9,6 +10,7 @@
             "Availability": "In stock",
             "Description": "Maximum of 10kg's can be bought at once",
             "Store": {
+                "type": "store"        
                 "Location": {
                     "Latitude": 50,
                     "Longitude": 50
@@ -22,9 +24,11 @@
                     "Name": "Tesco",
                     "Leicode": "321321412",
                     "Rating": 4
-                }   
+                    "type": "vendor"
+                },
             },
             "Product":{
+                "type": "product",
                 "Name": "Apple",
                 "Description": "Fresh and tasty...",
                 "Rating": [
@@ -34,16 +38,19 @@
                 ]
             },
             "Producer": {
+                "type": "producer",
                 "Name": "Nase Farma",
                 "Leicode": 1111,
                 "Rating": [5],
                 "ProductionCapacity": 10000
             },
             "Category": {
+                "type":"category",
                 "InternalName": "Fruit",
                 "AlternateName": "Ovoce"
             },
             "Picture": {
+                "type": "picture",
                 "Height": 100,
                 "Width": 100,
                 "URI": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg"
@@ -51,12 +58,14 @@
         },
 
         {
+            "type":"offer",
             "StartDate": "2021-05-10",
             "EndDate": "2021-05-29",
             "Price": 10.49,
             "Discount": 0.4,
             "Availability": 1000,
             "Store": {
+                "type":"store",
                 "Location": {
                     "Latitude": 50,
                     "Longitude": 50
@@ -69,10 +78,12 @@
                 "Vendor": {
                     "Name": "Tesco",
                     "Leicode": "321321412",
-                    "Rating": 4
+                    "Rating": 4,
+                    "type":"vendor"
                 }
             },
             "Product": {
+                "type":"product",
                 "Name": "Pilner Beer",
                 "Description": "Authentic Czech Beer",
                 "Rating": [
@@ -82,16 +93,19 @@
                 ]
             },
             "Producer": {
+                "type":"producer",
                 "Name": "Pilsner Urquel",
                 "Leicode": 112321,
                 "Rating": [5],
                 "ProductionCapacity": 50000
             },
             "Category": {
+                "type":"category",
                 "InternalName": "Alcohol",
                 "AlternateName": "Alkohol"
             },
             "Picture": {
+                "type":"picture"
                 "Height": 100,
                 "Width": 100,
                 "URI": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Club_Beer.jpg/640px-Club_Beer.jpg"
