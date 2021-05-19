@@ -1,74 +1,35 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
-	"Product": {
-        "Name": "string",
+    "Offer": {
+        "StartDate": {
+            "type":"string",
+            "format":"date"
+        },
+        "EndDate": {
+            "type":"string",
+            "format":"date"
+        },
+        "Price": {
+            "type": "number",
+            "minimum": 0    
+        },
+        "Discount": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+        },
+        "Availability": {
+            "type": "string",
+            "enum": ["In stock", "Out of stock"]
+        },
         "Description": "string",
-        "Rating": {
-            "type": "array",
-            "items": {
-                "type": "number",
-                "minimum": 1,
-                "maximum": 5
-            }
-        },
-        "Offer": {
-            "StartDate": {
-                "type":"string",
-                "format":"date"
-            },
-            "EndDate": {
-                "type":"string",
-                "format":"date"
-            },
-            "Price": {
-                "type": "number",
-                "minimum": 0    
-            },
-            "Discount": {
-                "type": "number",
-                "minimum": 0,
-                "maximum": 100
-            },
-            "Availability": {
-                "type": "string",
-                "enum": ["In stock", "Out of stock"]
-            },
-            "Description": "string",
-            "Store": {
-                
-                "Location": {
-                    "Langtitude": "number",
-                    "Longitude": "number"
-                },
-                "OpeningHours": "string",
-                "Rating": {
-                    "type": "array",
-                    "items": {
-                        "type": "number",
-                        "minimum": 1,
-                        "maximum": 5
-                    }
-                },
-                "Vendor": {
-                    "Name": {
-                        "type": "string"
-                    },
-                    "Leicode": "string",
-                    "Rating": {
-                            "type": "number",
-                            "minimum": 1,
-                            "maximum": 5
-                    }
-                }
-            }
+        "Store": {
             
-                
-        },
-        "Manufacturer": {
-            "name": {
-                "type": "string"
+            "Location": {
+                "Langtitude": "number",
+                "Longitude": "number"
             },
-            "Leicode": "string",
+            "OpeningHours": "string",
             "Rating": {
                 "type": "array",
                 "items": {
@@ -77,20 +38,60 @@
                     "maximum": 5
                 }
             },
-            "ProductionCapacity": "integer"
+            "Vendor": {
+                "Name": {
+                    "type": "string"
+                },
+                "Leicode": "string",
+                "Rating": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                }
+            }
         },
-        "Category": {
-            "InternalName": "string",
-            "AlternateName": "string"
-        },
-        "Picture": {
-            "Height": "integer",
-            "Width": "integer",
-            "URI": {
-                "type": "string",
-                "format": "uri"  
+        
+        "Product": {
+            "Name": "string",
+            "Description": "string",
+            "Rating": {
+                "type": "array",
+                "items": {
+                    "type": "number",
+                    "minimum": 1,
+                    "maximum": 5
+                }
+            },
+            
+            "Producer": {
+                "name": {
+                    "type": "string"
+                },
+                "Leicode": "string",
+                "Rating": {
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                    }
+                },
+                "ProductionCapacity": "integer"
+            },
+            "Category": {
+                "InternalName": "string",
+                "AlternateName": "string"
+            },
+            "Picture": {
+                "Height": "integer",
+                "Width": "integer",
+                "URI": {
+                    "type": "string",
+                    "format": "uri"  
+                }
             }
         }
-	}
+            
+    }
 }
 
