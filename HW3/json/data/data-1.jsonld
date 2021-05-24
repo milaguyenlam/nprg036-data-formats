@@ -1,12 +1,13 @@
 {
     "@context" :{
-        "base": "http://example.org",
+        "@base": "http://example.org/",
         "ex": "http://example.org/ex/",
         "xsd": "http://www.w3.org/2001/XMLSchema#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "schema": "http://schema.org/",
-        "frapo": "http://purl.org/cerif/frapo",
+        "frapo": "http://purl.org/cerif/frapo/",
         "type": "@type",
+        "id": "@id",
         "Offer": "schema:Offer",
         "Product": "schema:Product",
         "Picture": "schema:ImageObject",
@@ -27,15 +28,18 @@
         "SynonymName": "schema:alternateName",
         "ParentCategory": "schema:isPartOf",
         "Dic": "schema:leiCode",
-        "ProductionCapacity": "ex:productionCapacity",
+        "ProductionCapacity": {
+            "@id": "ex:productionCapacity",
+            "@type": "xsd:integer"},
         "Address": "schema:address",
         "OpeningHours": "schema:openingHours",
         "BranchOf": "schema:branchOf",
         "MadeBy": "schema:manufacturer"
     },
-    "Offer":
+    "@graph":
     [
         {
+            "id": "apple-offer-praha",
             "type": "Offer",
             "StartDate": "2021-05-20",
             "EndDate": "2021-05-30",
@@ -44,6 +48,7 @@
             "Availability": "In stock",
             "Description": "Maximum of 10kg's can be bought at once",
             "OfferedBy": {
+                "id": "tesco-praha",
                 "type": "Store",        
                 "Address": "Vysocanska 117, Prague 19000",
                 "OpeningHours": "Mon-Sun: 7:00-20:00",
@@ -52,6 +57,7 @@
                     3
                 ],
                 "BranchOf": {
+                    "id": "tesco",
                     "Name": "Tesco",
                     "Dic": "321321412",
                     "Rating": 4,
@@ -59,6 +65,7 @@
                 }
             },
             "ItemOffered":{
+                "id": "apple",
                 "type": "Product",
                 "Name": "Apple",
                 "Description": "Fresh and tasty...",
@@ -68,6 +75,7 @@
                     5
                 ],
                 "MadeBy": {
+                    "id": "farma",
                     "type": "Producer",
                     "Name": "Nase Farma",
                     "Dic": 1111,
@@ -75,11 +83,13 @@
                     "ProductionCapacity": 10000
                 },
                 "Category": {
+                    "id": "fruit",
                     "type":"Category",
                     "InternalName": "Fruit",
                     "SynonymName": "Ovoce"
                 },
                 "Picture": {
+                    "id": "apple-image",
                     "type": "Picture",
                     "Height": 100,
                     "Width": 100,
@@ -89,6 +99,7 @@
         },
 
         {
+            "id": "beer-offer-praha",
             "type":"Offer",
             "StartDate": "2021-05-10",
             "EndDate": "2021-05-29",
@@ -96,6 +107,7 @@
             "Discount": 0.4,
             "Availability": 1000,
             "OfferedBy": {
+                "id": "tesco-praha",
                 "type":"Store",
                 "Address":"Vysocanska 117, Prague 19000",
                 "OpeningHours": "Mon-Sun: 7:00-20:00",
@@ -104,6 +116,7 @@
                     3
                 ],
                 "Vendor": {
+                    "id": "tesco",
                     "Name": "Tesco",
                     "Dic": "321321412",
                     "Rating": 4,
@@ -111,6 +124,7 @@
                 }
             },
             "ItemOffered": {
+                "id": "beer",
                 "type":"Product",
                 "Name": "Pilner Beer",
                 "Description": "Authentic Czech Beer",
@@ -120,6 +134,7 @@
                     5
                 ],
                 "Producer": {
+                    "id": "pilsner",
                     "type":"Producer",
                     "Name": "Pilsner Urquel",
                     "Dic": 112321,
@@ -127,11 +142,13 @@
                     "ProductionCapacity": 50000
                 },
                 "Category": {
+                    "id": "alcohol",
                     "type":"Category",
                     "InternalName": "Alcohol",
                     "SynonymName": "Alkohol"
                 },
                 "Picture": {
+                    "id": "beer-image",
                     "type":"Picture",
                     "Height": 100,
                     "Width": 100,
