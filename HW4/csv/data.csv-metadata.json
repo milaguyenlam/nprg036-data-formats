@@ -1,0 +1,472 @@
+{
+  "@context": "http://www.w3.org/ns/csvw",
+  "@type": "TableGroup",
+  "@id": "https://example.org/tableGroup",
+  "tables": [
+    {
+      "url": "data-1.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "CategoryId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "Name (en)",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "titles": "Name (cs)",
+            "datatype": "string",
+            "required": false
+          },
+          {
+            "titles": "Name (vi)",
+            "datatype": "string",
+            "required": false
+          },
+          {
+            "titles": "ParentCategory",
+            "datatype": "nonNegativeInteger",
+            "required": false
+          }
+        ],
+        "primaryKey": "CategoryId",
+        "foreignKeys": [
+          {
+            "columnReference": "ParentCategory",
+            "reference": {
+              "resource": "data-1.csv",
+              "columnReference": "CategoryId"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "data-2.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "PictureId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "Height",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "Width",
+            "datatype": "nonNegativeInteger",
+            "required": false
+          },
+          {
+            "titles": "Url",
+            "datatype": "string",
+            "required": true
+          }
+        ],
+        "primaryKey": "PictureId"
+      }
+    },
+    {
+      "url": "data-3.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "RatingId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "Rating",
+            "datatype": {
+              "base": "nonNegativeInteger",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "required": true
+          },
+          {
+            "titles": "ProductId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          }
+        ],
+        "primaryKey": "RatingId",
+        "foreignKeys": [
+          {
+            "columnReference": "ProductId",
+            "reference": {
+              "resource": "data-7.csv",
+              "columnReference": "ProductId"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "data-4.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "RatingId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "Rating",
+            "datatype": {
+              "base": "nonNegativeInteger",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "required": true
+          },
+          {
+            "titles": "VendorId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          }
+        ],
+        "primaryKey": "RatingId",
+        "foreignKeys": [
+          {
+            "columnReference": "VendorId",
+            "reference": {
+              "resource": "data-9.csv",
+              "columnReference": "VendorId"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "data-5.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "RatingId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "Rating",
+            "datatype": {
+              "base": "nonNegativeInteger",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "required": true
+          },
+          {
+            "titles": "StoreId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          }
+        ],
+        "primaryKey": "RatingId",
+        "foreignKeys": [
+          {
+            "columnReference": "StoreId",
+            "reference": {
+              "resource": "data-11.csv",
+              "columnReference": "StoreId"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "data-6.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "RatingId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "Rating",
+            "datatype": {
+              "base": "nonNegativeInteger",
+              "minimum": 1,
+              "maximum": 5
+            },
+            "required": true
+          },
+          {
+            "titles": "ProducerId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          }
+        ],
+        "primaryKey": "RatingId",
+        "foreignKeys": [
+          {
+            "columnReference": "ProducerId",
+            "reference": {
+              "resource": "data-8.csv",
+              "columnReference": "ProducerId"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "data-7.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "ProductId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "Name",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "titles": "Ean",
+            "datatype": "string",
+            "required": false
+          },
+          {
+            "titles": "Description",
+            "datatype": "string",
+            "required": false
+          },
+          {
+            "titles": "ProducerId",
+            "datatype": "nonNegativeInteger",
+            "required": false
+          },
+          {
+            "titles": "CategoryId",
+            "datatype": "nonNegativeInteger",
+            "required": false
+          },
+          {
+            "titles": "PictureId",
+            "datatype": "nonNegativeInteger",
+            "required": false
+          }
+        ],
+        "primaryKey": "ProductId",
+        "foreignKeys": [
+          {
+            "columnReference": "ProducerId",
+            "reference": {
+              "resource": "data-8.csv",
+              "columnReference": "ProducerId"
+            }
+          },
+          {
+            "columnReference": "CategoryId",
+            "reference": {
+              "resource": "data-1.csv",
+              "columnReference": "CategoryId"
+            }
+          },
+          {
+            "columnReference": "PictureId",
+            "reference": {
+              "resource": "data-2.csv",
+              "columnReference": "PictureId"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "data-8.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "ProducerId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "Name",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "titles": "Dic",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "ProductionCapacity",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "PictureId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          }
+        ],
+        "primaryKey": "ProducerId",
+        "foreignKeys": [
+          {
+            "columnReference": "PictureId",
+            "reference": {
+              "resource": "data-2.csv",
+              "columnReference": "PictureId"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "data-9.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "VendorId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "Name",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "titles": "Dic",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "PictureId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          }
+        ],
+        "primaryKey": "VendorId",
+        "foreignKeys": [
+          {
+            "columnReference": "PictureId",
+            "reference": {
+              "resource": "data-2.csv",
+              "columnReference": "PictureId"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "data-10.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "ActiveOfferId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "ProductId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "StoreId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "FromDate",
+            "datatype": "date",
+            "required": true
+          },
+          {
+            "titles": "ToDate",
+            "datatype": "date",
+            "required": true
+          },
+          {
+            "titles": "Price",
+            "datatype": "float",
+            "required": true
+          },
+          {
+            "titles": "DiscountRate",
+            "datatype": "float",
+            "required": true
+          },
+          {
+            "titles": "InStockCount",
+            "datatype": "nonNegativeInteger",
+            "required": false
+          },
+          {
+            "titles": "Description",
+            "datatype": "string",
+            "required": false
+          }
+        ],
+        "primaryKey": "ActiveOfferId",
+        "foreignKeys": [
+          {
+            "columnReference": "ProductId",
+            "reference": {
+              "resource": "data-7.csv",
+              "columnReference": "ProductId"
+            }
+          },
+          {
+            "columnReference": "StoreId",
+            "reference": {
+              "resource": "data-11.csv",
+              "columnReference": "StoreId"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "data-11.csv",
+      "tableSchema": {
+        "columns": [
+          {
+            "titles": "StoreId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "VendorId",
+            "datatype": "nonNegativeInteger",
+            "required": true
+          },
+          {
+            "titles": "Address",
+            "datatype": "string",
+            "required": true
+          },
+          {
+            "titles": "OpeningHours",
+            "datatype": "string",
+            "required": false
+          }
+        ],
+        "primaryKey": "StoreId",
+        "foreignKeys": [
+          {
+            "columnReference": "VendorId",
+            "reference": {
+              "resource": "data-9.csv",
+              "columnReference": "VendorId"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
