@@ -6,31 +6,47 @@
     {
       "url": "data-1.csv",
       "tableSchema": {
+        "aboutUrl": "http://example.com/category/{id}",
         "columns": [
           {
             "titles": "CategoryId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "id"
           },
           {
             "titles": "Name (en)",
             "datatype": "string",
-            "required": true
+            "lang": "en",
+            "required": true,
+            "propertyUrl": "schema:name"
           },
           {
             "titles": "Name (cs)",
             "datatype": "string",
-            "required": false
+            "lang": "cs",
+            "required": false,
+            "propertyUrl": "schema:alternateName"
           },
           {
             "titles": "Name (vi)",
             "datatype": "string",
-            "required": false
+            "lang": "vi",
+            "required": false,
+            "propertyUrl": "schema:alternateName"
           },
           {
             "titles": "ParentCategory",
             "datatype": "nonNegativeInteger",
-            "required": false
+            "required": false,
+            "name": "parentId",
+            "valueUrl": "http://example.org/category/{parentId}",
+            "propertyUrl": "schema:isPartOf"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "schema:ProductGroup"
           }
         ],
         "primaryKey": "CategoryId",
@@ -48,26 +64,36 @@
     {
       "url": "data-2.csv",
       "tableSchema": {
+        "aboutUrl": "http://example.com/picture/{id}",
         "columns": [
           {
             "titles": "PictureId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "id"
           },
           {
             "titles": "Height",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:height"
           },
           {
             "titles": "Width",
             "datatype": "nonNegativeInteger",
-            "required": false
+            "required": false,
+            "propertyUrl": "schema:width"
           },
           {
             "titles": "Url",
             "datatype": "string",
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:url"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "schema:ImageObject"
           }
         ],
         "primaryKey": "PictureId"
@@ -76,11 +102,13 @@
     {
       "url": "data-3.csv",
       "tableSchema": {
+        "aboutUrl": "http://example.com/productrating/{id}",
         "columns": [
           {
             "titles": "RatingId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "id"
           },
           {
             "titles": "Rating",
@@ -89,12 +117,21 @@
               "minimum": 1,
               "maximum": 5
             },
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:starRating"
           },
           {
             "titles": "ProductId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "productId",
+            "valueUrl": "http://example.com/product/{productId}",
+            "propertyUrl": "schema:object"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "schema:Rating"
           }
         ],
         "primaryKey": "RatingId",
@@ -112,11 +149,13 @@
     {
       "url": "data-4.csv",
       "tableSchema": {
+        "aboutUrl": "http://example.com/vendorrating/{id}",
         "columns": [
           {
             "titles": "RatingId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "id"
           },
           {
             "titles": "Rating",
@@ -125,12 +164,21 @@
               "minimum": 1,
               "maximum": 5
             },
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:starRating"
           },
           {
             "titles": "VendorId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "vendorId",
+            "valueUrl": "http://example.com/vendor/{vendorId}",
+            "propertyUrl": "schema:object"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "schema:Rating"
           }
         ],
         "primaryKey": "RatingId",
@@ -148,11 +196,13 @@
     {
       "url": "data-5.csv",
       "tableSchema": {
+        "aboutUrl": "http://example.com/storerating/{id}",
         "columns": [
           {
             "titles": "RatingId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "id"
           },
           {
             "titles": "Rating",
@@ -161,12 +211,21 @@
               "minimum": 1,
               "maximum": 5
             },
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:starRating"
           },
           {
             "titles": "StoreId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "storeId",
+            "valueUrl": "http://example.com/store/{storeId}",
+            "propertyUrl": "schema:object"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "schema:Rating"
           }
         ],
         "primaryKey": "RatingId",
@@ -184,11 +243,13 @@
     {
       "url": "data-6.csv",
       "tableSchema": {
+        "aboutUrl": "http://example.com/producerrating/{id}",
         "columns": [
           {
             "titles": "RatingId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "id"
           },
           {
             "titles": "Rating",
@@ -197,12 +258,21 @@
               "minimum": 1,
               "maximum": 5
             },
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:starRating"
           },
           {
             "titles": "ProducerId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "producerId",
+            "valueUrl": "http://example.com/producer/{producerId}",
+            "propertyUrl": "schema:object"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "schema:Rating"
           }
         ],
         "primaryKey": "RatingId",
@@ -220,41 +290,62 @@
     {
       "url": "data-7.csv",
       "tableSchema": {
+        "aboutUrl": "http://example.com/product/{id}",
         "columns": [
           {
             "titles": "ProductId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "id"
           },
           {
             "titles": "Name",
             "datatype": "string",
-            "required": true
+            "lang": "en",
+            "required": true,
+            "propertyUrl": "schema:name"
           },
           {
             "titles": "Ean",
             "datatype": "string",
-            "required": false
+            "required": false,
+            "propertyUrl": "schema:gtin13"
           },
           {
             "titles": "Description",
             "datatype": "string",
-            "required": false
+            "lang": "en",
+            "required": false,
+            "propertyUrl": "schema:description"
           },
           {
             "titles": "ProducerId",
             "datatype": "nonNegativeInteger",
-            "required": false
+            "required": false,
+            "name": "producerId",
+            "valueUrl": "http://example.com/producer/{producerId}",
+            "propertyUrl": "schema:manufacturer"
           },
           {
             "titles": "CategoryId",
             "datatype": "nonNegativeInteger",
-            "required": false
+            "required": false,
+            "name": "categoryId",
+            "valueUrl": "http://example.com/category/{categoryId}",
+            "propertyUrl": "schema:category"
           },
           {
             "titles": "PictureId",
             "datatype": "nonNegativeInteger",
-            "required": false
+            "required": false,
+            "name": "pictureId",
+            "valueUrl": "http://example.com/picture/{pictureId}",
+            "propertyUrl": "schema:image"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "schema:Product"
           }
         ],
         "primaryKey": "ProductId",
@@ -286,6 +377,7 @@
     {
       "url": "data-8.csv",
       "tableSchema": {
+        "aboutUrl": "http://example.com/producer/{name}",
         "columns": [
           {
             "titles": "ProducerId",
@@ -295,22 +387,34 @@
           {
             "titles": "Name",
             "datatype": "string",
-            "required": true
+            "required": true,
+            "name": "name",
+            "propertyUrl": "schema:name"
           },
           {
             "titles": "Dic",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:leiCode"
           },
           {
             "titles": "ProductionCapacity",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "propertyUrl": "ex:productionCapacity"
           },
           {
             "titles": "PictureId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "pictureId",
+            "valueUrl": "http://example.com/picture/{pictureId}",
+            "propertyUrl": "schema:image"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "frapo:Manufacturer"
           }
         ],
         "primaryKey": "ProducerId",
@@ -328,6 +432,7 @@
     {
       "url": "data-9.csv",
       "tableSchema": {
+        "aboutUrl": "http://example.com/vendor/{name}",
         "columns": [
           {
             "titles": "VendorId",
@@ -337,17 +442,28 @@
           {
             "titles": "Name",
             "datatype": "string",
-            "required": true
+            "required": true,
+            "name": "name",
+            "propertyUrl": "schema:name"
           },
           {
             "titles": "Dic",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:leiCode"
           },
           {
             "titles": "PictureId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "pictureId",
+            "valueUrl": "http://example.com/picture/{pictureId}",
+            "propertyUrl": "schema:image"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "frapo:Vendor"
           }
         ],
         "primaryKey": "VendorId",
@@ -365,51 +481,71 @@
     {
       "url": "data-10.csv",
       "tableSchema": {
+        "aboutUrl": "http://example.com/offer/{id}",
         "columns": [
           {
             "titles": "ActiveOfferId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "id"
           },
           {
             "titles": "ProductId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "productId",
+            "valueUrl": "http://example.com/product/{productId}",
+            "propertyUrl": "schema:itemOffered"
           },
           {
             "titles": "StoreId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "storeId",
+            "valueUrl": "http://example.com/store/{storeId}",
+            "propertyUrl": "schema:offeredBy"
           },
           {
             "titles": "FromDate",
             "datatype": "date",
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:startDate"
           },
           {
             "titles": "ToDate",
             "datatype": "date",
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:endDate"
           },
           {
             "titles": "Price",
             "datatype": "float",
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:price"
           },
           {
             "titles": "DiscountRate",
             "datatype": "float",
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:discount"
           },
           {
             "titles": "InStockCount",
             "datatype": "nonNegativeInteger",
-            "required": false
+            "required": false,
+            "propertyUrl": "schema:availability"
           },
           {
             "titles": "Description",
             "datatype": "string",
-            "required": false
+            "lang": "en",
+            "required": false,
+            "propertyUrl": "schema:description"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "schema:Offer"
           }
         ],
         "primaryKey": "ActiveOfferId",
@@ -434,26 +570,39 @@
     {
       "url": "data-11.csv",
       "tableSchema": {
+        "aboutUrl": "http://example.com/store/{id}",
         "columns": [
           {
             "titles": "StoreId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "id"
           },
           {
             "titles": "VendorId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "vendorId",
+            "valueUrl": "http://example.com/vendor/{vendorId}",
+            "propertyUrl": "schema:branchOf"
           },
           {
             "titles": "Address",
             "datatype": "string",
-            "required": true
+            "required": true,
+            "propertyUrl": "schema:address"
           },
           {
             "titles": "OpeningHours",
             "datatype": "string",
-            "required": false
+            "lang": "en",
+            "required": false,
+            "propertyUrl": "schema:openingHours"
+          },
+          {
+            "virtual": true,
+            "propertyUrl": "rdf:type",
+            "valueUrl": "schema:Store"
           }
         ],
         "primaryKey": "StoreId",
