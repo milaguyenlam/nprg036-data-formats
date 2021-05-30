@@ -2,7 +2,8 @@
   "@context": "http://www.w3.org/ns/csvw",
   "@type": "TableGroup",
   "@id": "https://example.org/tableGroup",
-  "tables": [
+  "null": "",
+  "tables": [  
     {
       "url": "data-1.csv",
       "tableSchema": {
@@ -49,13 +50,13 @@
             "valueUrl": "schema:ProductGroup"
           }
         ],
-        "primaryKey": "CategoryId",
+        "primaryKey": "id",
         "foreignKeys": [
           {
-            "columnReference": "ParentCategory",
+            "columnReference": "parentId",
             "reference": {
               "resource": "data-1.csv",
-              "columnReference": "CategoryId"
+              "columnReference": "id"
             }
           }
         ]
@@ -96,10 +97,9 @@
             "valueUrl": "schema:ImageObject"
           }
         ],
-        "primaryKey": "PictureId"
+        "primaryKey": "id"
       }
-    },
-    {
+    },{
       "url": "data-3.csv",
       "tableSchema": {
         "aboutUrl": "http://example.com/productrating/{id}",
@@ -134,19 +134,18 @@
             "valueUrl": "schema:Rating"
           }
         ],
-        "primaryKey": "RatingId",
+        "primaryKey": "id",
         "foreignKeys": [
           {
-            "columnReference": "ProductId",
+            "columnReference": "productId",
             "reference": {
               "resource": "data-7.csv",
-              "columnReference": "ProductId"
+              "columnReference": "id"
             }
           }
         ]
       }
-    },
-    {
+    },    {
       "url": "data-4.csv",
       "tableSchema": {
         "aboutUrl": "http://example.com/vendorrating/{id}",
@@ -181,13 +180,13 @@
             "valueUrl": "schema:Rating"
           }
         ],
-        "primaryKey": "RatingId",
+        "primaryKey": "id",
         "foreignKeys": [
           {
-            "columnReference": "VendorId",
+            "columnReference": "vendorId",
             "reference": {
               "resource": "data-9.csv",
-              "columnReference": "VendorId"
+              "columnReference": "id"
             }
           }
         ]
@@ -228,13 +227,13 @@
             "valueUrl": "schema:Rating"
           }
         ],
-        "primaryKey": "RatingId",
+        "primaryKey": "id",
         "foreignKeys": [
           {
-            "columnReference": "StoreId",
+            "columnReference": "storeId",
             "reference": {
               "resource": "data-11.csv",
-              "columnReference": "StoreId"
+              "columnReference": "id"
             }
           }
         ]
@@ -275,13 +274,13 @@
             "valueUrl": "schema:Rating"
           }
         ],
-        "primaryKey": "RatingId",
+        "primaryKey": "id",
         "foreignKeys": [
           {
-            "columnReference": "ProducerId",
+            "columnReference": "producerId",
             "reference": {
               "resource": "data-8.csv",
-              "columnReference": "ProducerId"
+              "columnReference": "id"
             }
           }
         ]
@@ -348,27 +347,27 @@
             "valueUrl": "schema:Product"
           }
         ],
-        "primaryKey": "ProductId",
+        "primaryKey": "id",
         "foreignKeys": [
           {
-            "columnReference": "ProducerId",
+            "columnReference": "producerId",
             "reference": {
               "resource": "data-8.csv",
-              "columnReference": "ProducerId"
+              "columnReference": "id"
             }
           },
           {
-            "columnReference": "CategoryId",
+            "columnReference": "categoryId",
             "reference": {
               "resource": "data-1.csv",
-              "columnReference": "CategoryId"
+              "columnReference": "id"
             }
           },
           {
-            "columnReference": "PictureId",
+            "columnReference": "pictureId",
             "reference": {
               "resource": "data-2.csv",
-              "columnReference": "PictureId"
+              "columnReference": "id"
             }
           }
         ]
@@ -382,7 +381,8 @@
           {
             "titles": "ProducerId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "id"
           },
           {
             "titles": "Name",
@@ -417,13 +417,13 @@
             "valueUrl": "frapo:Manufacturer"
           }
         ],
-        "primaryKey": "ProducerId",
+        "primaryKey": "id",
         "foreignKeys": [
           {
-            "columnReference": "PictureId",
+            "columnReference": "pictureId",
             "reference": {
               "resource": "data-2.csv",
-              "columnReference": "PictureId"
+              "columnReference": "id"
             }
           }
         ]
@@ -432,18 +432,18 @@
     {
       "url": "data-9.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.com/vendor/{name}",
+        "aboutUrl": "http://example.com/vendor/{id}",
         "columns": [
           {
             "titles": "VendorId",
             "datatype": "nonNegativeInteger",
-            "required": true
+            "required": true,
+            "name": "id"
           },
           {
             "titles": "Name",
             "datatype": "string",
             "required": true,
-            "name": "name",
             "propertyUrl": "schema:name"
           },
           {
@@ -466,13 +466,13 @@
             "valueUrl": "frapo:Vendor"
           }
         ],
-        "primaryKey": "VendorId",
+        "primaryKey": "id",
         "foreignKeys": [
           {
-            "columnReference": "PictureId",
+            "columnReference": "pictureId",
             "reference": {
               "resource": "data-2.csv",
-              "columnReference": "PictureId"
+              "columnReference": "id"
             }
           }
         ]
@@ -548,20 +548,20 @@
             "valueUrl": "schema:Offer"
           }
         ],
-        "primaryKey": "ActiveOfferId",
+        "primaryKey": "id",
         "foreignKeys": [
           {
-            "columnReference": "ProductId",
+            "columnReference": "productId",
             "reference": {
               "resource": "data-7.csv",
-              "columnReference": "ProductId"
+              "columnReference": "id"
             }
           },
           {
-            "columnReference": "StoreId",
+            "columnReference": "storeId",
             "reference": {
               "resource": "data-11.csv",
-              "columnReference": "StoreId"
+              "columnReference": "id"
             }
           }
         ]
@@ -605,13 +605,13 @@
             "valueUrl": "schema:Store"
           }
         ],
-        "primaryKey": "StoreId",
+        "primaryKey": "id",
         "foreignKeys": [
           {
-            "columnReference": "VendorId",
+            "columnReference": "vendorId",
             "reference": {
               "resource": "data-9.csv",
-              "columnReference": "VendorId"
+              "columnReference": "id"
             }
           }
         ]
