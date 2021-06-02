@@ -5,7 +5,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/ex/> .
 
-ex:productionCapacity rdf:type xsd:integer .
+ex:productionCapacity a rdf:Property;
+    rdfs:range xsd:integer .
 
 #products
 <#apple>
