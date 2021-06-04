@@ -1,0 +1,305 @@
+@base <http://example.org/> .
+@prefix schema: <http://schema.org/> .
+@prefix frapo: <http://purl.org/cerif/frapo> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex: <http://example.org/ex/> .
+
+ex:productionCapacity rdf:type xsd:integer .
+
+<#apple-offer-Tesco-Sokolovská_968/189,_190_00_Praha_9-Libeň>
+	a schema:Offer ;
+	schema:startDate "2021-05-20"^^xsd:date ;
+	schema:endDate "2021-05-30"^^xsd:date ;
+	schema:price "50.49" ;
+	schema:discount "0.2" ;
+	schema:availability "In Stock"@en ;
+	schema:description "Customers can buy up to 5kilos at once"@en ;
+	schema:offeredBy <#Tesco-Sokolovská_968/189,_190_00_Praha_9-Libeň> ;
+	schema:itemOffered <#apple> .
+
+<#tesco-Sokolovská_968/189,_190_00_Praha_9-Libeň>
+	a schema:Store ;
+	schema:branchOf <#tesco> ;
+	schema:address "Sokolovská 968/189, 190 00 Praha 9-Libeň"@en ;
+	schema:rating "2" ;
+	schema:rating "3" ;
+	
+	schema:openingHours "Mon-Sun: 7:00-20:00"@en .
+
+<#tesco>
+	a frapo:Vendor ;
+	schema:name "Tesco"@en ;
+	schema:rating "4" ;
+	
+	schema:leiCode "321321412" .
+	
+<#apple>
+	a schema:Product ;
+	schema:name "Apple"@en ;
+	schema:gtin13 "123123123123" ;
+	schema:description "Sweet and tasty apple"@en ;
+	schema:rating "2" ;
+	schema:rating "1" ;
+	
+	schema:manufacturer <#agrofert> ;
+	schema:category <#fruit> ;
+	schema:category <#seasonal> ;
+	
+	schema:schema:image <#apple-image> .
+
+<#apple-image>	
+	a schema:ImageObject ;
+    schema:height "100" ;
+    schema:width "100" ;
+    schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg" .
+	
+<#fruit>
+    a schema:ProductGroup ;
+    schema:isPartOf <#fresh> ;schema:alternateName "Ovoce"@cs ;
+	
+    schema:name "Fruit"@en .    
+
+<#fresh>
+    a schema:ProductGroup ;
+    	schema:alternateName "Cerstve"@cs ;
+	schema:alternateName "Tuoi"@vi ;
+	
+	schema:name "Fresh"@en .
+	
+<#seasonal>
+    a schema:ProductGroup ;
+    schema:alternateName "Sezonni"@cs ;
+	
+    schema:name "Seasonal"@en .    
+
+<#agrofert>
+    a frapo:Manufacturer ;
+    schema:name "Agrofert"@en ;
+    schema:leiCode "333333333333" ;
+	schema:rating "1" ;
+	schema:rating "1" ;
+	schema:rating "2" ;
+	
+    ex:productionCapacity"10000000" .
+	
+<#apple-offer-Tesco-Písečná_5376,_430_00_Chomutov>
+	a schema:Offer ;
+	schema:startDate "2021-05-20"^^xsd:date ;
+	schema:endDate "2021-05-30"^^xsd:date ;
+	schema:price "45.49" ;
+	schema:discount "0.3" ;
+	schema:availability "In Stock"@en ;
+	schema:description "Customers can buy up to 10kilos at once"@en ;
+	schema:offeredBy <#Tesco-Písečná_5376,_430_00_Chomutov> ;
+	schema:itemOffered <#apple> .
+
+<#tesco-Písečná_5376,_430_00_Chomutov>
+	a schema:Store ;
+	schema:branchOf <#tesco> ;
+	schema:address "Písečná 5376, 430 00 Chomutov"@en ;
+	schema:rating "4" ;
+	schema:rating "5" ;
+	
+	schema:openingHours "Mon-Sun: 8:00-19:00"@en .
+
+<#tesco>
+	a frapo:Vendor ;
+	schema:name "Tesco"@en ;
+	schema:rating "4" ;
+	
+	schema:leiCode "321321412" .
+	
+<#apple>
+	a schema:Product ;
+	schema:name "Apple"@en ;
+	schema:gtin13 "123123123123" ;
+	schema:description "Sweet and tasty apple"@en ;
+	schema:rating "2" ;
+	schema:rating "1" ;
+	
+	schema:manufacturer <#agrofert> ;
+	schema:category <#fruit> ;
+	schema:category <#seasonal> ;
+	
+	schema:schema:image <#apple-image> .
+
+<#apple-image>	
+	a schema:ImageObject ;
+    schema:height "100" ;
+    schema:width "100" ;
+    schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg" .
+	
+<#fruit>
+    a schema:ProductGroup ;
+    schema:isPartOf <#fresh> ;schema:alternateName "Ovoce"@cs ;
+	
+    schema:name "Fruit"@en .    
+
+<#fresh>
+    a schema:ProductGroup ;
+    	schema:alternateName "Cerstve"@cs ;
+	schema:alternateName "Tuoi"@vi ;
+	
+	schema:name "Fresh"@en .
+	
+<#seasonal>
+    a schema:ProductGroup ;
+    schema:alternateName "Sezonni"@cs ;
+	
+    schema:name "Seasonal"@en .    
+
+<#agrofert>
+    a frapo:Manufacturer ;
+    schema:name "Agrofert"@en ;
+    schema:leiCode "333333333333" ;
+	schema:rating "1" ;
+	schema:rating "1" ;
+	schema:rating "2" ;
+	
+    ex:productionCapacity"10000000" .
+	
+<#milk-offer-Tesco-Písečná_5376,_430_00_Chomutov>
+	a schema:Offer ;
+	schema:startDate "2021-05-21"^^xsd:date ;
+	schema:endDate "2021-05-30"^^xsd:date ;
+	schema:price "21" ;
+	schema:discount "0.1" ;
+	schema:availability "In Stock"@en ;
+	schema:description "Maximum of 10kg's can be bought at once"@en ;
+	schema:offeredBy <#Tesco-Písečná_5376,_430_00_Chomutov> ;
+	schema:itemOffered <#milk> .
+
+<#tesco-Písečná_5376,_430_00_Chomutov>
+	a schema:Store ;
+	schema:branchOf <#tesco> ;
+	schema:address "Písečná 5376, 430 00 Chomutov"@en ;
+	schema:rating "4" ;
+	schema:rating "5" ;
+	
+	schema:openingHours "Mon-Sun: 8:00-19:00"@en .
+
+<#tesco>
+	a frapo:Vendor ;
+	schema:name "Tesco"@en ;
+	schema:rating "4" ;
+	
+	schema:leiCode "321321412" .
+	
+<#milk>
+	a schema:Product ;
+	schema:name "Milk"@en ;
+	schema:gtin13 "124124124124" ;
+	schema:description "Fresh milk from an organic farm"@en ;
+	schema:rating "5" ;
+	schema:rating "2" ;
+	schema:rating "4" ;
+	
+	schema:manufacturer <#agrofert> ;
+	schema:category <#dairy> ;
+	
+	schema:schema:image <#milk-image> .
+
+<#milk-image>	
+	a schema:ImageObject ;
+    schema:height "100" ;
+    schema:width "100" ;
+    schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Milk_glass.jpg/640px-Milk_glass.jpg" .
+	
+<#dairy>
+    a schema:ProductGroup ;
+    schema:isPartOf <#fresh> ;schema:alternateName "Mlecne vyrobky"@cs ;
+	
+    schema:name "Dairy"@en .    
+
+<#fresh>
+    a schema:ProductGroup ;
+    	schema:alternateName "Cerstve"@cs ;
+	schema:alternateName "Tuoi"@vi ;
+	
+	schema:name "Fresh"@en .
+	
+<#agrofert>
+    a frapo:Manufacturer ;
+    schema:name "Agrofert"@en ;
+    schema:leiCode "333333333333" ;
+	schema:rating "1" ;
+	schema:rating "1" ;
+	schema:rating "2" ;
+	
+    ex:productionCapacity"10000000" .
+	
+<#pilsner_beer-offer-Kaufland-Obchodní_zóna_260,_431_11_Otvice>
+	a schema:Offer ;
+	schema:startDate "2021-05-19"^^xsd:date ;
+	schema:endDate "2021-05-25"^^xsd:date ;
+	schema:price "20.99" ;
+	schema:discount "0.05" ;
+	schema:availability "In Stock"@en ;
+	schema:description "Customers can buy up to 10 packs at once"@en ;
+	schema:offeredBy <#Kaufland-Obchodní_zóna_260,_431_11_Otvice> ;
+	schema:itemOffered <#pilsner_beer> .
+
+<#kaufland-Obchodní_zóna_260,_431_11_Otvice>
+	a schema:Store ;
+	schema:branchOf <#kaufland> ;
+	schema:address "Obchodní zóna 260, 431 11 Otvice"@en ;
+	schema:rating "5" ;
+	schema:rating "3" ;
+	
+	schema:openingHours "Mon-Sun: 7:00-22:00"@en .
+
+<#kaufland>
+	a frapo:Vendor ;
+	schema:name "Kaufland"@en ;
+	schema:rating "3" ;
+	
+	schema:leiCode "321333332" .
+	
+<#pilsner_beer>
+	a schema:Product ;
+	schema:name "Pilsner beer"@en ;
+	schema:gtin13 "321321321321" ;
+	schema:description "Authentic Czech beer"@en ;
+	schema:rating "5" ;
+	
+	schema:manufacturer <#pilsner> ;
+	schema:category <#alcoholic_drinks> ;
+	schema:category <#seasonal> ;
+	
+	schema:schema:image <#pilsner_beer-image> .
+
+<#pilsner_beer-image>	
+	a schema:ImageObject ;
+    schema:height "100" ;
+    schema:width "100" ;
+    schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Club_Beer.jpg/640px-Club_Beer.jpg" .
+	
+<#alcoholic_drinks>
+    a schema:ProductGroup ;
+    schema:isPartOf <#fresh> ;schema:alternateName "Alkoholicke napoje"@cs ;
+	
+    schema:name "Alcoholic drinks"@en .    
+
+<#fresh>
+    a schema:ProductGroup ;
+    	schema:alternateName "Cerstve"@cs ;
+	schema:alternateName "Tuoi"@vi ;
+	
+	schema:name "Fresh"@en .
+	
+<#seasonal>
+    a schema:ProductGroup ;
+    schema:alternateName "Sezonni"@cs ;
+	
+    schema:name "Seasonal"@en .    
+
+<#pilsner>
+    a frapo:Manufacturer ;
+    schema:name "Pilsner"@en ;
+    schema:leiCode "222222222222" ;
+	schema:rating "5" ;
+	schema:rating "4" ;
+	
+    ex:productionCapacity"4000" .
+	

@@ -1,0 +1,162 @@
+{
+    "@context" :{
+        "@base": "http://example.org/",
+        "ex": "http://example.org/ex/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "schema": "http://schema.org/",
+        "frapo": "http://purl.org/cerif/frapo/",
+        "type": "@type",
+        "id": "@id",
+        "Offer": "schema:Offer",
+        "Product": "schema:Product",
+        "Picture": "schema:ImageObject",
+        "Category": "schema:ProductGroup",
+        "Producer": "frapo:Manufacturer",
+        "Vendor": "frapo:Vendor",
+        "Store": "schema:Store",
+        "StartDate": "schema:startDate",
+        "EndDate": "schema:endDate",
+        "Price": "schema:price",
+        "Discount": "schema:discount",
+        "Availability": "schema:availability",
+        "Description" : "schema:description",
+        "OfferedBy": "schema:offeredBy",
+        "ItemOffered": "schema:itemOffered",
+        "Name" : "schema:name",
+        "Rating": "schema:rating",
+        "SynonymName": "schema:alternateName",
+        "ParentCategory": "schema:isPartOf",
+        "Dic": "schema:leiCode",
+        "ProductionCapacity": {
+            "@id": "ex:productionCapacity",
+            "@type": "xsd:integer"},
+        "Address": "schema:address",
+        "OpeningHours": "schema:openingHours",
+        "BranchOf": "schema:branchOf",
+        "MadeBy": "schema:manufacturer"
+    },
+    "@graph":
+    [
+        {
+            "id": "apple-offer-praha",
+            "type": "Offer",
+            "StartDate": "2021-05-20",
+            "EndDate": "2021-05-30",
+            "Price": 50.49,
+            "Discount": 0.2,
+            "Availability": "In stock",
+            "Description": "Maximum of 10kg's can be bought at once",
+            "OfferedBy": {
+                "id": "tesco-praha",
+                "type": "Store",        
+                "Address": "Vysocanska 117, Prague 19000",
+                "OpeningHours": "Mon-Sun: 7:00-20:00",
+                "Rating": [
+                    2,
+                    3
+                ],
+                "BranchOf": {
+                    "id": "tesco",
+                    "Name": "Tesco",
+                    "Dic": "321321412",
+                    "Rating": 4,
+                    "type": "Vendor"
+                }
+            },
+            "ItemOffered":{
+                "id": "apple",
+                "type": "Product",
+                "Name": "Apple",
+                "Description": "Fresh and tasty...",
+                "Rating": [
+                    4,
+                    5,
+                    5
+                ],
+                "MadeBy": {
+                    "id": "farma",
+                    "type": "Producer",
+                    "Name": "Nase Farma",
+                    "Dic": 1111,
+                    "Rating": [5],
+                    "ProductionCapacity": 10000
+                },
+                "Category": {
+                    "id": "fruit",
+                    "type":"Category",
+                    "InternalName": "Fruit",
+                    "SynonymName": "Ovoce"
+                },
+                "Picture": {
+                    "id": "apple-image",
+                    "type": "Picture",
+                    "Height": 100,
+                    "Width": 100,
+                    "URI": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg"
+                }
+            }
+        },
+
+        {
+            "id": "beer-offer-praha",
+            "type":"Offer",
+            "StartDate": "2021-05-10",
+            "EndDate": "2021-05-29",
+            "Price": 10.49,
+            "Discount": 0.4,
+            "Availability": 1000,
+            "OfferedBy": {
+                "id": "tesco-praha",
+                "type":"Store",
+                "Address":"Vysocanska 117, Prague 19000",
+                "OpeningHours": "Mon-Sun: 7:00-20:00",
+                "Rating": [
+                    2,
+                    3
+                ],
+                "Vendor": {
+                    "id": "tesco",
+                    "Name": "Tesco",
+                    "Dic": "321321412",
+                    "Rating": 4,
+                    "type":"Vendor"
+                }
+            },
+            "ItemOffered": {
+                "id": "beer",
+                "type":"Product",
+                "Name": "Pilner Beer",
+                "Description": "Authentic Czech Beer",
+                "Rating": [
+                    5,
+                    5,
+                    5
+                ],
+                "Producer": {
+                    "id": "pilsner",
+                    "type":"Producer",
+                    "Name": "Pilsner Urquel",
+                    "Dic": 112321,
+                    "Rating": [5],
+                    "ProductionCapacity": 50000
+                },
+                "Category": {
+                    "id": "alcohol",
+                    "type":"Category",
+                    "InternalName": "Alcohol",
+                    "SynonymName": "Alkohol"
+                },
+                "Picture": {
+                    "id": "beer-image",
+                    "type":"Picture",
+                    "Height": 100,
+                    "Width": 100,
+                    "URI": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Club_Beer.jpg/640px-Club_Beer.jpg"
+                }
+            }
+            
+        }
+    ]
+    
+}

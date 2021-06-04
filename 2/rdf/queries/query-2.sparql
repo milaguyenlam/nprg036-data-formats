@@ -1,0 +1,16 @@
+# Get all products sorted by average rating
+
+PREFIX schema: <http://schema.org/>
+
+SELECT ?product ?avg_rating
+WHERE {
+ 	?product a schema:Product .
+  {
+    SELECT ?product (AVG(?rating) AS ?avg_rating)
+    WHERE {
+      ?product schema:rating ?rating
+    }
+    GROUP BY ?product
+  }
+}
+ORDER BY DESC(?avg_rating)

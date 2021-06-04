@@ -1,0 +1,96 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+
+    "Offer": {
+        "type": "array",
+        "items":{
+            "StartDate": {
+                "type":"string",
+                "format":"date"
+            },
+            "EndDate": {
+                "type":"string",
+                "format":"date"
+            },
+            "Price": {
+                "type": "number",
+                "minimum": 0    
+            },
+            "Discount": {
+                "type": "number",
+                "minimum": 0,
+                "maximum": 100
+            },
+            "Availability": {
+                "type": "string"
+            },
+            "Description": "string",
+            "OfferedBy": {
+
+                "Location": {
+                    "Langtitude": "number",
+                    "Longitude": "number"
+                },
+                "OpeningHours": "string",
+                "Rating": {
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                    }
+                },
+                "BranchOf": {
+                    "Name": {
+                        "type": "string"
+                    },
+                    "Leicode": "string",
+                    "Rating": {
+                            "type": "number",
+                            "minimum": 1,
+                            "maximum": 5
+                    }
+                }
+            },
+            "ItemOffered": {
+                "Name": "string",
+                "Description": "string",
+                "Rating": {
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                    }
+                }
+            },
+            "MadeBy": {
+                "name": {
+                    "type": "string"
+                },
+                "Leicode": "string",
+                "Rating": {
+                    "type": "array",
+                    "items": {
+                        "type": "number",
+                        "minimum": 1,
+                        "maximum": 5
+                    }
+                },
+                "ProductionCapacity": "integer"
+            },
+            "Category": {
+                "InternalName": "string",
+                "AlternateName": "string"
+            },
+            "Picture": {
+                "Height": "integer",
+                "Width": "integer",
+                "URI": {
+                    "type": "string",
+                    "format": "uri"  
+                }
+            }
+        }
+    }
+}

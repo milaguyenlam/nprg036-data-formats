@@ -1,0 +1,4 @@
+StoreId,VendorId,Address,OpeningHours
+0,0,Prosecka 115 Praha 9,Mon-Sun: 7:00-20:00
+1,0,Pisecna 5038 Chomutov,Mon-Sun: 9:00-18:00
+2,1,Makrovska 1 Praha,Mon-Sun: 8:00-20:00
