@@ -1,2 +1,0 @@
-(: Get all products sold in a particular store (defined by address and vendor name) :)
-//Product[./../Store/Address="Písečná 5376, 430 00 Chomutov" and ./../Store/Vendor/Name="Tesco"]

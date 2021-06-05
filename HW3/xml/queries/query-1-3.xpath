@@ -1,2 +1,0 @@
-(: Get average price for a certain product :)
-avg(/Offers/Offer[Product/Name="Apple"]/Price)
