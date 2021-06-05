@@ -1,9 +1,0 @@
-# Get root categories - one that does not have a parent
-
-PREFIX schema: <http://schema.org/>
-
-SELECT DISTINCT ?root
-WHERE {
-  ?root a schema:ProductGroup .
-  NOT EXISTS { ?root schema:isPartOf ?parent .}
-}
