@@ -16,7 +16,8 @@
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
 @prefix ex: &lt;http://example.org/ex/&gt; .
 
-ex:productionCapacity rdf:type xsd:integer .
+ex:productionCapacity a rdf:Property;
+    rdfs:range xsd:integer .
 <xsl:apply-templates/>
 	</xsl:template>
 	<xsl:template match="Offer">
