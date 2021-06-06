@@ -9,7 +9,7 @@ ex:productionCapacity a rdf:Property;
     rdfs:range xsd:integer .
 
 #products
-<#apple>
+<#http://schema.org/Product/1>
     a schema:Product ;
     schema:name "Apple"@en ;
     schema:gtin13 "123123123123" ;
@@ -17,10 +17,10 @@ ex:productionCapacity a rdf:Property;
     schema:rating 2 ;
     schema:rating 1 ;
     schema:manufacturer <#agrofert> ;
-    schema:image <#apple-image> ;
+    schema:image <#http://schema.org/ImageObject/1> ;
     schema:category <#fruit> ;
     schema:category <#seasonal> .
-<#milk>
+<#http://schema.org/Product/2>
     a schema:Product ;
     schema:name "Milk"@en ;
     schema:gtin13 "124124124124" ;
@@ -29,20 +29,20 @@ ex:productionCapacity a rdf:Property;
     schema:rating 2 ;
     schema:rating 4 ;
     schema:manufacturer <#agrofert> ;
-    schema:image <#milk-image> ;
+    schema:image <#http://schema.org/ImageObject/2> ;
     schema:category <#dairy> .
-<#beer>
+<#http://schema.org/Product/3>
     a schema:Product ;
     schema:name "Pilsner beer"@en ;
     schema:gtin13 "321321321321" ;
     schema:description "Authentic Czech beer"@en ;
     schema:rating 5 ;
     schema:manufacturer <#pilsner> ;
-    schema:image <#beer-image> ;
+    schema:image <#http://schema.org/ImageObject/3> ;
     schema:category <#alcohol> .
 
 #offers
-<#apple-offer-praha>
+<#http://schema.org/Offer/1>
     a schema:Offer ;
     schema:startDate "2021-04-15"^^xsd:date ;
     schema:endDate "2021-04-25"^^xsd:date ;
@@ -50,9 +50,9 @@ ex:productionCapacity a rdf:Property;
     schema:discount 0.2 ;
     schema:availability "In stock"@en ;
     schema:description "Customers can buy up to 5kilos at once"@en ;
-    schema:offeredBy <#makro-praha> ;
-    schema:itemOffered <#apple> .
-<#apple-offer-brno>
+    schema:offeredBy <#http://schema.org/Store/1> ;
+    schema:itemOffered <#http://schema.org/Product/1> .
+<#http://schema.org/Offer/2>
     a schema:Offer ;
     schema:startDate "2021-04-16"^^xsd:date ;
     schema:endDate "2021-04-20"^^xsd:date ;
@@ -60,9 +60,9 @@ ex:productionCapacity a rdf:Property;
     schema:discount 0.3 ;
     schema:availability "In stock"@en ;
     schema:description "Customers can buy up to 5kilos at once"@en ;
-    schema:offeredBy <#makro-brno> ;
-    schema:itemOffered <#apple> .
-<#milk-offer-praha>
+    schema:offeredBy <#http://schema.org/Store/3> ;
+    schema:itemOffered <#http://schema.org/Product/1> .
+<#http://schema.org/Offer/3>
     a schema:Offer ;
     schema:startDate "2021-04-20"^^xsd:date ;
     schema:endDate "2021-04-25"^^xsd:date ;
@@ -70,21 +70,21 @@ ex:productionCapacity a rdf:Property;
     schema:discount 0.2 ;
     schema:availability "In stock"@en ;
     schema:description "Customers can buy up to 10 packs at once"@en ;
-    schema:offeredBy <#makro-praha> ;
-    schema:itemOffered <#milk> .
+    schema:offeredBy <#http://schema.org/Store/1> ;
+    schema:itemOffered <#http://schema.org/Product/2> .
 
 #images
-<#apple-image>
+<#http://schema.org/ImageObject/1>
     a schema:ImageObject ;
     schema:height 100 ;
     schema:width 100 ;
     schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg" .
-<#milk-image>
+<#http://schema.org/ImageObject/2>
     a schema:ImageObject ;
     schema:height 100 ;
     schema:width 100 ;
     schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Milk_glass.jpg/640px-Milk_glass.jpg" .
-<#beer-image>
+<#http://schema.org/ImageObject/3>
     a schema:ImageObject ;
     schema:height 100 ;
     schema:width 100 ;
@@ -152,27 +152,27 @@ ex:productionCapacity a rdf:Property;
     ex:productionCapacity 10000000 .
 
 #stores
-<#makro-praha>
+<#http://schema.org/Store/1>
     a schema:Store ;
     schema:branchOf <#makro> ;
     schema:address "Chlumecká 2424 ,193 00  Praha 9"@cs ;
     schema:openingHours "po-ne: 7:00-20:00"@cs ;
     schema:rating 4 ;
     schema:rating 2 .
-<#makro-usti>
+<#http://schema.org/Store/2>
     a schema:Store ;
     schema:branchOf <#makro> ;
     schema:address "Makro, Žižkova 3363/78, 400 01 Ústí nad Labem-město"@cs ;
     schema:openingHours "po-ne: 7:00-20:00"@cs ;
     schema:rating 5 .
-<#makro-brno>
+<#http://schema.org/Store/3>
     a schema:Store ;
     schema:branchOf <#makro> ;
     schema:address "Kaštanová 506/50, 620 00 Brno-Tuřany"@cs ;
     schema:openingHours "po-ne: 7:00-20:00"@cs ;
     schema:rating 2 ;
     schema:rating 3 .
-<#tesco-chomutov>
+<#http://schema.org/Store/4>
     a schema:Store ;
     schema:branchOf <#tesco> ;
     schema:address "Písečná 5376, 430 00 Chomutov"@cs ;
