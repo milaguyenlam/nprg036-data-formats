@@ -5,23 +5,23 @@
         <ToDate>2021-05-30</ToDate>
         <Price>50.49</Price>
         <DiscountRate>0.2</DiscountRate>
-        <Availability lang="en">In Stock</Availability>
-        <Description lang="en">Customers can buy up to 5kilos at once</Description>
+        <Availability xml:lang="en">In Stock</Availability>
+        <Description xml:lang="en">Customers can buy up to 5kilos at once</Description>
         <Store>
             <Address>Sokolovská 968/189, 190 00 Praha 9-Libeň</Address>
-            <OpeningHours lang="en">Mon-Sun: 7:00-20:00</OpeningHours>
+            <OpeningHours xml:lang="en">Mon-Sun: 7:00-20:00</OpeningHours>
             <Rating>2</Rating>
             <Rating>3</Rating>
             <Vendor>
-                <Name lang="en">Tesco</Name>
+                <Name xml:lang="en">Tesco</Name>
                 <Dic>321321412</Dic>
                 <Rating>4</Rating>
             </Vendor>
         </Store>
         <Product>
-            <Name lang="en">Apple</Name>
+            <Name xml:lang="en">Apple</Name>
             <Ean>123123123123</Ean>
-            <Description lang="en">Sweet and tasty apple</Description>
+            <Description xml:lang="en">Sweet and tasty apple</Description>
             <Rating>2</Rating>
             <Rating>1</Rating>
             <Picture>
@@ -30,20 +30,20 @@
                 <Uri>https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg</Uri>
             </Picture>
             <Category>
-                <InternalName lang="en">Fruit</InternalName>
-                <SynonymName lang="cs">Ovoce</SynonymName>
+                <InternalName xml:lang="en">Fruit</InternalName>
+                <SynonymName xml:lang="cs">Ovoce</SynonymName>
                 <ParentCategory>
-                    <InternalName lang="en">Fresh</InternalName>
-                    <SynonymName lang="cs">Cerstve</SynonymName>
-                    <SynonymName lang="vi">Tuoi</SynonymName>
+                    <InternalName xml:lang="en">Fresh</InternalName>
+                    <SynonymName xml:lang="cs">Cerstve</SynonymName>
+                    <SynonymName xml:lang="vi">Tuoi</SynonymName>
                 </ParentCategory>
             </Category>
             <Category>
-                <InternalName lang="en">Seasonal</InternalName>
-                <SynonymName lang="cs">Sezonni</SynonymName>
+                <InternalName xml:lang="en">Seasonal</InternalName>
+                <SynonymName xml:lang="cs">Sezonni</SynonymName>
             </Category>
             <Producer>
-                <Name lang="en">Agrofert</Name>
+                <Name xml:lang="en">Agrofert</Name>
                 <Dic>333333333333</Dic>
                 <Rating>1</Rating>
                 <Rating>1</Rating>
@@ -57,8 +57,8 @@
         <ToDate>2021-05-30</ToDate>
         <Price>45.49</Price>
         <DiscountRate>0.3</DiscountRate>
-        <Availability lang="en">In Stock</Availability>
-        <Description lang="en">Customers can buy up to 10kilos at once</Description>
+        <Availability xml:lang="en">In Stock</Availability>
+        <Description xml:lang="en">Customers can buy up to 10kilos at once</Description>
         <Store>
             <Address>Písečná 5376, 430 00 Chomutov</Address>
             <OpeningHours>Mon-Sun: 8:00-19:00</OpeningHours>
@@ -71,9 +71,9 @@
             </Vendor>
         </Store>
         <Product>
-            <Name lang="en">Apple</Name>
+            <Name xml:lang="en">Apple</Name>
             <Ean>123123123123</Ean>
-            <Description lang="en">Sweet and tasty apple</Description>
+            <Description xml:lang="en">Sweet and tasty apple</Description>
             <Rating>2</Rating>
             <Rating>1</Rating>
             <Picture>
@@ -82,20 +82,20 @@
                 <Uri>https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg</Uri>
             </Picture>
             <Category>
-                <InternalName lang="en">Fruit</InternalName>
-                <SynonymName lang="cs">Ovoce</SynonymName>
+                <InternalName xml:lang="en">Fruit</InternalName>
+                <SynonymName xml:lang="cs">Ovoce</SynonymName>
                 <ParentCategory>
-                    <InternalName lang="en">Fresh</InternalName>
-                    <SynonymName lang="cs">Cerstve</SynonymName>
-                    <SynonymName lang="vi">Tuoi</SynonymName>
+                    <InternalName xml:lang="en">Fresh</InternalName>
+                    <SynonymName xml:lang="cs">Cerstve</SynonymName>
+                    <SynonymName xml:lang="vi">Tuoi</SynonymName>
                 </ParentCategory>
             </Category>
             <Category>
-                <InternalName lang="en">Seasonal</InternalName>
-                <SynonymName lang="cs">Sezonni</SynonymName>
+                <InternalName xml:lang="en">Seasonal</InternalName>
+                <SynonymName xml:lang="cs">Sezonni</SynonymName>
             </Category>
             <Producer>
-                <Name lang="en">Agrofert</Name>
+                <Name xml:lang="en">Agrofert</Name>
                 <Dic>333333333333</Dic>
                 <Rating>1</Rating>
                 <Rating>1</Rating>
@@ -109,7 +109,7 @@
         <ToDate>2021-05-30</ToDate>
         <Price>21.00</Price>
         <DiscountRate>0.1</DiscountRate>
-        <Availability lang="en">In Stock</Availability>
+        <Availability xml:lang="en">In Stock</Availability>
         <Description>Maximum of 10kg's can be bought at once</Description>
         <Store>
             <Address>Písečná 5376, 430 00 Chomutov</Address>
@@ -123,9 +123,9 @@
             </Vendor>
         </Store>
         <Product>
-            <Name lang="en">Milk</Name>
+            <Name xml:lang="en">Milk</Name>
             <Ean>124124124124</Ean>
-            <Description lang="en">Fresh milk from an organic farm</Description>
+            <Description xml:lang="en">Fresh milk from an organic farm</Description>
             <Rating>5</Rating>
             <Rating>2</Rating>
             <Rating>4</Rating>
@@ -135,16 +135,16 @@
                 <Uri>https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Milk_glass.jpg/640px-Milk_glass.jpg</Uri>
             </Picture>
             <Category>
-                <InternalName lang="en">Dairy</InternalName>
-                <SynonymName lang="cs">Mlecne vyrobky</SynonymName>
+                <InternalName xml:lang="en">Dairy</InternalName>
+                <SynonymName xml:lang="cs">Mlecne vyrobky</SynonymName>
                 <ParentCategory>
-                    <InternalName lang="en">Fresh</InternalName>
-                    <SynonymName lang="cs">Cerstve</SynonymName>
-                    <SynonymName lang="vi">Tuoi</SynonymName>
+                    <InternalName xml:lang="en">Fresh</InternalName>
+                    <SynonymName xml:lang="cs">Cerstve</SynonymName>
+                    <SynonymName xml:lang="vi">Tuoi</SynonymName>
                 </ParentCategory>
             </Category>
             <Producer>
-                <Name lang="en">Agrofert</Name>
+                <Name xml:lang="en">Agrofert</Name>
                 <Dic>333333333333</Dic>
                 <Rating>1</Rating>
                 <Rating>1</Rating>
@@ -158,11 +158,11 @@
         <ToDate>2021-05-25</ToDate>
         <Price>20.99</Price>
         <DiscountRate>0.05</DiscountRate>
-        <Availability lang="en">In Stock</Availability>
-        <Description lang="en">Customers can buy up to 10 packs at once</Description>
+        <Availability xml:lang="en">In Stock</Availability>
+        <Description xml:lang="en">Customers can buy up to 10 packs at once</Description>
         <Store>
             <Address>Obchodní zóna 260, 431 11 Otvice</Address>
-            <OpeningHours lang="en">Mon-Sun: 7:00-22:00</OpeningHours>
+            <OpeningHours xml:lang="en">Mon-Sun: 7:00-22:00</OpeningHours>
             <Rating>5</Rating>
             <Rating>3</Rating>
             <Vendor>
@@ -172,9 +172,9 @@
             </Vendor>
         </Store>
         <Product>
-            <Name lang="en">Pilsner beer</Name>
+            <Name xml:lang="en">Pilsner beer</Name>
             <Ean>321321321321</Ean>
-            <Description lang="en">Authentic Czech beer</Description>
+            <Description xml:lang="en">Authentic Czech beer</Description>
             <Rating>5</Rating>
             <Picture>
                 <Height>100</Height>
@@ -182,20 +182,20 @@
                 <Uri>https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Club_Beer.jpg/640px-Club_Beer.jpg</Uri>
             </Picture>
             <Category>
-                <InternalName lang="en">Alcoholic drinks</InternalName>
-                <SynonymName lang="cs">Alkoholicke napoje</SynonymName>
+                <InternalName xml:lang="en">Alcoholic drinks</InternalName>
+                <SynonymName xml:lang="cs">Alkoholicke napoje</SynonymName>
                 <ParentCategory>
                     <InternalName>Fresh</InternalName>
-                    <SynonymName lang="cs">Cerstve</SynonymName>
-                    <SynonymName lang="vi">Tuoi</SynonymName>
+                    <SynonymName xml:lang="cs">Cerstve</SynonymName>
+                    <SynonymName xml:lang="vi">Tuoi</SynonymName>
                 </ParentCategory>
             </Category>
             <Category>
                 <InternalName>Seasonal</InternalName>
-                <SynonymName lang="cs">Sezonni</SynonymName>
+                <SynonymName xml:lang="cs">Sezonni</SynonymName>
             </Category>
             <Producer>
-                <Name lang="en">Pilsner</Name>
+                <Name xml:lang="en">Pilsner</Name>
                 <Dic>222222222222</Dic>
                 <Rating>5</Rating>
                 <Rating>4</Rating>

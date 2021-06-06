@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
     <xs:element name="Offers" type="offerlist"></xs:element>
 
     <xs:complexType name="offerlist">
@@ -13,7 +13,7 @@
     <xs:complexType name="langString">
         <xs:simpleContent>
             <xs:extension base="xs:string">
-                <xs:attribute name="lang" type="xs:language" default="en" />
+                <xs:attribute ref="xml:lang" use="optional" default="en" />
             </xs:extension>
         </xs:simpleContent>
     </xs:complexType>
@@ -49,8 +49,8 @@
         <xs:sequence>
             <xs:element name="FromDate" type="xs:date" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="ToDate" type="xs:date" minOccurs="1" maxOccurs="1"></xs:element>
-            <xs:element name="Price" type="xs:float" minOccurs="1" maxOccurs="1"></xs:element>
-            <xs:element name="DiscountRate" type="xs:float" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="Price" type="xs:double" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="DiscountRate" type="xs:double" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Availability" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Description" type="langString" minOccurs="0" maxOccurs="1"></xs:element>
             <xs:element name="Store" type="store" minOccurs="1" maxOccurs="1"></xs:element>
