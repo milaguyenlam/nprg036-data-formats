@@ -4,6 +4,8 @@
     "Offer": {
         "type": "array",
         "items":{
+            "Id": "integer",
+            "type": "string",
             "StartDate": {
                 "type":"string",
                 "format":"date"
@@ -22,68 +24,69 @@
                 "maximum": 100
             },
             "Availability": {
-                "type": "string"
+                "type": "integer"
             },
             "Description": "string",
             "OfferedBy": {
-
-                "Location": {
-                    "Langtitude": "number",
-                    "Longitude": "number"
-                },
+                "Id": "integer",
+                "type": "string",
+                "Address": "string",
                 "OpeningHours": "string",
                 "Rating": {
                     "type": "array",
                     "items": {
-                        "type": "number",
-                        "minimum": 1,
-                        "maximum": 5
+                        "Id": "integer",
+                        "StarRating": "integer"
                     }
                 },
                 "BranchOf": {
-                    "Name": {
-                        "type": "string"
-                    },
-                    "Leicode": "string",
+                    "Id": "integer",
+                    "Name": "string",
+                    "Dic": "string",
                     "Rating": {
-                            "type": "number",
-                            "minimum": 1,
-                            "maximum": 5
-                    }
+                        "type": "array",
+                        "items": {
+                            "Id": "integer",
+                            "StarRating": "integer"
+                        }
+                    },
                 }
             },
             "ItemOffered": {
+                "Id": "integer",
+                "type": "string",
                 "Name": "string",
                 "Description": "string",
                 "Rating": {
                     "type": "array",
                     "items": {
-                        "type": "number",
-                        "minimum": 1,
-                        "maximum": 5
+                        "Id": "integer",
+                        "StarRating": "integer"
                     }
-                }
+                },
             },
             "MadeBy": {
-                "name": {
-                    "type": "string"
-                },
-                "Leicode": "string",
+                "Id": "integer",
+                "type": "string",
+                "Name": "string",
+                "Dic": "string",
                 "Rating": {
                     "type": "array",
                     "items": {
-                        "type": "number",
-                        "minimum": 1,
-                        "maximum": 5
+                        "Id": "integer",
+                        "StarRating": "integer"
                     }
                 },
                 "ProductionCapacity": "integer"
             },
             "Category": {
+                "Id": "integer",
                 "InternalName": "string",
                 "AlternateName": "string"
             },
             "Picture": {
+                "Id": "integer",
+                "type": "string",
                 "Height": "integer",
                 "Width": "integer",
                 "URI": {

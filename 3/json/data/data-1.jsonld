@@ -7,7 +7,7 @@
         "schema": "http://schema.org/",
         "frapo": "http://purl.org/cerif/frapo/",
         "type": "@type",
-        "id": "@id",
+        "Id": "@Id",
         "Offer": "schema:Offer",
         "Product": "schema:Product",
         "Picture": "schema:ImageObject",
@@ -29,7 +29,7 @@
         "ParentCategory": "schema:isPartOf",
         "Dic": "schema:leiCode",
         "ProductionCapacity": {
-            "@id": "ex:productionCapacity",
+            "@Id": "ex:productionCapacity",
             "@type": "xsd:integer"},
         "Address": "schema:address",
         "OpeningHours": "schema:openingHours",
@@ -39,120 +39,173 @@
     "@graph":
     [
         {
-            "id": "apple-offer-praha",
+            "Id": 0,
             "type": "Offer",
             "StartDate": "2021-05-20",
             "EndDate": "2021-05-30",
             "Price": 50.49,
-            "Discount": 0.2,
-            "Availability": "In stock",
-            "Description": "Maximum of 10kg's can be bought at once",
+            "Discount": 0.1,
+            "Availability": 120,
+            "Description": "Up to 30kgs can be bought at once",
             "OfferedBy": {
-                "id": "tesco-praha",
+                "Id": 0,
                 "type": "Store",        
-                "Address": "Vysocanska 117, Prague 19000",
-                "OpeningHours": "Mon-Sun: 7:00-20:00",
+                "Address": "Prosecka 115 Praha 9",
+                "OpeningHours": "Mo-Su 7:00-20:00",
                 "Rating": [
-                    2,
-                    3
+                    {
+                        "Id": 0,
+                        "StarRating": 4
+                    },
+                    {
+                        "Id": 1,
+                        "StarRating": 3
+                    },
                 ],
                 "BranchOf": {
-                    "id": "tesco",
+                    "Id": 0,
                     "Name": "Tesco",
-                    "Dic": "321321412",
-                    "Rating": 4,
+                    "Dic": "2222",
+                    "Rating": [
+                        {
+                            "Id": 0,
+                            "StarRating": 4
+                        },
+                        {
+                            "Id": 1,
+                            "StarRating": 3
+                        }
+                    ],
                     "type": "Vendor"
                 }
             },
             "ItemOffered":{
-                "id": "apple",
+                "Id": 0,
                 "type": "Product",
                 "Name": "Apple",
-                "Description": "Fresh and tasty...",
-                "Rating": [
-                    4,
-                    5,
-                    5
+                "Description": "Fresh and tasty",
+                "Rating":[
+                    {
+                        "Id": 0,
+                        "StarRating": 4
+                    },
+                    {
+                        "Id": 1,
+                        "StarRating": 3
+                    }
                 ],
                 "MadeBy": {
-                    "id": "farma",
+                    "Id": 0,
                     "type": "Producer",
-                    "Name": "Nase Farma",
-                    "Dic": 1111,
-                    "Rating": [5],
-                    "ProductionCapacity": 10000
+                    "Name": "Agrofert",
+                    "Dic": 1234,
+                    "Rating":[
+                        {
+                            "Id": 0,
+                            "StarRating": 4
+                        },
+                        {
+                            "Id": 0,
+                            "StarRating": 4
+                        },
+                        {
+                            "Id": 1,
+                            "StarRating": 3
+                        }
+
+                    ],
+                    "ProductionCapacity": 100000
                 },
                 "Category": {
-                    "id": "fruit",
+                    "Id": 1,
                     "type":"Category",
                     "InternalName": "Fruit",
                     "SynonymName": "Ovoce"
                 },
                 "Picture": {
-                    "id": "apple-image",
+                    "Id": 2,
                     "type": "Picture",
                     "Height": 100,
-                    "Width": 100,
-                    "URI": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg"
+                    "WIdth": 100,
+                    "URI": "https://agrofert.cz/apple/pic"
                 }
             }
         },
 
         {
-            "id": "beer-offer-praha",
+            "Id": 1,
             "type":"Offer",
-            "StartDate": "2021-05-10",
-            "EndDate": "2021-05-29",
-            "Price": 10.49,
-            "Discount": 0.4,
-            "Availability": 1000,
+            "StartDate": "2021-05-01",
+            "EndDate": "2021-05-09",
+            "Price": 20.0,
+            "Discount": 0.0,
+            "Availability": 200,
             "OfferedBy": {
-                "id": "tesco-praha",
+                "Id": 1,
                 "type":"Store",
-                "Address":"Vysocanska 117, Prague 19000",
-                "OpeningHours": "Mon-Sun: 7:00-20:00",
-                "Rating": [
-                    2,
-                    3
+                "Address":"Pisecna 5038 Chomutov",
+                "OpeningHours": "Mo-Su 9:00-18:00",
+                "Rating":[
+                    {
+                        "Id": 2,
+                        "StarRating": 2
+                    }
                 ],
                 "Vendor": {
-                    "id": "tesco",
+                    "Id": 0,
                     "Name": "Tesco",
-                    "Dic": "321321412",
-                    "Rating": 4,
+                    "Dic": "2222",
+                    "Rating":[
+                        {
+                            "Id": 0,
+                            "StarRating": 4
+                        },
+                        {
+                            "Id": 1,
+                            "StarRating": 3
+                        }
+                    ],
                     "type":"Vendor"
                 }
             },
             "ItemOffered": {
-                "id": "beer",
+                "Id": 2,
                 "type":"Product",
-                "Name": "Pilner Beer",
-                "Description": "Authentic Czech Beer",
-                "Rating": [
-                    5,
-                    5,
-                    5
-                ],
+                "Name": "Milk",
+                "Description": "Organic Milk",
                 "Producer": {
-                    "id": "pilsner",
+                    "Id": 0,
                     "type":"Producer",
-                    "Name": "Pilsner Urquel",
-                    "Dic": 112321,
-                    "Rating": [5],
-                    "ProductionCapacity": 50000
+                    "Name": "Agrofert",
+                    "Dic": 1234,
+                    "Rating":[
+                        {
+                            "Id": 0,
+                            "StarRating": 4
+                        },
+                        {
+                            "Id": 0,
+                            "StarRating": 4
+                        },
+                        {
+                            "Id": 1,
+                            "StarRating": 3
+                        }
+                    ],
+                    "ProductionCapacity": 100000
                 },
                 "Category": {
-                    "id": "alcohol",
+                    "Id": 2,
                     "type":"Category",
-                    "InternalName": "Alcohol",
-                    "SynonymName": "Alkohol"
+                    "InternalName": "Drinks",
+                    "SynonymName": "Napoje"
                 },
                 "Picture": {
-                    "id": "beer-image",
+                    "Id": 5,
                     "type":"Picture",
                     "Height": 100,
-                    "Width": 100,
-                    "URI": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Club_Beer.jpg/640px-Club_Beer.jpg"
+                    "WIdth": 100,
+                    "URI": "https://agrofert.cz/logo"
                 }
             }
             
