@@ -1,215 +1,231 @@
 {
-    "@context" :{
-        "@base": "http://example.org/",
-        "ex": "http://example.org/ex/",
-        "xsd": "http://www.w3.org/2001/XMLSchema#",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "schema": "http://schema.org/",
-        "frapo": "http://purl.org/cerif/frapo/",
-        "type": "@type",
-        "Id": "@Id",
-        "Offer": "schema:Offer",
-        "Product": "schema:Product",
-        "Picture": "schema:ImageObject",
-        "Category": "schema:ProductGroup",
-        "Producer": "frapo:Manufacturer",
-        "Vendor": "frapo:Vendor",
-        "Store": "schema:Store",
-        "StartDate": "schema:startDate",
-        "EndDate": "schema:endDate",
-        "Price": "schema:price",
-        "Discount": "schema:discount",
-        "Availability": "schema:availability",
-        "Description" : "schema:description",
-        "OfferedBy": "schema:offeredBy",
-        "ItemOffered": "schema:itemOffered",
-        "Name" : "schema:name",
-        "Rating": "schema:rating",
-        "SynonymName": "schema:alternateName",
-        "ParentCategory": "schema:isPartOf",
-        "Dic": "schema:leiCode",
-        "ProductionCapacity": {
-            "@Id": "ex:productionCapacity",
-            "@type": "xsd:integer"},
-        "Address": "schema:address",
-        "OpeningHours": "schema:openingHours",
-        "BranchOf": "schema:branchOf",
-        "MadeBy": "schema:manufacturer"
+  "@context": {
+    "@base": "http://example.org/",
+    "ex": "http://example.org/ex/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "schema": "http://schema.org/",
+    "frapo": "http://purl.org/cerif/frapo/",
+    "type": "@type",
+    "id": "@id",
+    "Id": "ex:id",
+    "Offer": "schema:Offer",
+    "Product": "schema:Product",
+    "Picture": "schema:ImageObject",
+    "Category": "schema:ProductGroup",
+    "Producer": "frapo:Manufacturer",
+    "Vendor": "frapo:Vendor",
+    "Store": "schema:Store",
+    "StartDate": "schema:startDate",
+    "EndDate": "schema:endDate",
+    "Price": "schema:price",
+    "Discount": "schema:discount",
+    "Availability": "schema:availability",
+    "Description": "schema:description",
+    "OfferedBy": "schema:offeredBy",
+    "ItemOffered": "schema:itemOffered",
+    "Name": "schema:name",
+    "Rating": "schema:rating",
+    "SynonymName": "schema:alternateName",
+    "ParentCategory": "schema:isPartOf",
+    "Dic": "schema:leiCode",
+    "ProductionCapacity": {
+      "@Id": "ex:productionCapacity",
+      "@type": "xsd:integer"
     },
-    "@graph":
-    [
-        {
+    "Address": "schema:address",
+    "OpeningHours": "schema:openingHours",
+    "BranchOf": "schema:branchOf",
+    "MadeBy": "schema:manufacturer"
+  },
+  "@graph": [
+    {
+      "id": "http://example.org/offer/0",
+      "Id": 0,
+      "type": "Offer",
+      "StartDate": "2021-05-20",
+      "EndDate": "2021-05-30",
+      "Price": 50.49,
+      "Discount": 0.1,
+      "Availability": 120,
+      "Description": "Up to 30kgs can be bought at once",
+      "OfferedBy": {
+        "id": "http://example.org/store/0",
+        "Id": 0,
+        "type": "Store",
+        "Address": "Prosecka 115 Praha 9",
+        "OpeningHours": "Mo-Su 7:00-20:00",
+        "Rating": [
+          {
+            "id": "http://example.org/storerating/0",
             "Id": 0,
-            "type": "Offer",
-            "StartDate": "2021-05-20",
-            "EndDate": "2021-05-30",
-            "Price": 50.49,
-            "Discount": 0.1,
-            "Availability": 120,
-            "Description": "Up to 30kgs can be bought at once",
-            "OfferedBy": {
-                "Id": 0,
-                "type": "Store",        
-                "Address": "Prosecka 115 Praha 9",
-                "OpeningHours": "Mo-Su 7:00-20:00",
-                "Rating": [
-                    {
-                        "Id": 0,
-                        "StarRating": 4
-                    },
-                    {
-                        "Id": 1,
-                        "StarRating": 3
-                    },
-                ],
-                "BranchOf": {
-                    "Id": 0,
-                    "Name": "Tesco",
-                    "Dic": "2222",
-                    "Rating": [
-                        {
-                            "Id": 0,
-                            "StarRating": 4
-                        },
-                        {
-                            "Id": 1,
-                            "StarRating": 3
-                        }
-                    ],
-                    "type": "Vendor"
-                }
-            },
-            "ItemOffered":{
-                "Id": 0,
-                "type": "Product",
-                "Name": "Apple",
-                "Description": "Fresh and tasty",
-                "Rating":[
-                    {
-                        "Id": 0,
-                        "StarRating": 4
-                    },
-                    {
-                        "Id": 1,
-                        "StarRating": 3
-                    }
-                ],
-                "MadeBy": {
-                    "Id": 0,
-                    "type": "Producer",
-                    "Name": "Agrofert",
-                    "Dic": 1234,
-                    "Rating":[
-                        {
-                            "Id": 0,
-                            "StarRating": 4
-                        },
-                        {
-                            "Id": 0,
-                            "StarRating": 4
-                        },
-                        {
-                            "Id": 1,
-                            "StarRating": 3
-                        }
-
-                    ],
-                    "ProductionCapacity": 100000
-                },
-                "Category": {
-                    "Id": 1,
-                    "type":"Category",
-                    "InternalName": "Fruit",
-                    "SynonymName": "Ovoce"
-                },
-                "Picture": {
-                    "Id": 2,
-                    "type": "Picture",
-                    "Height": 100,
-                    "WIdth": 100,
-                    "URI": "https://agrofert.cz/apple/pic"
-                }
-            }
-        },
-
-        {
+            "StarRating": 4
+          },
+          {
+            "id": "http://example.org/storerating/1",
             "Id": 1,
-            "type":"Offer",
-            "StartDate": "2021-05-01",
-            "EndDate": "2021-05-09",
-            "Price": 20.0,
-            "Discount": 0.0,
-            "Availability": 200,
-            "OfferedBy": {
-                "Id": 1,
-                "type":"Store",
-                "Address":"Pisecna 5038 Chomutov",
-                "OpeningHours": "Mo-Su 9:00-18:00",
-                "Rating":[
-                    {
-                        "Id": 2,
-                        "StarRating": 2
-                    }
-                ],
-                "Vendor": {
-                    "Id": 0,
-                    "Name": "Tesco",
-                    "Dic": "2222",
-                    "Rating":[
-                        {
-                            "Id": 0,
-                            "StarRating": 4
-                        },
-                        {
-                            "Id": 1,
-                            "StarRating": 3
-                        }
-                    ],
-                    "type":"Vendor"
-                }
+            "StarRating": 3
+          }
+        ],
+        "BranchOf": {
+          "id": "http://example.org/vendor/0",
+          "Id": 0,
+          "Name": "Tesco",
+          "Dic": "2222",
+          "Rating": [
+            {
+              "id": "http://example.org/vendorrating/0",
+              "Id": 0,
+              "StarRating": 4
             },
-            "ItemOffered": {
-                "Id": 2,
-                "type":"Product",
-                "Name": "Milk",
-                "Description": "Organic Milk",
-                "Producer": {
-                    "Id": 0,
-                    "type":"Producer",
-                    "Name": "Agrofert",
-                    "Dic": 1234,
-                    "Rating":[
-                        {
-                            "Id": 0,
-                            "StarRating": 4
-                        },
-                        {
-                            "Id": 0,
-                            "StarRating": 4
-                        },
-                        {
-                            "Id": 1,
-                            "StarRating": 3
-                        }
-                    ],
-                    "ProductionCapacity": 100000
-                },
-                "Category": {
-                    "Id": 2,
-                    "type":"Category",
-                    "InternalName": "Drinks",
-                    "SynonymName": "Napoje"
-                },
-                "Picture": {
-                    "Id": 5,
-                    "type":"Picture",
-                    "Height": 100,
-                    "WIdth": 100,
-                    "URI": "https://agrofert.cz/logo"
-                }
+            {
+              "id": "http://example.org/vendorrating/1",
+              "Id": 1,
+              "StarRating": 3
             }
-            
+          ],
+          "type": "Vendor"
         }
-    ]
-    
+      },
+      "ItemOffered": {
+        "id": "http://example.org/product/0",
+        "Id": 0,
+        "type": "Product",
+        "Name": "Apple",
+        "Description": "Fresh and tasty",
+        "Rating": [
+          {
+            "id": "http://example.org/productrating/0",
+            "Id": 0,
+            "StarRating": 4
+          },
+          {
+            "id": "http://example.org/productrating/1",
+            "Id": 1,
+            "StarRating": 3
+          }
+        ],
+        "MadeBy": {
+          "id": "http://example.org/producer/0",
+          "Id": 0,
+          "type": "Producer",
+          "Name": "Agrofert",
+          "Dic": 1234,
+          "Rating": [
+            {
+              "id": "http://example.org/producerrating/0",
+              "Id": 0,
+              "StarRating": 4
+            },
+            {
+              "id": "http://example.org/producerrating/1",
+              "Id": 1,
+              "StarRating": 3
+            }
+          ],
+          "ProductionCapacity": 100000
+        },
+        "Category": {
+          "id": "http://example.org/category/1",
+          "Id": 1,
+          "type": "Category",
+          "InternalName": "Fruit",
+          "SynonymName": "Ovoce"
+        },
+        "Picture": {
+          "id": "http://example.org/picture/2",
+          "Id": 2,
+          "type": "Picture",
+          "Height": 100,
+          "WIdth": 100,
+          "URI": "https://agrofert.cz/apple/pic"
+        }
+      }
+    },
+    {
+      "id": "http://example.org/offer/1",
+      "Id": 1,
+      "type": "Offer",
+      "StartDate": "2021-05-01",
+      "EndDate": "2021-05-09",
+      "Price": 20,
+      "Discount": 0,
+      "Availability": 200,
+      "OfferedBy": {
+        "id": "http://example.org/store/1",
+        "Id": 1,
+        "type": "Store",
+        "Address": "Pisecna 5038 Chomutov",
+        "OpeningHours": "Mo-Su 9:00-18:00",
+        "Rating": [
+          {
+            "id": "http://example.org/storerating/2",
+            "Id": 2,
+            "StarRating": 2
+          }
+        ],
+        "Vendor": {
+          "id": "http://example.org/vendor/0",
+          "Id": 0,
+          "Name": "Tesco",
+          "Dic": "2222",
+          "Rating": [
+            {
+              "id": "http://example.org/vendorrating/0",
+              "Id": 0,
+              "StarRating": 4
+            },
+            {
+              "id": "http://example.org/vendorrating/0",
+              "Id": 1,
+              "StarRating": 3
+            }
+          ],
+          "type": "Vendor"
+        }
+      },
+      "ItemOffered": {
+        "id": "http://example.org/product/2",
+        "Id": 2,
+        "type": "Product",
+        "Name": "Milk",
+        "Description": "Organic Milk",
+        "Producer": {
+          "id": "http://example.org/producer/0",
+          "Id": 0,
+          "type": "Producer",
+          "Name": "Agrofert",
+          "Dic": 1234,
+          "Rating": [
+            {
+              "id": "http://example.org/producerrating/0",
+              "Id": 0,
+              "StarRating": 4
+            },
+            {
+              "id": "http://example.org/producerrating/1",
+              "Id": 1,
+              "StarRating": 3
+            }
+          ],
+          "ProductionCapacity": 100000
+        },
+        "Category": {
+          "id": "http://example.org/category/2",
+          "Id": 2,
+          "type": "Category",
+          "InternalName": "Drinks",
+          "SynonymName": "Napoje"
+        },
+        "Picture": {
+          "id": "http://example.org/picture/5",
+          "Id": 5,
+          "type": "Picture",
+          "Height": 100,
+          "WIdth": 100,
+          "URI": "https://agrofert.cz/logo"
+        }
+      }
+    }
+  ]
 }
