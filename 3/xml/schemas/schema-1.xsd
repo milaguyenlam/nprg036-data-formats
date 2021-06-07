@@ -18,21 +18,37 @@
         </xs:simpleContent>
     </xs:complexType>
 
+
+    <xs:simpleType name="starRating">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"></xs:minInclusive>
+            <xs:maxInclusive value="5"></xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:complexType name="product">
         <xs:sequence>
+            <xs:element name="Id" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Name" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Ean" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Description" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
-            <xs:element name="Rating" type="xs:positiveInteger" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            <xs:element name="Rating" type="rating" minOccurs="0" maxOccurs="unbounded"></xs:element>
             <xs:element name="Picture" type="picture" minOccurs="1" maxOccurs="unbounded"></xs:element>
             <xs:element name="Category" type="category" minOccurs="1" maxOccurs="unbounded"></xs:element>
             <xs:element name="Producer" type="producer" minOccurs="1" maxOccurs="1"></xs:element>
         </xs:sequence>
     </xs:complexType>
 
+    <xs:complexType name="rating">
+        <xs:sequence>
+            <xs:element name="Id" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="StarRating" type="starRating" minOccurs="1" maxOccurs="1"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:complexType name="picture">
         <xs:sequence>
+            <xs:element name="Id" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Height" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Width" type="xs:positiveInteger" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Uri" type="xs:anyURI" minOccurs="1" maxOccurs="1"></xs:element>
@@ -40,6 +56,7 @@
     </xs:complexType>
     <xs:complexType name="category">
         <xs:sequence>
+            <xs:element name="Id" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="InternalName" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="SynonymName" type="langString" minOccurs="0" maxOccurs="unbounded"></xs:element>
             <xs:element name="ParentCategory" type="category" minOccurs="0" maxOccurs="unbounded"></xs:element>
@@ -47,6 +64,7 @@
     </xs:complexType>
     <xs:complexType name="offer">
         <xs:sequence>
+            <xs:element name="Id" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="FromDate" type="xs:date" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="ToDate" type="xs:date" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Price" type="xs:double" minOccurs="1" maxOccurs="1"></xs:element>
@@ -59,18 +77,20 @@
     </xs:complexType>
     <xs:complexType name="store">
         <xs:sequence>
+            <xs:element name="Id" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Address" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="OpeningHours" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
-            <xs:element name="Rating" type="xs:positiveInteger" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            <xs:element name="Rating" type="rating" minOccurs="0" maxOccurs="unbounded"></xs:element>
             <xs:element name="Vendor" type="vendor" minOccurs="1" maxOccurs="1"></xs:element>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="company">
         <xs:sequence>
+            <xs:element name="Id" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Name" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Dic" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
-            <xs:element name="Rating" type="xs:positiveInteger" minOccurs="0" maxOccurs="unbounded"></xs:element>
+            <xs:element name="Rating" type="rating" minOccurs="0" maxOccurs="unbounded"></xs:element>
             <xs:element name="Picture" type="picture" minOccurs="0" maxOccurs="1"></xs:element>
         </xs:sequence>
     </xs:complexType>
