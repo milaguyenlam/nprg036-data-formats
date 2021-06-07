@@ -66,6 +66,7 @@ div {
 			<p>
 				<xsl:value-of select="Description"/>
 			</p>
+			<xsl:if test="count(Rating/StarRating) &gt; 0">
 			<table rules="all" style="border: 1px solid black">
 				<tr>
 					<th colspan="2">
@@ -74,7 +75,7 @@ div {
 				<tr>
 					<td>Average</td>
 					<td>
-						<xsl:value-of select="format-number(sum(Rating) div count(Rating),'#.#')"/>
+						<xsl:value-of select="format-number(sum(Rating/StarRating) div count(Rating/StarRating),'#.#')"/>
 					</td>
 				</tr>
 				<tr style="border-bottom:1px solid black">
@@ -83,34 +84,35 @@ div {
 				<tr>
 					<td>Excellent</td>
 					<td>
-						<xsl:value-of select="count(Rating[. = 5])"/>
+						<xsl:value-of select="count(Rating/StarRating[. = 5])"/>
 					</td>
 				</tr>
 				<tr>
 					<td>Very Good</td>
 					<td>
-						<xsl:value-of select="count(Rating[. = 4])"/>
+						<xsl:value-of select="count(Rating/StarRating[. = 4])"/>
 					</td>
 				</tr>
 				<tr>
 					<td>Good</td>
 					<td>
-						<xsl:value-of select="count(Rating[. = 3])"/>
+						<xsl:value-of select="count(Rating/StarRating[. = 3])"/>
 					</td>
 				</tr>
 				<tr>
 					<td>Fair</td>
 					<td>
-						<xsl:value-of select="count(Rating[. = 2])"/>
+						<xsl:value-of select="count(Rating/StarRating[. = 2])"/>
 					</td>
 				</tr>
 				<tr>
 					<td>Poor</td>
 					<td>
-						<xsl:value-of select="count(Rating[. = 1])"/>
+						<xsl:value-of select="count(Rating/StarRating[. = 1])"/>
 					</td>
 				</tr>
 			</table>
+			</xsl:if>
 			<svg id="{concat('barcode_', Ean)}"/>
 			<script>
 			JsBarcode("#barcode_<xsl:value-of select="Ean"/>", "<xsl:value-of select="Ean"/>");
