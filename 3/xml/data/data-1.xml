@@ -1,207 +1,247 @@
 <?xml-model href="../schemas/schema-1.xsd"?>
 <Offers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../schemas/schema-1.xsd">
     <Offer>
-        <FromDate>2021-05-20</FromDate>
-        <ToDate>2021-05-30</ToDate>
+        <Id>0</Id>
+        <FromDate>2021-05-01</FromDate>
+        <ToDate>2021-05-09</ToDate>
         <Price>50.49</Price>
-        <DiscountRate>0.2</DiscountRate>
-        <Availability xml:lang="en">In Stock</Availability>
-        <Description xml:lang="en">Customers can buy up to 5kilos at once</Description>
-        <Store>
-            <Address>Sokolovská 968/189, 190 00 Praha 9-Libeň</Address>
-            <OpeningHours xml:lang="en">Mon-Sun: 7:00-20:00</OpeningHours>
-            <Rating>2</Rating>
-            <Rating>3</Rating>
-            <Vendor>
-                <Name xml:lang="en">Tesco</Name>
-                <Dic>321321412</Dic>
-                <Rating>4</Rating>
-            </Vendor>
-        </Store>
-        <Product>
-            <Name xml:lang="en">Apple</Name>
-            <Ean>123123123123</Ean>
-            <Description xml:lang="en">Sweet and tasty apple</Description>
-            <Rating>2</Rating>
-            <Rating>1</Rating>
-            <Picture>
-                <Height>100</Height>
-                <Width>100</Width>
-                <Uri>https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg</Uri>
-            </Picture>
-            <Category>
-                <InternalName xml:lang="en">Fruit</InternalName>
-                <SynonymName xml:lang="cs">Ovoce</SynonymName>
-                <ParentCategory>
-                    <InternalName xml:lang="en">Fresh</InternalName>
-                    <SynonymName xml:lang="cs">Cerstve</SynonymName>
-                    <SynonymName xml:lang="vi">Tuoi</SynonymName>
-                </ParentCategory>
-            </Category>
-            <Category>
-                <InternalName xml:lang="en">Seasonal</InternalName>
-                <SynonymName xml:lang="cs">Sezonni</SynonymName>
-            </Category>
-            <Producer>
-                <Name xml:lang="en">Agrofert</Name>
-                <Dic>333333333333</Dic>
-                <Rating>1</Rating>
-                <Rating>1</Rating>
-                <Rating>2</Rating>
-                <ProductionCapacity>10000000</ProductionCapacity>
-            </Producer>
-        </Product>
-    </Offer>
-    <Offer>
-        <FromDate>2021-05-20</FromDate>
-        <ToDate>2021-05-30</ToDate>
-        <Price>45.49</Price>
-        <DiscountRate>0.3</DiscountRate>
-        <Availability xml:lang="en">In Stock</Availability>
-        <Description xml:lang="en">Customers can buy up to 10kilos at once</Description>
-        <Store>
-            <Address>Písečná 5376, 430 00 Chomutov</Address>
-            <OpeningHours>Mon-Sun: 8:00-19:00</OpeningHours>
-            <Rating>4</Rating>
-            <Rating>5</Rating>
-            <Vendor>
-                <Name>Tesco</Name>
-                <Dic>321321412</Dic>
-                <Rating>4</Rating>
-            </Vendor>
-        </Store>
-        <Product>
-            <Name xml:lang="en">Apple</Name>
-            <Ean>123123123123</Ean>
-            <Description xml:lang="en">Sweet and tasty apple</Description>
-            <Rating>2</Rating>
-            <Rating>1</Rating>
-            <Picture>
-                <Height>100</Height>
-                <Width>100</Width>
-                <Uri>https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg</Uri>
-            </Picture>
-            <Category>
-                <InternalName xml:lang="en">Fruit</InternalName>
-                <SynonymName xml:lang="cs">Ovoce</SynonymName>
-                <ParentCategory>
-                    <InternalName xml:lang="en">Fresh</InternalName>
-                    <SynonymName xml:lang="cs">Cerstve</SynonymName>
-                    <SynonymName xml:lang="vi">Tuoi</SynonymName>
-                </ParentCategory>
-            </Category>
-            <Category>
-                <InternalName xml:lang="en">Seasonal</InternalName>
-                <SynonymName xml:lang="cs">Sezonni</SynonymName>
-            </Category>
-            <Producer>
-                <Name xml:lang="en">Agrofert</Name>
-                <Dic>333333333333</Dic>
-                <Rating>1</Rating>
-                <Rating>1</Rating>
-                <Rating>2</Rating>
-                <ProductionCapacity>10000000</ProductionCapacity>
-            </Producer>
-        </Product>
-    </Offer>
-    <Offer>
-        <FromDate>2021-05-21</FromDate>
-        <ToDate>2021-05-30</ToDate>
-        <Price>21.00</Price>
         <DiscountRate>0.1</DiscountRate>
-        <Availability xml:lang="en">In Stock</Availability>
-        <Description>Maximum of 10kg's can be bought at once</Description>
+        <Availability>120</Availability>
+        <Description xml:lang="en">Up to 30kgs can be bought at once</Description>
         <Store>
-            <Address>Písečná 5376, 430 00 Chomutov</Address>
-            <OpeningHours>Mon-Sun: 8:00-19:00</OpeningHours>
-            <Rating>4</Rating>
-            <Rating>5</Rating>
+            <Id>0</Id>
+            <Address>Prosecka 115 Praha 9</Address>
+            <OpeningHours xml:lang="en">Mo-Su 7:00-20:00</OpeningHours>
+            <Rating>
+                <Id>0</Id>
+                <StarRating>4</StarRating>
+            </Rating>
+            <Rating>
+                <Id>1</Id>
+                <StarRating>3</StarRating>
+            </Rating>
             <Vendor>
+                <Id>0</Id>
                 <Name>Tesco</Name>
-                <Dic>321321412</Dic>
-                <Rating>4</Rating>
+                <Dic>2222</Dic>
+                <Rating>
+                    <Id>0</Id>
+                    <StarRating>4</StarRating>
+                </Rating>
+                <Rating>
+                    <Id>1</Id>
+                    <StarRating>3</StarRating>
+                </Rating>
+                <Picture>
+                    <Id>1</Id>
+                    <Height>100</Height>
+                    <Width>100</Width>
+                    <Uri>https://tesco.cz/logo</Uri>
+                </Picture>
             </Vendor>
         </Store>
         <Product>
-            <Name xml:lang="en">Milk</Name>
-            <Ean>124124124124</Ean>
-            <Description xml:lang="en">Fresh milk from an organic farm</Description>
-            <Rating>5</Rating>
-            <Rating>2</Rating>
-            <Rating>4</Rating>
+            <Id>0</Id>
+            <Name xml:lang="en">Apple</Name>
+            <Ean>1111</Ean>
+            <Description xml:lang="en">Fresh and Tasty</Description>
+            <Rating>
+                <Id>0</Id>
+                <StarRating>4</StarRating>
+            </Rating>
+            <Rating>
+                <Id>1</Id>
+                <StarRating>3</StarRating>
+            </Rating>
             <Picture>
+                <Id>2</Id>
                 <Height>100</Height>
                 <Width>100</Width>
-                <Uri>https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Milk_glass.jpg/640px-Milk_glass.jpg</Uri>
+                <Uri>https://agrofert.cz/apple/pic</Uri>
             </Picture>
             <Category>
-                <InternalName xml:lang="en">Dairy</InternalName>
-                <SynonymName xml:lang="cs">Mlecne vyrobky</SynonymName>
+                <Id>1</Id>
+                <InternalName xml:lang="en">Fruit</InternalName>
+                <SynonymName xml:lang="cs">Ovoce</SynonymName>
+                <SynonymName xml:lang="vi">Hoa Qua</SynonymName>
                 <ParentCategory>
+                    <Id>0</Id>
                     <InternalName xml:lang="en">Fresh</InternalName>
                     <SynonymName xml:lang="cs">Cerstve</SynonymName>
                     <SynonymName xml:lang="vi">Tuoi</SynonymName>
                 </ParentCategory>
             </Category>
             <Producer>
-                <Name xml:lang="en">Agrofert</Name>
-                <Dic>333333333333</Dic>
-                <Rating>1</Rating>
-                <Rating>1</Rating>
-                <Rating>2</Rating>
-                <ProductionCapacity>10000000</ProductionCapacity>
+                <Id>0</Id>
+                <Name>Agrofert</Name>
+                <Dic>1234</Dic>
+                <Rating>
+                    <Id>0</Id>
+                    <StarRating>4</StarRating>
+                </Rating>
+                <Rating>
+                    <Id>0</Id>
+                    <StarRating>4</StarRating>
+                </Rating>
+                <Rating>
+                    <Id>1</Id>
+                    <StarRating>3</StarRating>
+                </Rating>
+                <Picture>
+                    <Id>5</Id>
+                    <Height>100</Height>
+                    <Width>100</Width>
+                    <Uri>https://agrofert.cz/logo</Uri>
+                </Picture>
+                <ProductionCapacity>100000</ProductionCapacity>
             </Producer>
         </Product>
     </Offer>
     <Offer>
-        <FromDate>2021-05-19</FromDate>
-        <ToDate>2021-05-25</ToDate>
-        <Price>20.99</Price>
-        <DiscountRate>0.05</DiscountRate>
-        <Availability xml:lang="en">In Stock</Availability>
-        <Description xml:lang="en">Customers can buy up to 10 packs at once</Description>
+        <Id>1</Id>
+        <FromDate>2021-05-01</FromDate>
+        <ToDate>2021-05-09</ToDate>
+        <Price>20.0</Price>
+        <DiscountRate>0.0</DiscountRate>
+        <Availability>200</Availability>
         <Store>
-            <Address>Obchodní zóna 260, 431 11 Otvice</Address>
-            <OpeningHours xml:lang="en">Mon-Sun: 7:00-22:00</OpeningHours>
-            <Rating>5</Rating>
-            <Rating>3</Rating>
+            <Id>1</Id>
+            <Address>Pisecna 5038 Chomutov</Address>
+            <OpeningHours xml:lang="en">Mo-Su 9:00-18:00</OpeningHours>
+            <Rating>
+                <Id>2</Id>
+                <StarRating>2</StarRating>
+            </Rating>
             <Vendor>
-                <Name>Kaufland</Name>
-                <Dic>321333332</Dic>
-                <Rating>3</Rating>
+                <Id>0</Id>
+                <Name>Tesco</Name>
+                <Dic>2222</Dic>
+                <Rating>
+                    <Id>0</Id>
+                    <StarRating>4</StarRating>
+                </Rating>
+                <Rating>
+                    <Id>1</Id>
+                    <StarRating>3</StarRating>
+                </Rating>
+                <Picture>
+                    <Id>1</Id>
+                    <Height>100</Height>
+                    <Width>100</Width>
+                    <Uri>https://tesco.cz/logo</Uri>
+                </Picture>
             </Vendor>
         </Store>
         <Product>
-            <Name xml:lang="en">Pilsner beer</Name>
-            <Ean>321321321321</Ean>
-            <Description xml:lang="en">Authentic Czech beer</Description>
-            <Rating>5</Rating>
+            <Id>2</Id>
+            <Name xml:lang="en">Milk</Name>
+            <Ean>3333</Ean>
+            <Description xml:lang="en">Organic milk</Description>
             <Picture>
+                <Id>3</Id>
                 <Height>100</Height>
                 <Width>100</Width>
-                <Uri>https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Club_Beer.jpg/640px-Club_Beer.jpg</Uri>
+                <Uri>https://agrofert.cz/milk/pic</Uri>
             </Picture>
             <Category>
-                <InternalName xml:lang="en">Alcoholic drinks</InternalName>
-                <SynonymName xml:lang="cs">Alkoholicke napoje</SynonymName>
-                <ParentCategory>
-                    <InternalName>Fresh</InternalName>
-                    <SynonymName xml:lang="cs">Cerstve</SynonymName>
-                    <SynonymName xml:lang="vi">Tuoi</SynonymName>
-                </ParentCategory>
-            </Category>
-            <Category>
-                <InternalName>Seasonal</InternalName>
-                <SynonymName xml:lang="cs">Sezonni</SynonymName>
+                <Id>2</Id>
+                <InternalName xml:lang="en">Drinks</InternalName>
+                <SynonymName xml:lang="cs">Napoje</SynonymName>
             </Category>
             <Producer>
-                <Name xml:lang="en">Pilsner</Name>
-                <Dic>222222222222</Dic>
-                <Rating>5</Rating>
-                <Rating>4</Rating>
-                <ProductionCapacity>4000</ProductionCapacity>
+                <Id>0</Id>
+                <Name>Agrofert</Name>
+                <Dic>1234</Dic>
+                <Rating>
+                    <Id>0</Id>
+                    <StarRating>4</StarRating>
+                </Rating>
+                <Rating>
+                    <Id>0</Id>
+                    <StarRating>4</StarRating>
+                </Rating>
+                <Rating>
+                    <Id>1</Id>
+                    <StarRating>3</StarRating>
+                </Rating>
+                <Picture>
+                    <Id>5</Id>
+                    <Height>100</Height>
+                    <Width>100</Width>
+                    <Uri>https://agrofert.cz/logo</Uri>
+                </Picture>
+                <ProductionCapacity>100000</ProductionCapacity>
             </Producer>
         </Product>
     </Offer>
-
+    <Offer>
+        <Id>2</Id>
+        <FromDate>2021-05-02</FromDate>
+        <ToDate>2021-05-07</ToDate>
+        <Price>15.49</Price>
+        <DiscountRate>0.3</DiscountRate>
+        <Availability>100</Availability>
+        <Store>
+            <Id>2</Id>
+            <Address>Makrovska 1 Praha</Address>
+            <OpeningHours xml:lang="en">Mo-Su 8:00-20:00</OpeningHours>
+            <Vendor>
+                <Id>1</Id>
+                <Name>Makro</Name>
+                <Dic>3333</Dic>
+                <Rating>
+                    <Id>2</Id>
+                    <StarRating>2</StarRating>
+                </Rating>
+                <Picture>
+                    <Id>0</Id>
+                    <Height>100</Height>
+                    <Width>100</Width>
+                    <Uri>https://makro.cz/logo</Uri>
+                </Picture>
+            </Vendor>
+        </Store>
+        <Product>
+            <Id>1</Id>
+            <Name xml:lang="en">Pilsner Beer</Name>
+            <Ean>2222</Ean>
+            <Description xml:lang="en">Authentic Czech beer</Description>
+            <Rating>
+                <Id>2</Id>
+                <StarRating>2</StarRating>
+            </Rating>
+            <Picture>
+                <Id>4</Id>
+                <Height>100</Height>
+                <Width>100</Width>
+                <Uri>https://pilsner.cz/beer/pic</Uri>
+            </Picture>
+            <Category>
+                <Id>3</Id>
+                <InternalName xml:lang="en">Alcohol</InternalName>
+                <SynonymName xml:lang="cs">Alkohol</SynonymName>
+                <ParentCategory>
+                    <Id>2</Id>
+                    <InternalName xml:lang="en">Drinks</InternalName>
+                    <SynonymName xml:lang="cs">Napoje</SynonymName>
+                </ParentCategory>
+            </Category>
+            <Producer>
+                <Id>1</Id>
+                <Name>Pilsner</Name>
+                <Dic>2345</Dic>
+                <Rating>
+                    <Id>2</Id>
+                    <StarRating>2</StarRating>
+                </Rating>
+                <Picture>
+                    <Id>6</Id>
+                    <Height>100</Height>
+                    <Width>100</Width>
+                    <Uri>https://pilsner.cz/logo</Uri>
+                </Picture>
+                <ProductionCapacity>100000</ProductionCapacity>
+            </Producer>
+        </Product>
+    </Offer>
 </Offers>
