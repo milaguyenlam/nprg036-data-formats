@@ -1,13 +1,13 @@
 {
   "@context": "http://www.w3.org/ns/csvw",
   "@type": "TableGroup",
-  "@id": "https://example.org/tableGroup",
+  "@id": "https://example.com/tableGroup",
   "null": "",
   "tables": [
     {
       "url": "data-1.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.org/category/{id}",
+        "aboutUrl": "http://example.com/category/{id}",
         "columns": [
           {
             "titles": "CategoryId",
@@ -42,7 +42,7 @@
             "datatype": "nonNegativeInteger",
             "required": false,
             "name": "parentId",
-            "valueUrl": "http://example.org/category/{parentId}",
+            "valueUrl": "http://example.com/category/{parentId}",
             "propertyUrl": "schema:isPartOf"
           },
           {
@@ -66,7 +66,7 @@
     {
       "url": "data-2.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.org/picture/{id}",
+        "aboutUrl": "http://example.com/picture/{id}",
         "columns": [
           {
             "titles": "PictureId",
@@ -105,7 +105,7 @@
     {
       "url": "data-3.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.org/productrating/{id}",
+        "aboutUrl": "http://example.com/productrating/{id}",
         "columns": [
           {
             "titles": "RatingId",
@@ -129,7 +129,7 @@
             "datatype": "nonNegativeInteger",
             "required": true,
             "name": "productId",
-            "valueUrl": "http://example.org/product/{productId}",
+            "valueUrl": "http://example.com/product/{productId}",
             "propertyUrl": "schema:object"
           },
           {
@@ -153,7 +153,7 @@
     {
       "url": "data-4.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.org/vendorrating/{id}",
+        "aboutUrl": "http://example.com/vendorrating/{id}",
         "columns": [
           {
             "titles": "RatingId",
@@ -177,7 +177,7 @@
             "datatype": "nonNegativeInteger",
             "required": true,
             "name": "vendorId",
-            "valueUrl": "http://example.org/vendor/{vendorId}",
+            "valueUrl": "http://example.com/vendor/{vendorId}",
             "propertyUrl": "schema:object"
           },
           {
@@ -201,7 +201,7 @@
     {
       "url": "data-5.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.org/storerating/{id}",
+        "aboutUrl": "http://example.com/storerating/{id}",
         "columns": [
           {
             "titles": "RatingId",
@@ -225,7 +225,7 @@
             "datatype": "nonNegativeInteger",
             "required": true,
             "name": "storeId",
-            "valueUrl": "http://example.org/store/{storeId}",
+            "valueUrl": "http://example.com/store/{storeId}",
             "propertyUrl": "schema:object"
           },
           {
@@ -249,7 +249,7 @@
     {
       "url": "data-6.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.org/producerrating/{id}",
+        "aboutUrl": "http://example.com/producerrating/{id}",
         "columns": [
           {
             "titles": "RatingId",
@@ -273,7 +273,7 @@
             "datatype": "nonNegativeInteger",
             "required": true,
             "name": "producerId",
-            "valueUrl": "http://example.org/producer/{producerId}",
+            "valueUrl": "http://example.com/producer/{producerId}",
             "propertyUrl": "schema:object"
           },
           {
@@ -297,7 +297,7 @@
     {
       "url": "data-7.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.org/product/{id}",
+        "aboutUrl": "http://example.com/product/{id}",
         "columns": [
           {
             "titles": "ProductId",
@@ -331,7 +331,7 @@
             "datatype": "nonNegativeInteger",
             "required": false,
             "name": "producerId",
-            "valueUrl": "http://example.org/producer/{producerId}",
+            "valueUrl": "http://example.com/producer/{producerId}",
             "propertyUrl": "schema:manufacturer"
           },
           {
@@ -339,7 +339,7 @@
             "datatype": "nonNegativeInteger",
             "required": false,
             "name": "categoryId",
-            "valueUrl": "http://example.org/category/{categoryId}",
+            "valueUrl": "http://example.com/category/{categoryId}",
             "propertyUrl": "schema:category"
           },
           {
@@ -347,7 +347,7 @@
             "datatype": "nonNegativeInteger",
             "required": false,
             "name": "pictureId",
-            "valueUrl": "http://example.org/picture/{pictureId}",
+            "valueUrl": "http://example.com/picture/{pictureId}",
             "propertyUrl": "schema:image"
           },
           {
@@ -385,7 +385,7 @@
     {
       "url": "data-8.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.org/producer/{id}",
+        "aboutUrl": "http://example.com/producer/{id}",
         "columns": [
           {
             "titles": "ProducerId",
@@ -417,7 +417,7 @@
             "datatype": "nonNegativeInteger",
             "required": true,
             "name": "pictureId",
-            "valueUrl": "http://example.org/picture/{pictureId}",
+            "valueUrl": "http://example.com/picture/{pictureId}",
             "propertyUrl": "schema:image"
           },
           {
@@ -441,7 +441,7 @@
     {
       "url": "data-9.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.org/vendor/{id}",
+        "aboutUrl": "http://example.com/vendor/{id}",
         "columns": [
           {
             "titles": "VendorId",
@@ -467,7 +467,7 @@
             "datatype": "nonNegativeInteger",
             "required": true,
             "name": "pictureId",
-            "valueUrl": "http://example.org/picture/{pictureId}",
+            "valueUrl": "http://example.com/picture/{pictureId}",
             "propertyUrl": "schema:image"
           },
           {
@@ -491,7 +491,7 @@
     {
       "url": "data-10.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.org/offer/{id}",
+        "aboutUrl": "http://example.com/offer/{id}",
         "columns": [
           {
             "titles": "ActiveOfferId",
@@ -505,7 +505,7 @@
             "datatype": "nonNegativeInteger",
             "required": true,
             "name": "productId",
-            "valueUrl": "http://example.org/product/{productId}",
+            "valueUrl": "http://example.com/product/{productId}",
             "propertyUrl": "schema:itemOffered"
           },
           {
@@ -513,7 +513,7 @@
             "datatype": "nonNegativeInteger",
             "required": true,
             "name": "storeId",
-            "valueUrl": "http://example.org/store/{storeId}",
+            "valueUrl": "http://example.com/store/{storeId}",
             "propertyUrl": "schema:offeredBy"
           },
           {
@@ -581,7 +581,7 @@
     {
       "url": "data-11.csv",
       "tableSchema": {
-        "aboutUrl": "http://example.org/store/{id}",
+        "aboutUrl": "http://example.com/store/{id}",
         "columns": [
           {
             "titles": "StoreId",
@@ -595,7 +595,7 @@
             "datatype": "nonNegativeInteger",
             "required": true,
             "name": "vendorId",
-            "valueUrl": "http://example.org/vendor/{vendorId}",
+            "valueUrl": "http://example.com/vendor/{vendorId}",
             "propertyUrl": "schema:branchOf"
           },
           {

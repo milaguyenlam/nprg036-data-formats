@@ -1,9 +1,9 @@
-@base <http://example.org/> .
+@base <http://example.com/> .
 @prefix schema: <http://schema.org/> .
 @prefix frapo: <http://purl.org/cerif/frapo> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix ex: <http://example.org/ex/> .
+@prefix ex: <http://example.com/ex/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
 ex:productionCapacity a rdf:Property;
@@ -22,7 +22,7 @@ ex:id a rdf:Property;
     ex:id "1"^^xsd:nonNegativeInteger ;
     schema:alternateName "Ovoce"@cs,
         "Hoa Qua"@vi ;
-    schema:isPartOf <http://example.org/category/0> ;
+    schema:isPartOf <http://example.com/category/0> ;
     schema:name "Fruit"@en .
 
 <http://example.com/category/2> a schema:ProductGroup ;
@@ -33,7 +33,7 @@ ex:id a rdf:Property;
 <http://example.com/category/3> a schema:ProductGroup ;
     ex:id "3"^^xsd:nonNegativeInteger ;
     schema:alternateName "Alkohol"@cs ;
-    schema:isPartOf <http://example.org/category/2> ;
+    schema:isPartOf <http://example.com/category/2> ;
     schema:name "Alcohol"@en .
 
 <http://example.com/picture/0> a schema:ImageObject ;

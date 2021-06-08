@@ -1,88 +1,88 @@
-@prefix ex:    <http://example.org/ex/> .
+@prefix ex:    <http://example.com/ex/> .
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix schema: <http://schema.org/> .
 @prefix frapo: <http://purl.org/cerif/frapo/> .
 
-<http://example.org/apple-offer-praha>
+<http://example.com/apple-offer-praha>
         rdf:type             schema:Offer ;
         schema:availability  "In stock" ;
         schema:description   "Maximum of 10kg's can be bought at once" ;
         schema:discount      2.0E-1 ;
         schema:endDate       "2021-05-30" ;
-        schema:itemOffered   <http://example.org/apple> ;
-        schema:offeredBy     <http://example.org/tesco-praha> ;
+        schema:itemOffered   <http://example.com/apple> ;
+        schema:offeredBy     <http://example.com/tesco-praha> ;
         schema:price         5.049E1 ;
         schema:startDate     "2021-05-20" .
 
-<http://example.org/apple>
+<http://example.com/apple>
         rdf:type             schema:Product ;
-        schema:ImageObject   <http://example.org/apple-image> ;
-        schema:ProductGroup  <http://example.org/fruit> ;
+        schema:ImageObject   <http://example.com/apple-image> ;
+        schema:ProductGroup  <http://example.com/fruit> ;
         schema:description   "Fresh and tasty..." ;
-        schema:manufacturer  <http://example.org/farma> ;
+        schema:manufacturer  <http://example.com/farma> ;
         schema:name          "Apple" ;
         schema:rating        4 ;
         schema:rating        5 .
 
-<http://example.org/apple-image>
+<http://example.com/apple-image>
         rdf:type  schema:ImageObject .
 
-<http://example.org/fruit>
+<http://example.com/fruit>
         rdf:type              schema:ProductGroup ;
         schema:alternateName  "Ovoce" .
 
-<http://example.org/farma>
+<http://example.com/farma>
         rdf:type               frapo:Manufacturer ;
         ex:productionCapacity  10000 ;
         schema:leiCode         1111 ;
         schema:name            "Nase Farma" ;
         schema:rating          5 .
 
-<http://example.org/tesco-praha>
+<http://example.com/tesco-praha>
         rdf:type             schema:Store ;
-        frapo:Vendor         <http://example.org/tesco> ;
+        frapo:Vendor         <http://example.com/tesco> ;
         schema:address       "Vysocanska 117, Prague 19000" ;
-        schema:branchOf      <http://example.org/tesco> ;
+        schema:branchOf      <http://example.com/tesco> ;
         schema:openingHours  "Mon-Sun: 7:00-20:00" ;
         schema:rating        2 ;
         schema:rating        3 .
 
-<http://example.org/tesco>
+<http://example.com/tesco>
         rdf:type        frapo:Vendor ;
         schema:leiCode  "321321412" ;
         schema:name     "Tesco" ;
         schema:rating   4 .
 
-<http://example.org/beer-offer-praha>
+<http://example.com/beer-offer-praha>
         rdf:type             schema:Offer ;
         schema:availability  1000 ;
         schema:discount      4.0E-1 ;
         schema:endDate       "2021-05-29" ;
-        schema:itemOffered   <http://example.org/beer> ;
-        schema:offeredBy     <http://example.org/tesco-praha> ;
+        schema:itemOffered   <http://example.com/beer> ;
+        schema:offeredBy     <http://example.com/tesco-praha> ;
         schema:price         1.049E1 ;
         schema:startDate     "2021-05-10" .
 
-<http://example.org/beer>
+<http://example.com/beer>
         rdf:type             schema:Product ;
-        frapo:Manufacturer   <http://example.org/pilsner> ;
-        schema:ImageObject   <http://example.org/beer-image> ;
-        schema:ProductGroup  <http://example.org/alcohol> ;
+        frapo:Manufacturer   <http://example.com/pilsner> ;
+        schema:ImageObject   <http://example.com/beer-image> ;
+        schema:ProductGroup  <http://example.com/alcohol> ;
         schema:description   "Authentic Czech Beer" ;
         schema:name          "Pilner Beer" ;
         schema:rating        5 .
 
-<http://example.org/pilsner>
+<http://example.com/pilsner>
         rdf:type               frapo:Manufacturer ;
         ex:productionCapacity  50000 ;
         schema:leiCode         112321 ;
         schema:name            "Pilsner Urquel" ;
         schema:rating          5 .
 
-<http://example.org/beer-image>
+<http://example.com/beer-image>
         rdf:type  schema:ImageObject .
 
-<http://example.org/alcohol>
+<http://example.com/alcohol>
         rdf:type              schema:ProductGroup ;
         schema:alternateName  "Alkohol" .
