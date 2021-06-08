@@ -17,25 +17,43 @@
     "Producer": "frapo:Manufacturer",
     "Vendor": "frapo:Vendor",
     "Store": "schema:Store",
-    "StartDate": "schema:startDate",
+    "StartDate": {
+      "@id": "schema:startDate",
+      "@type": "xsd:date"
+    },
     "EndDate": "schema:endDate",
     "Price": "schema:price",
     "Discount": "schema:discount",
     "Availability": "schema:availability",
-    "Description": "schema:description",
+    "Description": {
+      "@id": "schema:description",
+      "@language": "en"
+    },
     "OfferedBy": "schema:offeredBy",
     "ItemOffered": "schema:itemOffered",
-    "Name": "schema:name",
+    "Name": {
+      "@id": "schema:name",
+      "@language": "en"
+    },
     "Rating": "schema:rating",
-    "SynonymName": "schema:alternateName",
+    "SynonymName": {
+      "@id": "schema:alternateName",
+      "@container": "@language"
+    },
     "ParentCategory": "schema:isPartOf",
     "Dic": "schema:leiCode",
     "ProductionCapacity": "ex:productionCapacity",
     "Address": "schema:address",
-    "OpeningHours": "schema:openingHours",
+    "OpeningHours": {
+      "@id": "schema:openingHours",
+      "@language": "en"
+    },
     "BranchOf": "schema:branchOf",
     "MadeBy": "schema:manufacturer",
-    "InternalName": "schema:name",
+    "InternalName": {
+      "@id": "schema:name",
+      "@language": "en"
+    },
     "StarRating": "schema:starRating",
     "Height": "schema:height",
     "Width": "schema:width",
@@ -51,10 +69,7 @@
       "Price": 50.49,
       "Discount": 0.1,
       "Availability": 120,
-      "Description": {
-        "@value": "Up to 30kgs can be bought at once",
-        "@language": "en"
-      },
+      "Description": "Up to 30kgs can be bought at once",
       "OfferedBy": {
         "id": "http://example.com/store/0",
         "Id": 0,
@@ -136,14 +151,20 @@
           "Id": 0,
           "type": "Category",
           "InternalName": "Fruit",
-          "SynonymName": "Ovoce",
+          "SynonymName": {
+            "cs": "Ovoce"
+          },
           "ParentCategory": {
             "id": "http://example.com/parentcategory/0",
             "Id": 0,
             "InternalName": "Fresh",
             "SynonymName": [
-              "Cerstve",
-              "Tuoi"
+              {
+                "cs": "Cerstve"
+              },
+              {
+                "vi": "Tuoi"
+              }
             ]
           }
         },
@@ -230,7 +251,9 @@
           "Id": 1,
           "type": "Category",
           "InternalName": "Drinks",
-          "SynonymName": "Napoje"
+          "SynonymName": {
+            "cs": "Napoje"
+          }
         },
         "Picture": {
           "id": "http://example.com/picture/5",
@@ -305,13 +328,17 @@
           "Id": 2,
           "type": "Category",
           "InternalName": "Alcohol",
-          "SynonymName": "Alkohol",
+          "SynonymName": {
+            "cs": "Alkohol"
+          },
           "ParentCategory": {
             "id": "http://example.com/parentcategory/1",
             "Id": 1,
             "InternalName": "Drinks",
             "SynonymName": [
-              "Napoje"
+              {
+                "cs": "Napoje"
+              }
             ]
           }
         },

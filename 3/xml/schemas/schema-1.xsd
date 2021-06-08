@@ -30,7 +30,7 @@
         <xs:sequence>
             <xs:element name="Id" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Name" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
-            <xs:element name="Ean" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="Ean" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Description" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Rating" type="rating" minOccurs="0" maxOccurs="unbounded"></xs:element>
             <xs:element name="Picture" type="picture" minOccurs="1" maxOccurs="unbounded"></xs:element>
@@ -89,7 +89,7 @@
         <xs:sequence>
             <xs:element name="Id" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
-            <xs:element name="Dic" type="langString" minOccurs="1" maxOccurs="1"></xs:element>
+            <xs:element name="Dic" type="xs:string" minOccurs="1" maxOccurs="1"></xs:element>
             <xs:element name="Rating" type="rating" minOccurs="0" maxOccurs="unbounded"></xs:element>
             <xs:element name="Picture" type="picture" minOccurs="0" maxOccurs="1"></xs:element>
         </xs:sequence>
