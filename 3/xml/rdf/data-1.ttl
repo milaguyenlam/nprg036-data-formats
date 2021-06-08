@@ -4,302 +4,285 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix ex: <http://example.org/ex/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-ex:productionCapacity rdf:type xsd:integer .
+ex:productionCapacity a rdf:Property;
+    rdfs:range xsd:nonNegativeInteger .
 
-<#apple-offer-Tesco-Sokolovská_968/189,_190_00_Praha_9-Libeň>
-	a schema:Offer ;
-	schema:startDate "2021-05-20"^^xsd:date ;
-	schema:endDate "2021-05-30"^^xsd:date ;
-	schema:price "50.49" ;
-	schema:discount "0.2" ;
-	schema:availability "In Stock"@en ;
-	schema:description "Customers can buy up to 5kilos at once"@en ;
-	schema:offeredBy <#Tesco-Sokolovská_968/189,_190_00_Praha_9-Libeň> ;
-	schema:itemOffered <#apple> .
+ex:id a rdf:Property;
+    rdfs:range xsd:nonNegativeInteger .
 
-<#tesco-Sokolovská_968/189,_190_00_Praha_9-Libeň>
-	a schema:Store ;
-	schema:branchOf <#tesco> ;
-	schema:address "Sokolovská 968/189, 190 00 Praha 9-Libeň"@en ;
-	schema:rating "2" ;
-	schema:rating "3" ;
-	
-	schema:openingHours "Mon-Sun: 7:00-20:00"@en .
+<http://example.com/offer/0> a schema:Offer ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:startDate "2021-05-01"^^xsd:date ;
+    schema:endDate "2021-05-09"^^xsd:date ;
+    schema:price "50.49"^^xsd:decimal ;
+    schema:discount "0.1"^^xsd:decimal ;
+    schema:availability "120"^^xsd:nonNegativeInteger ;
+    schema:description "Up to 30kgs can be bought at once"@en ;
+    schema:offeredBy <http://example.com/store/0> ;
+    schema:itemOffered <http://example.com/product/0> .
 
-<#tesco>
-	a frapo:Vendor ;
-	schema:name "Tesco"@en ;
-	schema:rating "4" ;
-	
-	schema:leiCode "321321412" .
-	
-<#apple>
-	a schema:Product ;
-	schema:name "Apple"@en ;
-	schema:gtin13 "123123123123" ;
-	schema:description "Sweet and tasty apple"@en ;
-	schema:rating "2" ;
-	schema:rating "1" ;
-	
-	schema:manufacturer <#agrofert> ;
-	schema:category <#fruit> ;
-	schema:category <#seasonal> ;
-	
-	schema:schema:image <#apple-image> .
+<http://example.com/store/0> a schema:Store ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:branchOf <http://example.com/vendor/0> ;
+    schema:address "Prosecka 115 Praha 9" ;
+    schema:openingHours "Mo-Su 7:00-20:00"@en .
 
-<#apple-image>	
-	a schema:ImageObject ;
-    schema:height "100" ;
-    schema:width "100" ;
-    schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg" .
-	
-<#fruit>
-    a schema:ProductGroup ;
-    schema:isPartOf <#fresh> ;schema:alternateName "Ovoce"@cs ;
-	
-    schema:name "Fruit"@en .    
+<http://example.com/storerating/0> a schema:Rating ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/store/0> ;
+    schema:starRating "4"^^xsd:nonNegativeInteger .
 
-<#fresh>
-    a schema:ProductGroup ;
-    	schema:alternateName "Cerstve"@cs ;
-	schema:alternateName "Tuoi"@vi ;
-	
-	schema:name "Fresh"@en .
-	
-<#seasonal>
-    a schema:ProductGroup ;
-    schema:alternateName "Sezonni"@cs ;
-	
-    schema:name "Seasonal"@en .    
+<http://example.com/storerating/1> a schema:Rating ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/store/0> ;
+    schema:starRating "3"^^xsd:nonNegativeInteger .
 
-<#agrofert>
-    a frapo:Manufacturer ;
-    schema:name "Agrofert"@en ;
-    schema:leiCode "333333333333" ;
-	schema:rating "1" ;
-	schema:rating "1" ;
-	schema:rating "2" ;
-	
-    ex:productionCapacity"10000000" .
-	
-<#apple-offer-Tesco-Písečná_5376,_430_00_Chomutov>
-	a schema:Offer ;
-	schema:startDate "2021-05-20"^^xsd:date ;
-	schema:endDate "2021-05-30"^^xsd:date ;
-	schema:price "45.49" ;
-	schema:discount "0.3" ;
-	schema:availability "In Stock"@en ;
-	schema:description "Customers can buy up to 10kilos at once"@en ;
-	schema:offeredBy <#Tesco-Písečná_5376,_430_00_Chomutov> ;
-	schema:itemOffered <#apple> .
+<http://example.com/vendor/0> a frapo:Vendor ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:image <http://example.com/picture/1> ;
+    schema:name "Tesco" ;
+    schema:leiCode "2222"^^xsd:nonNegativeInteger .
+    
+<http://example.com/vendorrating/0> a schema:Rating ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/vendor/0> ;
+    schema:starRating "4"^^xsd:nonNegativeInteger .
 
-<#tesco-Písečná_5376,_430_00_Chomutov>
-	a schema:Store ;
-	schema:branchOf <#tesco> ;
-	schema:address "Písečná 5376, 430 00 Chomutov"@en ;
-	schema:rating "4" ;
-	schema:rating "5" ;
-	
-	schema:openingHours "Mon-Sun: 8:00-19:00"@en .
+<http://example.com/vendorrating/1> a schema:Rating ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/vendor/0> ;
+    schema:starRating "3"^^xsd:nonNegativeInteger .
 
-<#tesco>
-	a frapo:Vendor ;
-	schema:name "Tesco"@en ;
-	schema:rating "4" ;
-	
-	schema:leiCode "321321412" .
-	
-<#apple>
-	a schema:Product ;
-	schema:name "Apple"@en ;
-	schema:gtin13 "123123123123" ;
-	schema:description "Sweet and tasty apple"@en ;
-	schema:rating "2" ;
-	schema:rating "1" ;
-	
-	schema:manufacturer <#agrofert> ;
-	schema:category <#fruit> ;
-	schema:category <#seasonal> ;
-	
-	schema:schema:image <#apple-image> .
+<http://example.com/picture/1> a schema:ImageObject ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:height "100"^^xsd:nonNegativeInteger ;
+    schema:width "100"^^xsd:nonNegativeInteger ;
+    schema:url "https://tesco.cz/logo" .
+    
+<http://example.com/product/0> a schema:Product ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:name "Apple"@en ;
+    schema:gtin13 "1111" ;
+    schema:description "Fresh and Tasty"@en ;
+    schema:manufacturer <http://example.com/producer/0> ;
+    schema:category <http://example.com/category/1> ;
+    schema:image <http://example.com/picture/2> .
+    
+<http://example.com/productrating/0> a schema:Rating ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/product/0> ;
+    schema:starRating "4"^^xsd:nonNegativeInteger .
 
-<#apple-image>	
-	a schema:ImageObject ;
-    schema:height "100" ;
-    schema:width "100" ;
-    schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Red_Apple.jpg/640px-Red_Apple.jpg" .
-	
-<#fruit>
-    a schema:ProductGroup ;
-    schema:isPartOf <#fresh> ;schema:alternateName "Ovoce"@cs ;
-	
-    schema:name "Fruit"@en .    
+<http://example.com/productrating/1> a schema:Rating ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/product/0> ;
+    schema:starRating "3"^^xsd:nonNegativeInteger .
 
-<#fresh>
-    a schema:ProductGroup ;
-    	schema:alternateName "Cerstve"@cs ;
-	schema:alternateName "Tuoi"@vi ;
-	
-	schema:name "Fresh"@en .
-	
-<#seasonal>
-    a schema:ProductGroup ;
-    schema:alternateName "Sezonni"@cs ;
-	
-    schema:name "Seasonal"@en .    
+<http://example.com/picture/2> a schema:ImageObject ;
+    ex:id "2"^^xsd:nonNegativeInteger ;
+    schema:height "100"^^xsd:nonNegativeInteger ;
+    schema:width "100"^^xsd:nonNegativeInteger ;
+    schema:url "https://agrofert.cz/apple/pic" .
+    
+<http://example.com/category/1> a schema:ProductGroup ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:isPartOf <http://example.com/category/0> ;
+    
+    schema:alternateName "Ovoce"@cs ;
+    schema:alternateName "Hoa Qua"@vi ;
+    schema:name "Fruit"@en .
 
-<#agrofert>
-    a frapo:Manufacturer ;
-    schema:name "Agrofert"@en ;
-    schema:leiCode "333333333333" ;
-	schema:rating "1" ;
-	schema:rating "1" ;
-	schema:rating "2" ;
-	
-    ex:productionCapacity"10000000" .
-	
-<#milk-offer-Tesco-Písečná_5376,_430_00_Chomutov>
-	a schema:Offer ;
-	schema:startDate "2021-05-21"^^xsd:date ;
-	schema:endDate "2021-05-30"^^xsd:date ;
-	schema:price "21" ;
-	schema:discount "0.1" ;
-	schema:availability "In Stock"@en ;
-	schema:description "Maximum of 10kg's can be bought at once"@en ;
-	schema:offeredBy <#Tesco-Písečná_5376,_430_00_Chomutov> ;
-	schema:itemOffered <#milk> .
+<http://example.com/category/0> a schema:ProductGroup ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:alternateName "Cerstve"@cs ;
+    schema:alternateName "Tuoi"@vi ;
+    schema:name "Fresh"@en .
+    
+<http://example.com/producer/0> a frapo:Manufacturer ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:name "Agrofert" ;
+    schema:leiCode "1234"^^xsd:nonNegativeInteger ;
+    schema:image <http://example.com/picture/5> ;
+    ex:productionCapacity"100000"^^xsd:nonNegativeInteger .
+        
+<http://example.com/producerrating/0> a schema:Rating ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/producer/0> ;
+    schema:starRating "4"^^xsd:nonNegativeInteger .
 
-<#tesco-Písečná_5376,_430_00_Chomutov>
-	a schema:Store ;
-	schema:branchOf <#tesco> ;
-	schema:address "Písečná 5376, 430 00 Chomutov"@en ;
-	schema:rating "4" ;
-	schema:rating "5" ;
-	
-	schema:openingHours "Mon-Sun: 8:00-19:00"@en .
+<http://example.com/producerrating/0> a schema:Rating ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/producer/0> ;
+    schema:starRating "4"^^xsd:nonNegativeInteger .
 
-<#tesco>
-	a frapo:Vendor ;
-	schema:name "Tesco"@en ;
-	schema:rating "4" ;
-	
-	schema:leiCode "321321412" .
-	
-<#milk>
-	a schema:Product ;
-	schema:name "Milk"@en ;
-	schema:gtin13 "124124124124" ;
-	schema:description "Fresh milk from an organic farm"@en ;
-	schema:rating "5" ;
-	schema:rating "2" ;
-	schema:rating "4" ;
-	
-	schema:manufacturer <#agrofert> ;
-	schema:category <#dairy> ;
-	
-	schema:schema:image <#milk-image> .
+<http://example.com/producerrating/1> a schema:Rating ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/producer/0> ;
+    schema:starRating "3"^^xsd:nonNegativeInteger .
 
-<#milk-image>	
-	a schema:ImageObject ;
-    schema:height "100" ;
-    schema:width "100" ;
-    schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Milk_glass.jpg/640px-Milk_glass.jpg" .
-	
-<#dairy>
-    a schema:ProductGroup ;
-    schema:isPartOf <#fresh> ;schema:alternateName "Mlecne vyrobky"@cs ;
-	
-    schema:name "Dairy"@en .    
+<http://example.com/offer/1> a schema:Offer ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:startDate "2021-05-01"^^xsd:date ;
+    schema:endDate "2021-05-09"^^xsd:date ;
+    schema:price "20"^^xsd:decimal ;
+    schema:discount "0"^^xsd:decimal ;
+    schema:availability "200"^^xsd:nonNegativeInteger ;
+    
+    schema:offeredBy <http://example.com/store/1> ;
+    schema:itemOffered <http://example.com/product/2> .
 
-<#fresh>
-    a schema:ProductGroup ;
-    	schema:alternateName "Cerstve"@cs ;
-	schema:alternateName "Tuoi"@vi ;
-	
-	schema:name "Fresh"@en .
-	
-<#agrofert>
-    a frapo:Manufacturer ;
-    schema:name "Agrofert"@en ;
-    schema:leiCode "333333333333" ;
-	schema:rating "1" ;
-	schema:rating "1" ;
-	schema:rating "2" ;
-	
-    ex:productionCapacity"10000000" .
-	
-<#pilsner_beer-offer-Kaufland-Obchodní_zóna_260,_431_11_Otvice>
-	a schema:Offer ;
-	schema:startDate "2021-05-19"^^xsd:date ;
-	schema:endDate "2021-05-25"^^xsd:date ;
-	schema:price "20.99" ;
-	schema:discount "0.05" ;
-	schema:availability "In Stock"@en ;
-	schema:description "Customers can buy up to 10 packs at once"@en ;
-	schema:offeredBy <#Kaufland-Obchodní_zóna_260,_431_11_Otvice> ;
-	schema:itemOffered <#pilsner_beer> .
+<http://example.com/store/1> a schema:Store ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:branchOf <http://example.com/vendor/0> ;
+    schema:address "Pisecna 5038 Chomutov" ;
+    schema:openingHours "Mo-Su 9:00-18:00"@en .
 
-<#kaufland-Obchodní_zóna_260,_431_11_Otvice>
-	a schema:Store ;
-	schema:branchOf <#kaufland> ;
-	schema:address "Obchodní zóna 260, 431 11 Otvice"@en ;
-	schema:rating "5" ;
-	schema:rating "3" ;
-	
-	schema:openingHours "Mon-Sun: 7:00-22:00"@en .
+<http://example.com/storerating/2> a schema:Rating ;
+    ex:id "2"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/store/1> ;
+    schema:starRating "2"^^xsd:nonNegativeInteger .
 
-<#kaufland>
-	a frapo:Vendor ;
-	schema:name "Kaufland"@en ;
-	schema:rating "3" ;
-	
-	schema:leiCode "321333332" .
-	
-<#pilsner_beer>
-	a schema:Product ;
-	schema:name "Pilsner beer"@en ;
-	schema:gtin13 "321321321321" ;
-	schema:description "Authentic Czech beer"@en ;
-	schema:rating "5" ;
-	
-	schema:manufacturer <#pilsner> ;
-	schema:category <#alcoholic_drinks> ;
-	schema:category <#seasonal> ;
-	
-	schema:schema:image <#pilsner_beer-image> .
+<http://example.com/vendor/0> a frapo:Vendor ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:image <http://example.com/picture/1> ;
+    schema:name "Tesco" ;
+    schema:leiCode "2222"^^xsd:nonNegativeInteger .
+    
+<http://example.com/vendorrating/0> a schema:Rating ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/vendor/0> ;
+    schema:starRating "4"^^xsd:nonNegativeInteger .
 
-<#pilsner_beer-image>	
-	a schema:ImageObject ;
-    schema:height "100" ;
-    schema:width "100" ;
-    schema:url "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Club_Beer.jpg/640px-Club_Beer.jpg" .
-	
-<#alcoholic_drinks>
-    a schema:ProductGroup ;
-    schema:isPartOf <#fresh> ;schema:alternateName "Alkoholicke napoje"@cs ;
-	
-    schema:name "Alcoholic drinks"@en .    
+<http://example.com/vendorrating/1> a schema:Rating ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/vendor/0> ;
+    schema:starRating "3"^^xsd:nonNegativeInteger .
 
-<#fresh>
-    a schema:ProductGroup ;
-    	schema:alternateName "Cerstve"@cs ;
-	schema:alternateName "Tuoi"@vi ;
-	
-	schema:name "Fresh"@en .
-	
-<#seasonal>
-    a schema:ProductGroup ;
-    schema:alternateName "Sezonni"@cs ;
-	
-    schema:name "Seasonal"@en .    
+<http://example.com/picture/1> a schema:ImageObject ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:height "100"^^xsd:nonNegativeInteger ;
+    schema:width "100"^^xsd:nonNegativeInteger ;
+    schema:url "https://tesco.cz/logo" .
+    
+<http://example.com/product/2> a schema:Product ;
+    ex:id "2"^^xsd:nonNegativeInteger ;
+    schema:name "Milk"@en ;
+    schema:gtin13 "3333" ;
+    schema:description "Organic milk"@en ;
+    schema:manufacturer <http://example.com/producer/0> ;
+    schema:category <http://example.com/category/2> ;
+    schema:image <http://example.com/picture/3> .
+    
+<http://example.com/picture/3> a schema:ImageObject ;
+    ex:id "3"^^xsd:nonNegativeInteger ;
+    schema:height "100"^^xsd:nonNegativeInteger ;
+    schema:width "100"^^xsd:nonNegativeInteger ;
+    schema:url "https://agrofert.cz/milk/pic" .
+    
+<http://example.com/category/2> a schema:ProductGroup ;
+    ex:id "2"^^xsd:nonNegativeInteger ;
+    
+    schema:alternateName "Napoje"@cs ;
+    schema:name "Drinks"@en .
 
-<#pilsner>
-    a frapo:Manufacturer ;
-    schema:name "Pilsner"@en ;
-    schema:leiCode "222222222222" ;
-	schema:rating "5" ;
-	schema:rating "4" ;
-	
-    ex:productionCapacity"4000" .
-	
+<http://example.com/producer/0> a frapo:Manufacturer ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:name "Agrofert" ;
+    schema:leiCode "1234"^^xsd:nonNegativeInteger ;
+    schema:image <http://example.com/picture/5> ;
+    ex:productionCapacity"100000"^^xsd:nonNegativeInteger .
+        
+<http://example.com/producerrating/0> a schema:Rating ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/producer/0> ;
+    schema:starRating "4"^^xsd:nonNegativeInteger .
+
+<http://example.com/producerrating/0> a schema:Rating ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/producer/0> ;
+    schema:starRating "4"^^xsd:nonNegativeInteger .
+
+<http://example.com/producerrating/1> a schema:Rating ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/producer/0> ;
+    schema:starRating "3"^^xsd:nonNegativeInteger .
+
+<http://example.com/offer/2> a schema:Offer ;
+    ex:id "2"^^xsd:nonNegativeInteger ;
+    schema:startDate "2021-05-02"^^xsd:date ;
+    schema:endDate "2021-05-07"^^xsd:date ;
+    schema:price "15.49"^^xsd:decimal ;
+    schema:discount "0.3"^^xsd:decimal ;
+    schema:availability "100"^^xsd:nonNegativeInteger ;
+    
+    schema:offeredBy <http://example.com/store/2> ;
+    schema:itemOffered <http://example.com/product/1> .
+
+<http://example.com/store/2> a schema:Store ;
+    ex:id "2"^^xsd:nonNegativeInteger ;
+    schema:branchOf <http://example.com/vendor/1> ;
+    schema:address "Makrovska 1 Praha" ;
+    schema:openingHours "Mo-Su 8:00-20:00"@en .
+
+<http://example.com/vendor/1> a frapo:Vendor ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:image <http://example.com/picture/0> ;
+    schema:name "Makro" ;
+    schema:leiCode "3333"^^xsd:nonNegativeInteger .
+    
+<http://example.com/vendorrating/2> a schema:Rating ;
+    ex:id "2"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/vendor/1> ;
+    schema:starRating "2"^^xsd:nonNegativeInteger .
+
+<http://example.com/picture/0> a schema:ImageObject ;
+    ex:id "0"^^xsd:nonNegativeInteger ;
+    schema:height "100"^^xsd:nonNegativeInteger ;
+    schema:width "100"^^xsd:nonNegativeInteger ;
+    schema:url "https://makro.cz/logo" .
+    
+<http://example.com/product/1> a schema:Product ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:name "Pilsner Beer"@en ;
+    schema:gtin13 "2222" ;
+    schema:description "Authentic Czech beer"@en ;
+    schema:manufacturer <http://example.com/producer/1> ;
+    schema:category <http://example.com/category/3> ;
+    schema:image <http://example.com/picture/4> .
+    
+<http://example.com/productrating/2> a schema:Rating ;
+    ex:id "2"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/product/1> ;
+    schema:starRating "2"^^xsd:nonNegativeInteger .
+
+<http://example.com/picture/4> a schema:ImageObject ;
+    ex:id "4"^^xsd:nonNegativeInteger ;
+    schema:height "100"^^xsd:nonNegativeInteger ;
+    schema:width "100"^^xsd:nonNegativeInteger ;
+    schema:url "https://pilsner.cz/beer/pic" .
+    
+<http://example.com/category/3> a schema:ProductGroup ;
+    ex:id "3"^^xsd:nonNegativeInteger ;
+    schema:isPartOf <http://example.com/category/2> ;
+    
+    schema:alternateName "Alkohol"@cs ;
+    schema:name "Alcohol"@en .
+
+<http://example.com/category/2> a schema:ProductGroup ;
+    ex:id "2"^^xsd:nonNegativeInteger ;
+    schema:alternateName "Napoje"@cs ;
+    schema:name "Drinks"@en .
+    
+<http://example.com/producer/1> a frapo:Manufacturer ;
+    ex:id "1"^^xsd:nonNegativeInteger ;
+    schema:name "Pilsner" ;
+    schema:leiCode "2345"^^xsd:nonNegativeInteger ;
+    schema:image <http://example.com/picture/6> ;
+    ex:productionCapacity"100000"^^xsd:nonNegativeInteger .
+        
+<http://example.com/producerrating/2> a schema:Rating ;
+    ex:id "2"^^xsd:nonNegativeInteger ;
+    schema:object <http://example.com/producer/1> ;
+    schema:starRating "2"^^xsd:nonNegativeInteger .
