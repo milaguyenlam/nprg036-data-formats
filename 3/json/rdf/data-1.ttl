@@ -1,251 +1,255 @@
+@prefix ex:     <http://example.com/ex/> .
+@prefix frapo:  <http://purl.org/cerif/frapo/> .
+@prefix rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix schema: <http://schema.org/> .
-@prefix ex:    <http://example.com/ex/> .
-@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix frapo: <http://purl.org/cerif/frapo/> .
-@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.com/vendorrating/2>
-        ex:id              2 ;
-        schema:starRating  4 .
+        ex:id              "2"^^xsd:nonNegativeInteger ;
+        schema:starRating  "4"^^xsd:nonNegativeInteger .
 
 <http://example.com/store/0>
         rdf:type             schema:Store ;
-        ex:id                0 ;
+        ex:id                "0"^^xsd:nonNegativeInteger ;
         schema:address       "Prosecka 115 Praha 9" ;
         schema:branchOf      <http://example.com/vendor/0> ;
-        schema:openingHours  "Mo-Su 7:00-20:00" ;
+        schema:openingHours  "Mo-Su 7:00-20:00"@en ;
         schema:rating        <http://example.com/storerating/1> , <http://example.com/storerating/0> .
 
 <http://example.com/storerating/2>
-        ex:id              2 ;
-        schema:starRating  2 .
+        ex:id              "2"^^xsd:nonNegativeInteger ;
+        schema:starRating  "2"^^xsd:nonNegativeInteger .
 
 <http://example.com/category/0>
         rdf:type              schema:ProductGroup ;
-        ex:id                 0 ;
-        schema:alternateName  "Ovoce" ;
+        ex:id                 "0"^^xsd:nonNegativeInteger ;
+        schema:alternateName  "Ovoce"@cs ;
         schema:isPartOf       <http://example.com/parentcategory/0> ;
-        schema:name           "Fruit" .
+        schema:name           "Fruit"@en .
 
 <http://example.com/offer/1>
         rdf:type             schema:Offer ;
-        ex:id                1 ;
-        schema:availability  200 ;
-        schema:discount      0 ;
-        schema:endDate       "2021-05-09" ;
+        ex:id                "1"^^xsd:nonNegativeInteger ;
+        schema:availability  "200"^^xsd:nonNegativeInteger ;
+        schema:discount      "0"^^xsd:decimal ;
+        schema:endDate       "2021-05-09"^^xsd:date ;
         schema:itemOffered   <http://example.com/product/1> ;
         schema:offeredBy     <http://example.com/store/1> ;
-        schema:price         20 ;
-        schema:startDate     "2021-05-01" .
+        schema:price         "20"^^xsd:decimal ;
+        schema:startDate     "2021-05-01"^^xsd:date .
 
 <http://example.com/producerrating/4>
-        ex:id              4 ;
-        schema:starRating  2 .
+        ex:id              "4"^^xsd:nonNegativeInteger ;
+        schema:starRating  "2"^^xsd:nonNegativeInteger .
 
 <http://example.com/product/0>
         rdf:type             schema:Product ;
-        ex:id                0 ;
+        ex:id                "0"^^xsd:nonNegativeInteger ;
         schema:ImageObject   <http://example.com/picture/0> ;
         schema:ProductGroup  <http://example.com/category/0> ;
-        schema:description   "Fresh and tasty" ;
+        schema:description   "Fresh and tasty"@en ;
         schema:manufacturer  <http://example.com/producer/0> ;
-        schema:name          "Apple" ;
+        schema:name          "Apple"@en ;
         schema:rating        <http://example.com/productrating/1> , <http://example.com/productrating/0> .
 
 <http://example.com/vendorrating/1>
-        ex:id              1 ;
-        schema:starRating  3 .
+        ex:id              "1"^^xsd:nonNegativeInteger ;
+        schema:starRating  "3"^^xsd:nonNegativeInteger .
 
 <http://example.com/storerating/1>
-        ex:id              1 ;
-        schema:starRating  3 .
+        ex:id              "1"^^xsd:nonNegativeInteger ;
+        schema:starRating  "3"^^xsd:nonNegativeInteger .
 
 <http://example.com/offer/0>
         rdf:type             schema:Offer ;
-        ex:id                0 ;
-        schema:availability  120 ;
-        schema:description   "Up to 30kgs can be bought at once" ;
-        schema:discount      1.0E-1 ;
-        schema:endDate       "2021-05-30" ;
+        ex:id                "0"^^xsd:nonNegativeInteger ;
+        schema:availability  "120"^^xsd:nonNegativeInteger ;
+        schema:description   "Up to 30kgs can be bought at once"@en ;
+        schema:discount      0.1 ;
+        schema:endDate       "2021-05-30"^^xsd:date ;
         schema:itemOffered   <http://example.com/product/0> ;
         schema:offeredBy     <http://example.com/store/0> ;
-        schema:price         5.049E1 ;
-        schema:startDate     "2021-05-20" .
+        schema:price         50.49 ;
+        schema:startDate     "2021-05-20"^^xsd:date .
 
 <http://example.com/producerrating/3>
-        ex:id              3 ;
-        schema:starRating  3 .
+        ex:id              "3"^^xsd:nonNegativeInteger ;
+        schema:starRating  "3"^^xsd:nonNegativeInteger .
 
 <http://example.com/producer/2>
         rdf:type               frapo:Manufacturer ;
-        ex:id                  2 ;
-        ex:productionCapacity  100000 ;
-        schema:leiCode         2345 ;
-        schema:name            "Pilsner" ;
+        ex:id                  "2"^^xsd:nonNegativeInteger ;
+        ex:productionCapacity  "100000"^^xsd:nonNegativeInteger ;
+        schema:leiCode         "2345"^^xsd:nonNegativeInteger ;
+        schema:name            "Pilsner"@en ;
         schema:rating          <http://example.com/producerrating/4> .
 
 <http://example.com/vendorrating/0>
-        ex:id              0 ;
-        schema:starRating  4 .
+        ex:id              "0"^^xsd:nonNegativeInteger ;
+        schema:starRating  "4"^^xsd:nonNegativeInteger .
 
 <http://example.com/storerating/0>
-        ex:id              0 ;
-        schema:starRating  4 .
+        ex:id              "0"^^xsd:nonNegativeInteger ;
+        schema:starRating  "4"^^xsd:nonNegativeInteger .
 
 <http://example.com/productrating/2>
-        ex:id              2 ;
-        schema:starRating  2 .
+        ex:id              "2"^^xsd:nonNegativeInteger ;
+        schema:starRating  "2"^^xsd:nonNegativeInteger .
 
 <http://example.com/producerrating/2>
-        ex:id              2 ;
-        schema:starRating  4 .
+        ex:id              "2"^^xsd:nonNegativeInteger ;
+        schema:starRating  "4"^^xsd:nonNegativeInteger .
 
 <http://example.com/producer/1>
         rdf:type               frapo:Manufacturer ;
-        ex:id                  1 ;
-        ex:productionCapacity  100000 ;
-        schema:leiCode         1234 ;
-        schema:name            "Agrofert" ;
+        ex:id                  "1"^^xsd:nonNegativeInteger ;
+        ex:productionCapacity  "100000"^^xsd:nonNegativeInteger ;
+        schema:leiCode         "1234"^^xsd:nonNegativeInteger ;
+        schema:name            "Agrofert"@en ;
         schema:rating          <http://example.com/producerrating/3> , <http://example.com/producerrating/2> .
 
 <http://example.com/parentcategory/1>
-        ex:id                 1 ;
-        schema:alternateName  "Napoje" ;
-        schema:name           "Drinks" .
+        ex:id                 "1"^^xsd:nonNegativeInteger ;
+        schema:alternateName  [ <http://example.com/cs>
+                          "Napoje" ] ;
+        schema:name           "Drinks"@en .
 
 <http://example.com/productrating/1>
-        ex:id              1 ;
-        schema:starRating  3 .
+        ex:id              "1"^^xsd:nonNegativeInteger ;
+        schema:starRating  "3"^^xsd:nonNegativeInteger .
 
 <http://example.com/vendor/2>
         rdf:type        frapo:Vendor ;
-        ex:id           2 ;
-        schema:leiCode  "3333" ;
-        schema:name     "Makro" ;
+        ex:id           "2"^^xsd:nonNegativeInteger ;
+        schema:leiCode  "3333"^^xsd:nonNegativeInteger ;
+        schema:name     "Makro"@en ;
         schema:rating   <http://example.com/vendorrating/4> .
 
 <http://example.com/picture/6>
         rdf:type       schema:ImageObject ;
-        ex:id          6 ;
-        schema:height  100 ;
+        ex:id          "6"^^xsd:nonNegativeInteger ;
+        schema:height  "100"^^xsd:nonNegativeInteger ;
         schema:url     "https://pilsner.cz/logo" ;
-        schema:width   100 .
+        schema:width   "100"^^xsd:nonNegativeInteger .
 
 <http://example.com/producerrating/1>
-        ex:id              1 ;
-        schema:starRating  3 .
+        ex:id              "1"^^xsd:nonNegativeInteger ;
+        schema:starRating  "3"^^xsd:nonNegativeInteger .
 
 <http://example.com/producer/0>
         rdf:type               frapo:Manufacturer ;
-        ex:id                  0 ;
-        ex:productionCapacity  100000 ;
-        schema:leiCode         1234 ;
-        schema:name            "Agrofert" ;
+        ex:id                  "0"^^xsd:nonNegativeInteger ;
+        ex:productionCapacity  "100000"^^xsd:nonNegativeInteger ;
+        schema:leiCode         "1234"^^xsd:nonNegativeInteger ;
+        schema:name            "Agrofert"@en ;
         schema:rating          <http://example.com/producerrating/1> , <http://example.com/producerrating/0> .
 
 <http://example.com/vendorrating/4>
-        ex:id              4 ;
-        schema:starRating  2 .
+        ex:id              "4"^^xsd:nonNegativeInteger ;
+        schema:starRating  "2"^^xsd:nonNegativeInteger .
 
 <http://example.com/store/2>
         rdf:type             schema:Store ;
-        ex:id                2 ;
+        ex:id                "2"^^xsd:nonNegativeInteger ;
         schema:address       "Makrovska 1 Praha" ;
         schema:branchOf      <http://example.com/vendor/2> ;
-        schema:openingHours  "Mo-Su 8:00-20:00" .
+        schema:openingHours  "Mo-Su 8:00-20:00"@en .
 
 <http://example.com/picture/0>
         rdf:type       schema:ImageObject ;
-        ex:id          0 ;
-        schema:height  100 ;
+        ex:id          "0"^^xsd:nonNegativeInteger ;
+        schema:height  "100"^^xsd:nonNegativeInteger ;
         schema:url     "https://agrofert.cz/apple/pic" ;
-        schema:width   100 .
+        schema:width   "100"^^xsd:nonNegativeInteger .
 
 <http://example.com/parentcategory/0>
-        ex:id                 0 ;
-        schema:alternateName  "Tuoi" , "Cerstve" ;
-        schema:name           "Fresh" .
+        ex:id                 "0"^^xsd:nonNegativeInteger ;
+        schema:alternateName  [ <http://example.com/vi>
+                          "Tuoi" ] ;
+        schema:alternateName  [ <http://example.com/cs>
+                          "Cerstve" ] ;
+        schema:name           "Fresh"@en .
 
 <http://example.com/productrating/0>
-        ex:id              0 ;
-        schema:starRating  4 .
+        ex:id              "0"^^xsd:nonNegativeInteger ;
+        schema:starRating  "4"^^xsd:nonNegativeInteger .
 
 <http://example.com/category/2>
         rdf:type              schema:ProductGroup ;
-        ex:id                 2 ;
-        schema:alternateName  "Alkohol" ;
+        ex:id                 "2"^^xsd:nonNegativeInteger ;
+        schema:alternateName  "Alkohol"@cs ;
         schema:isPartOf       <http://example.com/parentcategory/1> ;
-        schema:name           "Alcohol" .
+        schema:name           "Alcohol"@en .
 
 <http://example.com/vendor/1>
         rdf:type        frapo:Vendor ;
-        ex:id           1 ;
-        schema:leiCode  "2222" ;
-        schema:name     "Tesco" ;
+        ex:id           "1"^^xsd:nonNegativeInteger ;
+        schema:leiCode  "2222"^^xsd:nonNegativeInteger ;
+        schema:name     "Tesco"@en ;
         schema:rating   <http://example.com/vendorrating/3> , <http://example.com/vendorrating/2> .
 
 <http://example.com/product/2>
         rdf:type             schema:Product ;
-        ex:id                2 ;
+        ex:id                "2"^^xsd:nonNegativeInteger ;
         schema:ImageObject   <http://example.com/picture/6> ;
         schema:ProductGroup  <http://example.com/category/2> ;
-        schema:description   "Authentic Czech beer" ;
+        schema:description   "Authentic Czech beer"@en ;
         schema:manufacturer  <http://example.com/producer/2> ;
-        schema:name          "Pilsner Beer" ;
+        schema:name          "Pilsner Beer"@en ;
         schema:rating        <http://example.com/productrating/2> .
 
 <http://example.com/picture/5>
         rdf:type       schema:ImageObject ;
-        ex:id          5 ;
-        schema:height  100 ;
+        ex:id          "5"^^xsd:nonNegativeInteger ;
+        schema:height  "100"^^xsd:nonNegativeInteger ;
         schema:url     "https://agrofert.cz/logo" ;
-        schema:width   100 .
+        schema:width   "100"^^xsd:nonNegativeInteger .
 
 <http://example.com/producerrating/0>
-        ex:id              0 ;
-        schema:starRating  4 .
+        ex:id              "0"^^xsd:nonNegativeInteger ;
+        schema:starRating  "4"^^xsd:nonNegativeInteger .
 
 <http://example.com/vendorrating/3>
-        ex:id              3 ;
-        schema:starRating  3 .
+        ex:id              "3"^^xsd:nonNegativeInteger ;
+        schema:starRating  "3"^^xsd:nonNegativeInteger .
 
 <http://example.com/store/1>
         rdf:type             schema:Store ;
-        ex:id                1 ;
+        ex:id                "1"^^xsd:nonNegativeInteger ;
         schema:address       "Pisecna 5038 Chomutov" ;
         schema:branchOf      <http://example.com/vendor/1> ;
-        schema:openingHours  "Mo-Su 9:00-18:00" ;
+        schema:openingHours  "Mo-Su 9:00-18:00"@en ;
         schema:rating        <http://example.com/storerating/2> .
 
 <http://example.com/category/1>
         rdf:type              schema:ProductGroup ;
-        ex:id                 1 ;
-        schema:alternateName  "Napoje" ;
-        schema:name           "Drinks" .
+        ex:id                 "1"^^xsd:nonNegativeInteger ;
+        schema:alternateName  "Napoje"@cs ;
+        schema:name           "Drinks"@en .
 
 <http://example.com/offer/2>
         rdf:type             schema:Offer ;
-        ex:id                2 ;
-        schema:availability  100 ;
-        schema:discount      3.0E-1 ;
-        schema:endDate       "2021-05-07" ;
+        ex:id                "2"^^xsd:nonNegativeInteger ;
+        schema:availability  "100"^^xsd:nonNegativeInteger ;
+        schema:discount      0.3 ;
+        schema:endDate       "2021-05-07"^^xsd:date ;
         schema:itemOffered   <http://example.com/product/2> ;
         schema:offeredBy     <http://example.com/store/2> ;
-        schema:price         1.549E1 ;
-        schema:startDate     "2021-05-02" .
+        schema:price         15.49 ;
+        schema:startDate     "2021-05-02"^^xsd:date .
 
 <http://example.com/vendor/0>
         rdf:type        frapo:Vendor ;
-        ex:id           0 ;
-        schema:leiCode  "2222" ;
-        schema:name     "Tesco" ;
+        ex:id           "0"^^xsd:nonNegativeInteger ;
+        schema:leiCode  "2222"^^xsd:nonNegativeInteger ;
+        schema:name     "Tesco"@en ;
         schema:rating   <http://example.com/vendorrating/1> , <http://example.com/vendorrating/0> .
 
 <http://example.com/product/1>
         rdf:type             schema:Product ;
-        ex:id                1 ;
+        ex:id                "1"^^xsd:nonNegativeInteger ;
         schema:ImageObject   <http://example.com/picture/5> ;
         schema:ProductGroup  <http://example.com/category/1> ;
-        schema:description   "Organic Milk" ;
+        schema:description   "Organic Milk"@en ;
         schema:manufacturer  <http://example.com/producer/1> ;
-        schema:name          "Milk" .
+        schema:name          "Milk"@en .
