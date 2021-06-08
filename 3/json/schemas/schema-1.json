@@ -82,7 +82,17 @@
             "Category": {
                 "Id": "integer",
                 "InternalName": "string",
-                "AlternateName": "string"
+                "SynonymName": "string",
+                "ParentCategory":{
+                    "Id": "integer",
+                    "InternalName": "string",
+                    "SynonymName":{
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
             },
             "Picture": {
                 "Id": "integer",

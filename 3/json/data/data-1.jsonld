@@ -126,15 +126,22 @@
           "ProductionCapacity": 100000
         },
         "Category": {
-          "id": "http://example.org/category/1",
-          "Id": 1,
+          "id": "http://example.org/category/0",
+          "Id": 0,
           "type": "Category",
           "InternalName": "Fruit",
-          "SynonymName": "Ovoce"
+          "SynonymName": "Ovoce",
+          "ParentCategory":{
+
+            "id": "http//example.org/parentcategory/0",
+            "Id": 0,
+            "InternalName": "Fresh",
+            "SynonymName":["Cerstve", "Tuoi"]
+          }
         },
         "Picture": {
-          "id": "http://example.org/picture/2",
-          "Id": 2,
+          "id": "http://example.org/picture/0",
+          "Id": 0,
           "type": "Picture",
           "Height": 100,
           "WIdth": 100,
@@ -164,20 +171,20 @@
             "StarRating": 2
           }
         ],
-        "Vendor": {
-          "id": "http://example.org/vendor/0",
-          "Id": 0,
+        "BranchOf": {
+          "id": "http://example.org/vendor/1",
+          "Id": 1,
           "Name": "Tesco",
           "Dic": "2222",
           "Rating": [
             {
-              "id": "http://example.org/vendorrating/0",
-              "Id": 0,
+              "id": "http://example.org/vendorrating/2",
+              "Id": 2,
               "StarRating": 4
             },
             {
-              "id": "http://example.org/vendorrating/0",
-              "Id": 1,
+              "id": "http://example.org/vendorrating/3",
+              "Id": 3,
               "StarRating": 3
             }
           ],
@@ -185,34 +192,34 @@
         }
       },
       "ItemOffered": {
-        "id": "http://example.org/product/2",
-        "Id": 2,
+        "id": "http://example.org/product/1",
+        "Id": 1,
         "type": "Product",
         "Name": "Milk",
         "Description": "Organic Milk",
-        "Producer": {
-          "id": "http://example.org/producer/0",
-          "Id": 0,
+        "MadeBy": {
+          "id": "http://example.org/producer/1",
+          "Id": 1,
           "type": "Producer",
           "Name": "Agrofert",
           "Dic": 1234,
           "Rating": [
             {
-              "id": "http://example.org/producerrating/0",
-              "Id": 0,
+              "id": "http://example.org/producerrating/2",
+              "Id": 2,
               "StarRating": 4
             },
             {
-              "id": "http://example.org/producerrating/1",
-              "Id": 1,
+              "id": "http://example.org/producerrating/3",
+              "Id": 3,
               "StarRating": 3
             }
           ],
           "ProductionCapacity": 100000
         },
         "Category": {
-          "id": "http://example.org/category/2",
-          "Id": 2,
+          "id": "http://example.org/category/1",
+          "Id": 1,
           "type": "Category",
           "InternalName": "Drinks",
           "SynonymName": "Napoje"
@@ -224,6 +231,87 @@
           "Height": 100,
           "WIdth": 100,
           "URI": "https://agrofert.cz/logo"
+        }
+      }
+    },
+    {
+      "id": "http://example.org/offer/2",
+      "Id": 2,
+      "type": "Offer",
+      "StartDate": "2021-05-02",
+      "EndDate": "2021-05-07",
+      "Price": 15.49,
+      "Discount": 0.3,
+      "Availability": 100,
+      "OfferedBy": {
+        "id": "http://example.org/store/2",
+        "Id": 2,
+        "type": "Store",
+        "Address": "Makrovska 1 Praha",
+        "OpeningHours": "Mo-Su 8:00-20:00", 
+        "BranchOf": {
+          "id": "http://example.org/vendor/2",
+          "Id": 2,
+          "Name": "Makro",
+          "Dic": "3333",
+          "Rating": [
+            {
+              "id": "http://example.org/vendorrating/4",
+              "Id": 4,
+              "StarRating": 2
+            }
+          ],
+          "type": "Vendor"
+        }
+      },
+      "ItemOffered": {
+        "id": "http://example.org/product/2",
+        "Id": 2,
+        "type": "Product",
+        "Name": "Pilsner Beer",
+        "Description": "Authentic Czech beer",
+        "Rating": [
+          {
+            "id": "http://example.org/productrating/2",
+            "Id": 2,
+            "StarRating": 2
+          }
+        ],
+        "MadeBy": {
+          "id": "http://example.org/producer/2",
+          "Id": 2,
+          "type": "Producer",
+          "Name": "Pilsner",
+          "Dic": 2345,
+          "Rating": [
+            {
+              "id": "http://example.org/producerrating/4",
+              "Id": 4,
+              "StarRating": 2
+            }
+          ],
+          "ProductionCapacity": 100000
+        },
+        "Category": {
+          "id": "http://example.org/category/2",
+          "Id": 2,
+          "type": "Category",
+          "InternalName": "Alcohol",
+          "SynonymName": "Alkohol",
+          "ParentCategory":{
+            "id": "http//example.org/parentcategory/1",
+            "Id": 1,
+            "InternalName": "Drinks",
+            "SynonymName":["Napoje"]
+          }
+        },
+        "Picture": {
+          "id": "http://example.org/picture/6",
+          "Id": 6,
+          "type": "Picture",
+          "Height": 100,
+          "WIdth": 100,
+          "URI": "https://pilsner.cz/logo"
         }
       }
     }
