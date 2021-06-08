@@ -30,14 +30,16 @@
     "SynonymName": "schema:alternateName",
     "ParentCategory": "schema:isPartOf",
     "Dic": "schema:leiCode",
-    "ProductionCapacity": {
-      "@Id": "ex:productionCapacity",
-      "@type": "xsd:integer"
-    },
+    "ProductionCapacity": "ex:productionCapacity",
     "Address": "schema:address",
     "OpeningHours": "schema:openingHours",
     "BranchOf": "schema:branchOf",
-    "MadeBy": "schema:manufacturer"
+    "MadeBy": "schema:manufacturer",
+    "InternalName": "schema:name",
+    "StarRating": "schema:starRating",
+    "Height": "schema:height",
+    "Width": "schema:width",
+    "URI": "schema:url"
   },
   "@graph": [
     {
@@ -133,7 +135,7 @@
           "InternalName": "Fruit",
           "SynonymName": "Ovoce",
           "ParentCategory": {
-            "id": "http//example.com/parentcategory/0",
+            "id": "http://example.com/parentcategory/0",
             "Id": 0,
             "InternalName": "Fresh",
             "SynonymName": [
@@ -147,7 +149,7 @@
           "Id": 0,
           "type": "Picture",
           "Height": 100,
-          "WIdth": 100,
+          "Width": 100,
           "URI": "https://agrofert.cz/apple/pic"
         }
       }
@@ -232,7 +234,7 @@
           "Id": 5,
           "type": "Picture",
           "Height": 100,
-          "WIdth": 100,
+          "Width": 100,
           "URI": "https://agrofert.cz/logo"
         }
       }
@@ -302,7 +304,7 @@
           "InternalName": "Alcohol",
           "SynonymName": "Alkohol",
           "ParentCategory": {
-            "id": "http//example.com/parentcategory/1",
+            "id": "http://example.com/parentcategory/1",
             "Id": 1,
             "InternalName": "Drinks",
             "SynonymName": [
@@ -315,7 +317,7 @@
           "Id": 6,
           "type": "Picture",
           "Height": 100,
-          "WIdth": 100,
+          "Width": 100,
           "URI": "https://pilsner.cz/logo"
         }
       }
