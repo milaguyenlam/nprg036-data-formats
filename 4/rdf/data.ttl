@@ -158,27 +158,27 @@
     schema:manufacturer <http://example.com/producer/0> ;
     schema:name "Milk"@en .
 
-<http://example.com/producer/0> a <frapo:Manufacturer> ;
+<http://example.com/producer/0> a frapo:Manufacturer ;
     ex:productionCapacity "1000000"^^xsd:nonNegativeInteger ;
     ex:id "0"^^xsd:nonNegativeInteger ;
     schema:image <http://example.com/picture/5> ;
     schema:leiCode "1234"^^xsd:nonNegativeInteger ;
     schema:name "Agrofert" .
 
-<http://example.com/producer/1> a <frapo:Manufacturer> ;
+<http://example.com/producer/1> a frapo:Manufacturer ;
     ex:productionCapacity "100000"^^xsd:nonNegativeInteger ;
     ex:id "1"^^xsd:nonNegativeInteger ;
     schema:image <http://example.com/picture/6> ;
     schema:leiCode "2345"^^xsd:nonNegativeInteger ;
     schema:name "Pilsner" .
 
-<http://example.com/vendor/1> a <frapo:Vendor> ;
+<http://example.com/vendor/1> a frapo:Vendor ;
     ex:id "1"^^xsd:nonNegativeInteger ;
     schema:image <http://example.com/picture/0> ;
     schema:leiCode "3333"^^xsd:nonNegativeInteger ;
     schema:name "Makro" .
 
-<http://example.com/vendor/0> a <frapo:Vendor> ;
+<http://example.com/vendor/0> a frapo:Vendor ;
     ex:id "0"^^xsd:nonNegativeInteger ;
     schema:image <http://example.com/picture/1> ;
     schema:leiCode "2222"^^xsd:nonNegativeInteger ;
@@ -188,31 +188,31 @@
     ex:id "0"^^xsd:nonNegativeInteger ;
     schema:availability "120"^^xsd:nonNegativeInteger ;
     schema:description "Up to 30kgs can be bought at once"@en ;
-    schema:discount "0.1"^^xsd:float ;
+    schema:discount "0.1"^^xsd:decimal ;
     schema:endDate "2021-05-09"^^xsd:date ;
     schema:itemOffered <http://example.com/product/0> ;
     schema:offeredBy <http://example.com/store/0> ;
-    schema:price "50.49"^^xsd:float ;
+    schema:price "50.49"^^xsd:decimal ;
     schema:startDate "2021-05-01"^^xsd:date .
 
 <http://example.com/offer/1> a schema:Offer ;
     ex:id "1"^^xsd:nonNegativeInteger ;
     schema:availability "200"^^xsd:nonNegativeInteger ;
-    schema:discount "0.0"^^xsd:float ;
+    schema:discount "0.0"^^xsd:decimal ;
     schema:endDate "2021-05-09"^^xsd:date ;
     schema:itemOffered <http://example.com/product/2> ;
     schema:offeredBy <http://example.com/store/1> ;
-    schema:price "20.0"^^xsd:float ;
+    schema:price "20.0"^^xsd:decimal ;
     schema:startDate "2021-05-01"^^xsd:date .
 
 <http://example.com/offer/2> a schema:Offer ;
     ex:id "2"^^xsd:nonNegativeInteger ;
     schema:availability "100"^^xsd:nonNegativeInteger ;
-    schema:discount "0.3"^^xsd:float ;
+    schema:discount "0.3"^^xsd:decimal ;
     schema:endDate "2021-05-07"^^xsd:date ;
     schema:itemOffered <http://example.com/product/1> ;
     schema:offeredBy <http://example.com/store/2> ;
-    schema:price "15.49"^^xsd:float ;
+    schema:price "15.49"^^xsd:decimal ;
     schema:startDate "2021-05-02"^^xsd:date .
 
 <http://example.com/store/0> a schema:Store ;

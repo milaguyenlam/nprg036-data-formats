@@ -530,13 +530,13 @@
           },
           {
             "titles": "Price",
-            "datatype": "float",
+            "datatype": "decimal",
             "required": true,
             "propertyUrl": "schema:price"
           },
           {
             "titles": "DiscountRate",
-            "datatype": "float",
+            "datatype": "decimal",
             "required": true,
             "propertyUrl": "schema:discount"
           },
