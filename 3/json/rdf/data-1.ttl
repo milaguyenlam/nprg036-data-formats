@@ -5,9 +5,8 @@
 @prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
 
 <http://example.com/vendorrating/2>
-        <http://example.com/StarRating>
-                4 ;
-        ex:id   2 .
+        ex:id              2 ;
+        schema:starRating  4 .
 
 <http://example.com/store/0>
         rdf:type             schema:Store ;
@@ -18,17 +17,15 @@
         schema:rating        <http://example.com/storerating/1> , <http://example.com/storerating/0> .
 
 <http://example.com/storerating/2>
-        <http://example.com/StarRating>
-                2 ;
-        ex:id   2 .
+        ex:id              2 ;
+        schema:starRating  2 .
 
 <http://example.com/category/0>
         rdf:type              schema:ProductGroup ;
-        <http://example.com/InternalName>
-                "Fruit" ;
         ex:id                 0 ;
         schema:alternateName  "Ovoce" ;
-        schema:isPartOf       <http://example.com/http/example.com/parentcategory/0> .
+        schema:isPartOf       <http://example.com/parentcategory/0> ;
+        schema:name           "Fruit" .
 
 <http://example.com/offer/1>
         rdf:type             schema:Offer ;
@@ -42,9 +39,8 @@
         schema:startDate     "2021-05-01" .
 
 <http://example.com/producerrating/4>
-        <http://example.com/StarRating>
-                2 ;
-        ex:id   4 .
+        ex:id              4 ;
+        schema:starRating  2 .
 
 <http://example.com/product/0>
         rdf:type             schema:Product ;
@@ -57,14 +53,12 @@
         schema:rating        <http://example.com/productrating/1> , <http://example.com/productrating/0> .
 
 <http://example.com/vendorrating/1>
-        <http://example.com/StarRating>
-                3 ;
-        ex:id   1 .
+        ex:id              1 ;
+        schema:starRating  3 .
 
 <http://example.com/storerating/1>
-        <http://example.com/StarRating>
-                3 ;
-        ex:id   1 .
+        ex:id              1 ;
+        schema:starRating  3 .
 
 <http://example.com/offer/0>
         rdf:type             schema:Offer ;
@@ -79,64 +73,49 @@
         schema:startDate     "2021-05-20" .
 
 <http://example.com/producerrating/3>
-        <http://example.com/StarRating>
-                3 ;
-        ex:id   3 .
+        ex:id              3 ;
+        schema:starRating  3 .
 
 <http://example.com/producer/2>
-        rdf:type        frapo:Manufacturer ;
-        <http://example.com/ProductionCapacity>
-                100000 ;
-        ex:id           2 ;
-        schema:leiCode  2345 ;
-        schema:name     "Pilsner" ;
-        schema:rating   <http://example.com/producerrating/4> .
-
-<http://example.com/http/example.com/parentcategory/1>
-        <http://example.com/InternalName>
-                "Drinks" ;
-        ex:id                 1 ;
-        schema:alternateName  "Napoje" .
+        rdf:type               frapo:Manufacturer ;
+        ex:id                  2 ;
+        ex:productionCapacity  100000 ;
+        schema:leiCode         2345 ;
+        schema:name            "Pilsner" ;
+        schema:rating          <http://example.com/producerrating/4> .
 
 <http://example.com/vendorrating/0>
-        <http://example.com/StarRating>
-                4 ;
-        ex:id   0 .
+        ex:id              0 ;
+        schema:starRating  4 .
 
 <http://example.com/storerating/0>
-        <http://example.com/StarRating>
-                4 ;
-        ex:id   0 .
+        ex:id              0 ;
+        schema:starRating  4 .
 
 <http://example.com/productrating/2>
-        <http://example.com/StarRating>
-                2 ;
-        ex:id   2 .
+        ex:id              2 ;
+        schema:starRating  2 .
 
 <http://example.com/producerrating/2>
-        <http://example.com/StarRating>
-                4 ;
-        ex:id   2 .
+        ex:id              2 ;
+        schema:starRating  4 .
 
 <http://example.com/producer/1>
-        rdf:type        frapo:Manufacturer ;
-        <http://example.com/ProductionCapacity>
-                100000 ;
-        ex:id           1 ;
-        schema:leiCode  1234 ;
-        schema:name     "Agrofert" ;
-        schema:rating   <http://example.com/producerrating/3> , <http://example.com/producerrating/2> .
+        rdf:type               frapo:Manufacturer ;
+        ex:id                  1 ;
+        ex:productionCapacity  100000 ;
+        schema:leiCode         1234 ;
+        schema:name            "Agrofert" ;
+        schema:rating          <http://example.com/producerrating/3> , <http://example.com/producerrating/2> .
 
-<http://example.com/http/example.com/parentcategory/0>
-        <http://example.com/InternalName>
-                "Fresh" ;
-        ex:id                 0 ;
-        schema:alternateName  "Tuoi" , "Cerstve" .
+<http://example.com/parentcategory/1>
+        ex:id                 1 ;
+        schema:alternateName  "Napoje" ;
+        schema:name           "Drinks" .
 
 <http://example.com/productrating/1>
-        <http://example.com/StarRating>
-                3 ;
-        ex:id   1 .
+        ex:id              1 ;
+        schema:starRating  3 .
 
 <http://example.com/vendor/2>
         rdf:type        frapo:Vendor ;
@@ -146,30 +125,27 @@
         schema:rating   <http://example.com/vendorrating/4> .
 
 <http://example.com/picture/6>
-        rdf:type                     schema:ImageObject ;
-        <http://example.com/Height>  100 ;
-        <http://example.com/URI>     "https://pilsner.cz/logo" ;
-        <http://example.com/WIdth>   100 ;
-        ex:id                        6 .
+        rdf:type       schema:ImageObject ;
+        ex:id          6 ;
+        schema:height  100 ;
+        schema:url     "https://pilsner.cz/logo" ;
+        schema:width   100 .
 
 <http://example.com/producerrating/1>
-        <http://example.com/StarRating>
-                3 ;
-        ex:id   1 .
+        ex:id              1 ;
+        schema:starRating  3 .
 
 <http://example.com/producer/0>
-        rdf:type        frapo:Manufacturer ;
-        <http://example.com/ProductionCapacity>
-                100000 ;
-        ex:id           0 ;
-        schema:leiCode  1234 ;
-        schema:name     "Agrofert" ;
-        schema:rating   <http://example.com/producerrating/1> , <http://example.com/producerrating/0> .
+        rdf:type               frapo:Manufacturer ;
+        ex:id                  0 ;
+        ex:productionCapacity  100000 ;
+        schema:leiCode         1234 ;
+        schema:name            "Agrofert" ;
+        schema:rating          <http://example.com/producerrating/1> , <http://example.com/producerrating/0> .
 
 <http://example.com/vendorrating/4>
-        <http://example.com/StarRating>
-                2 ;
-        ex:id   4 .
+        ex:id              4 ;
+        schema:starRating  2 .
 
 <http://example.com/store/2>
         rdf:type             schema:Store ;
@@ -179,24 +155,27 @@
         schema:openingHours  "Mo-Su 8:00-20:00" .
 
 <http://example.com/picture/0>
-        rdf:type                     schema:ImageObject ;
-        <http://example.com/Height>  100 ;
-        <http://example.com/URI>     "https://agrofert.cz/apple/pic" ;
-        <http://example.com/WIdth>   100 ;
-        ex:id                        0 .
+        rdf:type       schema:ImageObject ;
+        ex:id          0 ;
+        schema:height  100 ;
+        schema:url     "https://agrofert.cz/apple/pic" ;
+        schema:width   100 .
+
+<http://example.com/parentcategory/0>
+        ex:id                 0 ;
+        schema:alternateName  "Tuoi" , "Cerstve" ;
+        schema:name           "Fresh" .
 
 <http://example.com/productrating/0>
-        <http://example.com/StarRating>
-                4 ;
-        ex:id   0 .
+        ex:id              0 ;
+        schema:starRating  4 .
 
 <http://example.com/category/2>
         rdf:type              schema:ProductGroup ;
-        <http://example.com/InternalName>
-                "Alcohol" ;
         ex:id                 2 ;
         schema:alternateName  "Alkohol" ;
-        schema:isPartOf       <http://example.com/http/example.com/parentcategory/1> .
+        schema:isPartOf       <http://example.com/parentcategory/1> ;
+        schema:name           "Alcohol" .
 
 <http://example.com/vendor/1>
         rdf:type        frapo:Vendor ;
@@ -216,21 +195,19 @@
         schema:rating        <http://example.com/productrating/2> .
 
 <http://example.com/picture/5>
-        rdf:type                     schema:ImageObject ;
-        <http://example.com/Height>  100 ;
-        <http://example.com/URI>     "https://agrofert.cz/logo" ;
-        <http://example.com/WIdth>   100 ;
-        ex:id                        5 .
+        rdf:type       schema:ImageObject ;
+        ex:id          5 ;
+        schema:height  100 ;
+        schema:url     "https://agrofert.cz/logo" ;
+        schema:width   100 .
 
 <http://example.com/producerrating/0>
-        <http://example.com/StarRating>
-                4 ;
-        ex:id   0 .
+        ex:id              0 ;
+        schema:starRating  4 .
 
 <http://example.com/vendorrating/3>
-        <http://example.com/StarRating>
-                3 ;
-        ex:id   3 .
+        ex:id              3 ;
+        schema:starRating  3 .
 
 <http://example.com/store/1>
         rdf:type             schema:Store ;
@@ -242,10 +219,9 @@
 
 <http://example.com/category/1>
         rdf:type              schema:ProductGroup ;
-        <http://example.com/InternalName>
-                "Drinks" ;
         ex:id                 1 ;
-        schema:alternateName  "Napoje" .
+        schema:alternateName  "Napoje" ;
+        schema:name           "Drinks" .
 
 <http://example.com/offer/2>
         rdf:type             schema:Offer ;
