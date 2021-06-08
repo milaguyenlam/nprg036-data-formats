@@ -9,7 +9,10 @@
     "frapo": "http://purl.org/cerif/frapo/",
     "type": "@type",
     "id": "@id",
-    "Id": "ex:id",
+    "Id": {
+      "@id": "ex:id",  
+      "@type": "xsd:nonNegativeInteger"
+    },
     "Offer": "schema:Offer",
     "Product": "schema:Product",
     "Picture": "schema:ImageObject",
@@ -21,10 +24,22 @@
       "@id": "schema:startDate",
       "@type": "xsd:date"
     },
-    "EndDate": "schema:endDate",
-    "Price": "schema:price",
-    "Discount": "schema:discount",
-    "Availability": "schema:availability",
+    "EndDate": {
+      "@id": "schema:endDate",
+      "@type": "xsd:date"
+    },
+    "Price": {
+      "@id": "schema:price",
+      "@type": "xsd:decimal"
+    },
+    "Discount":{ 
+      "@id": "schema:discount",
+      "@type": "xsd:decimal"
+    },
+    "Availability": {
+      "@id": "schema:availability",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "Description": {
       "@id": "schema:description",
       "@language": "en"
@@ -35,14 +50,23 @@
       "@id": "schema:name",
       "@language": "en"
     },
-    "Rating": "schema:rating",
+    "Rating": {
+      "@id": "schema:rating",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "SynonymName": {
       "@id": "schema:alternateName",
       "@container": "@language"
     },
     "ParentCategory": "schema:isPartOf",
-    "Dic": "schema:leiCode",
-    "ProductionCapacity": "ex:productionCapacity",
+    "Dic": {
+      "@id": "schema:leiCode",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "ProductionCapacity": {
+      "@id": "ex:productionCapacity",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "Address": "schema:address",
     "OpeningHours": {
       "@id": "schema:openingHours",
@@ -54,9 +78,18 @@
       "@id": "schema:name",
       "@language": "en"
     },
-    "StarRating": "schema:starRating",
-    "Height": "schema:height",
-    "Width": "schema:width",
+    "StarRating": {
+      "@id": "schema:starRating",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "Height": {
+      "@id": "schema:height",
+      "@type": "xsd:nonNegativeInteger"
+    },
+    "Width": {
+      "@id": "schema:width",
+      "@type": "xsd:nonNegativeInteger"
+    },
     "URI": "schema:url"
   },
   "@graph": [
