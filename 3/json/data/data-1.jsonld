@@ -51,7 +51,10 @@
       "Price": 50.49,
       "Discount": 0.1,
       "Availability": 120,
-      "Description": "Up to 30kgs can be bought at once",
+      "Description": {
+        "@value": "Up to 30kgs can be bought at once",
+        "@language": "en"
+      },
       "OfferedBy": {
         "id": "http://example.com/store/0",
         "Id": 0,
