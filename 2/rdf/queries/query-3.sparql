@@ -6,7 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 SELECT ?offer
 WHERE {
   ?offer a schema:Offer ;
-         schema:itemOffered <http://example.com/#apple> ;
+         schema:itemOffered <http://example.com/product/0> ;
          schema:price ?price ;
          schema:startDate ?start ;
          schema:endDate ?end .
